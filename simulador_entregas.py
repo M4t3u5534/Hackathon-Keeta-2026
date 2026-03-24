@@ -40,47 +40,69 @@ def registrar_evento(id_e, id_r, status, clima="Limpo"):
 class GerenciadorEventos:
     def __init__(self, G):
         self.G = G
+        self.modo = "aleatorio"
+        self.acidentes_manuais = []
         self.chuva_ativa = False
         self.chuva_timer = 0
         self.acidentes = {} # {(u, v): tempo_restante}
         self.niveis_transito = {} # {(u, v): fator_multiplicador}
         
-    def atualizar(self):
-        # 1. Gerenciar Chuva
-        if self.chuva_ativa:
-            self.chuva_timer -= 1
-            if self.chuva_timer <= 0:
-                self.chuva_ativa = False
+    def alternar_modo(self):
+        if self.modo == "aleatorio":
+            self.modo = "manual"
+            self.chuva_ativa = False
+            self.acidentes.clear()
+            self.acidentes_manuais.clear()
         else:
-            if random.random() < 0.002: # 0.2% de chance por frame de começar a chover
-                self.chuva_ativa = True
-                self.chuva_timer = random.randint(300, 1000)
+            self.modo = "aleatorio"
+            self.acidentes_manuais.clear()
 
-        # 2. Gerenciar Acidentes
-        # Limpar acidentes antigos
-        self.acidentes = {edge: t - 1 for edge, t in self.acidentes.items() if t > 0}
-        # Chance de novo acidente
-        if random.random() < 0.005:
-            edges = list(self.G.edges())
-            if edges:
-                e = random.choice(edges)
-                self.acidentes[(e[0], e[1])] = random.randint(200, 600)
+    def alternar_chuva_manual(self):
+        if self.modo == "manual":
+            self.chuva_ativa = not self.chuva_ativa
 
-        # 3. Gerenciar Trânsito (Atualização dinâmica de pesos)
-        # Níveis: 1.0 (Livre), 0.6 (Moderado), 0.3 (Pesado)
+    def alterar_acidentes_manual(self, delta):
+        if self.modo == "manual":
+            if delta > 0:
+                edges = list(self.G.edges())
+                if edges:
+                    self.acidentes_manuais.append(random.choice(edges))
+            elif delta < 0 and self.acidentes_manuais:
+                self.acidentes_manuais.pop()
+        
+    def atualizar(self):
+        if self.modo == "aleatorio":
+            # 1. Gerenciar Chuva
+            if self.chuva_ativa:
+                self.chuva_timer -= 1
+                if self.chuva_timer <= 0:
+                    self.chuva_ativa = False
+            else:
+                if random.random() < 0.002: # 0.2% de chance por frame de começar a chover
+                    self.chuva_ativa = True
+                    self.chuva_timer = random.randint(300, 1000)
+
+            # 2. Gerenciar Acidentes
+            self.acidentes = {edge: t - 1 for edge, t in self.acidentes.items() if t > 0}
+            if random.random() < 0.005:
+                edges = list(self.G.edges())
+                if edges:
+                    e = random.choice(edges)
+                    self.acidentes[(e[0], e[1])] = random.randint(200, 600)
+
+        # 3. Gerenciar Trânsito (Para ambos os modos)
         for u, v, k, data in self.G.edges(data=True, keys=True):
-            # Mudança aleatória de tráfego
             if random.random() < 0.01 or (u, v) not in self.niveis_transito:
                 fator = random.choices([1.0, 0.6, 0.3], weights=[70, 20, 10])[0]
                 self.niveis_transito[(u, v)] = fator
             
-            # Cálculo de penalidade total
             penalidade_chuva = 0.8 if self.chuva_ativa else 1.0
-            penalidade_acidente = 0.1 if (u, v) in self.acidentes else 1.0
+            
+            tem_acidente = (u, v) in self.acidentes or (u, v) in self.acidentes_manuais
+            penalidade_acidente = 0.1 if tem_acidente else 1.0
+            
             fator_transito = self.niveis_transito[(u, v)]
             
-            # Peso dinâmico = comprimento / (velocidade_ajustada)
-            # Simplificado: comprimento * (1 / fatores)
             multiplicador_atraso = 1.0 / (penalidade_chuva * penalidade_acidente * fator_transito)
             data['peso_dinamico'] = data['length'] * multiplicador_atraso
             data['fator_velocidade'] = (penalidade_chuva * penalidade_acidente * fator_transito)
@@ -105,7 +127,7 @@ class Entregador:
         self.path = []
         self.current_job = None
 
-    def update(self, G, pos_map, eventos):
+    def update(self, G, pos_map, eventos, vel_global=1.0):
         if self.target_node is None:
             if self.path:
                 self.target_node = self.path.pop(0)
@@ -117,15 +139,14 @@ class Entregador:
                     self.handle_arrival(eventos)
 
         if self.target_node is not None:
-            # Ajustar velocidade baseada na via atual
+            # Ajustar velocidade baseada na via atual e multiplicador global
             edge_data = G.get_edge_data(self.node, self.target_node)
             fator = 1.0
             if edge_data:
-                # Pega o primeiro valor se for multigraph
                 data = list(edge_data.values())[0] if isinstance(edge_data, dict) and 0 in edge_data else edge_data
                 fator = data.get('fator_velocidade', 1.0)
             
-            self.vel = self.base_vel * fator
+            self.vel = self.base_vel * fator * vel_global
 
             tx, ty = pos_map[self.target_node]
             dx, dy = tx - self.x, ty - self.y
@@ -198,6 +219,7 @@ class Simulador:
         self.pedidos_pendentes = 0
         self.qtd_lojas_visiveis = 3
         self.eventos = None
+        self.multiplicador_vel = 1.0
 
     def carregar_csv(self, path):
         if not os.path.exists(path): return []
@@ -267,13 +289,22 @@ class Simulador:
         btn_itaim = Botao(WIDTH//2-150, 320, 300, 50, "ITAIM BIBI")
         btn_pinheiros = Botao(WIDTH//2-150, 390, 300, 50, "PINHEIROS")
         
-        btn_voltar = Botao(20, 15, 100, 45, "VOLTAR", (200, 200, 200)) 
-        btn_e_minus = Botao(140, 15, 45, 45, "-", (255, 200, 200))
-        btn_e_plus = Botao(195, 15, 45, 45, "+", (200, 255, 200))
-        btn_l_minus = Botao(WIDTH//2 - 90, 15, 45, 45, "-", (255, 200, 200))
-        btn_l_plus = Botao(WIDTH//2 - 35, 15, 45, 45, "+", (200, 255, 200))
-        btn_p_minus = Botao(WIDTH-130, 15, 45, 45, "-", (255, 200, 200))
-        btn_p_plus = Botao(WIDTH-75, 15, 45, 45, "+", (200, 255, 200))
+        # LINHA 1 DE BOTOES
+        btn_voltar = Botao(20, 15, 100, 35, "VOLTAR", (200, 200, 200)) 
+        btn_e_minus = Botao(140, 15, 35, 35, "-", (255, 200, 200))
+        btn_e_plus = Botao(180, 15, 35, 35, "+", (200, 255, 200))
+        btn_l_minus = Botao(WIDTH//2 - 90, 15, 35, 35, "-", (255, 200, 200))
+        btn_l_plus = Botao(WIDTH//2 - 50, 15, 35, 35, "+", (200, 255, 200))
+        btn_p_minus = Botao(WIDTH-130, 15, 35, 35, "-", (255, 200, 200))
+        btn_p_plus = Botao(WIDTH-90, 15, 35, 35, "+", (200, 255, 200))
+
+        # LINHA 2 DE BOTOES
+        btn_vel_minus = Botao(140, 60, 35, 35, "-", (255, 220, 150))
+        btn_vel_plus = Botao(180, 60, 35, 35, "+", (255, 220, 150))
+        btn_modo = Botao(320, 60, 130, 35, "MODO: ALEAT", (200, 200, 255))
+        btn_chuva = Botao(460, 60, 110, 35, "CHUVA: OFF", (150, 200, 255))
+        btn_acid_minus = Botao(650, 60, 35, 35, "-", (255, 200, 200))
+        btn_acid_plus = Botao(690, 60, 35, 35, "+", (200, 255, 200))
 
         while self.running:
             self.screen.fill(BG_COLOR)
@@ -300,6 +331,24 @@ class Simulador:
                         if btn_p_plus.rect.collidepoint(ev.pos): self.pedidos_pendentes += 1
                         if btn_p_minus.rect.collidepoint(ev.pos) and self.pedidos_pendentes > 0:
                             self.pedidos_pendentes -= 1
+                            
+                        # INTERAÇÕES DOS NOVOS BOTOES
+                        if btn_vel_plus.rect.collidepoint(ev.pos): 
+                            self.multiplicador_vel += 0.2
+                        if btn_vel_minus.rect.collidepoint(ev.pos) and self.multiplicador_vel > 0.3: 
+                            self.multiplicador_vel -= 0.2
+                            
+                        if btn_modo.rect.collidepoint(ev.pos):
+                            self.eventos.alternar_modo()
+                            btn_modo.text = "MODO: MANUAL" if self.eventos.modo == "manual" else "MODO: ALEAT"
+
+                        if self.eventos.modo == "manual":
+                            if btn_chuva.rect.collidepoint(ev.pos):
+                                self.eventos.alternar_chuva_manual()
+                            if btn_acid_plus.rect.collidepoint(ev.pos):
+                                self.eventos.alterar_acidentes_manual(1)
+                            if btn_acid_minus.rect.collidepoint(ev.pos):
+                                self.eventos.alterar_acidentes_manual(-1)
 
             if self.state == "MENU":
                 txt = self.title_font.render("SIMULADOR LOGÍSTICA URBANA", True, TEXT_COLOR)
@@ -307,22 +356,21 @@ class Simulador:
                 btn_mack.draw(self.screen, self.font); btn_itaim.draw(self.screen, self.font); btn_pinheiros.draw(self.screen, self.font)
             
             elif self.state == "SIM":
-                # Atualizar Eventos
                 self.eventos.atualizar()
+                btn_chuva.text = "CHUVA: ON" if self.eventos.chuva_ativa else "CHUVA: OFF"
 
-                # Desenhar Arestas (Vias) com cores dinâmicas para trânsito/acidente
                 for u, v, k, data in self.G.edges(data=True, keys=True):
                     color = LINE_EMPTY
                     width = 1
-                    if (u, v) in self.eventos.acidentes:
+                    # Atualizado para considerar acidentes manuais
+                    if (u, v) in self.eventos.acidentes or (u, v) in self.eventos.acidentes_manuais:
                         color = COLOR_ACCIDENT
                         width = 3
                     elif data.get('fator_velocidade', 1.0) < 0.5:
-                        color = (200, 150, 0) # Alerta Trânsito
+                        color = (200, 150, 0) 
                     
                     pygame.draw.line(self.screen, color, self.pos_map[u], self.pos_map[v], width)
                 
-                # Desenhar Lojas
                 for l in self.lojas_no_mapa[:self.qtd_lojas_visiveis]:
                     nid = l['node_id']
                     px, py = self.pos_map[nid]
@@ -332,40 +380,51 @@ class Simulador:
                 
                 self.despachar()
                 for e in self.ativos:
-                    e.update(self.G, self.pos_map, self.eventos)
+                    e.update(self.G, self.pos_map, self.eventos, self.multiplicador_vel) # Passando a veloc. global
                     e.draw(self.screen, self.pos_map)
                 
-                # Efeito visual de Chuva na tela inteira (opcional, gotas sutis)
                 if self.eventos.chuva_ativa:
                     overlay = pygame.Surface((WIDTH, HEIGHT), pygame.SRCALPHA)
-                    overlay.fill((100, 149, 237, 30)) # Azul transparente
+                    overlay.fill((100, 149, 237, 30)) 
                     self.screen.blit(overlay, (0,0))
 
-                # Interface superior
-                pygame.draw.rect(self.screen, UI_PANEL, (0, 0, WIDTH, 85))
+                # PAINEL DA INTERFACE AUMENTADO (110 pixels)
+                pygame.draw.rect(self.screen, UI_PANEL, (0, 0, WIDTH, 110))
                 btn_voltar.draw(self.screen, self.font)
                 btn_e_minus.draw(self.screen, self.font); btn_e_plus.draw(self.screen, self.font)
                 btn_l_minus.draw(self.screen, self.font); btn_l_plus.draw(self.screen, self.font)
                 btn_p_minus.draw(self.screen, self.font); btn_p_plus.draw(self.screen, self.font)
                 
-                # Info de Texto
-                self.screen.blit(self.font.render(f"FROTA: {len(self.ativos)}", True, TEXT_COLOR), (250, 15))
-                self.screen.blit(self.font.render(f"LOJAS: {self.qtd_lojas_visiveis}", True, TEXT_COLOR), (WIDTH//2 + 20, 15))
-                self.screen.blit(self.font.render(f"PEDIDOS: {self.pedidos_pendentes}", True, TEXT_COLOR), (WIDTH - 310, 15))
+                btn_vel_minus.draw(self.screen, self.font); btn_vel_plus.draw(self.screen, self.font)
+                btn_modo.draw(self.screen, self.font)
+                
+                if self.eventos.modo == "manual":
+                    btn_chuva.draw(self.screen, self.font)
+                    btn_acid_minus.draw(self.screen, self.font); btn_acid_plus.draw(self.screen, self.font)
+                
+                # INFO DE TEXTO (L1)
+                self.screen.blit(self.font.render(f"FROTA: {len(self.ativos)}", True, TEXT_COLOR), (225, 23))
+                self.screen.blit(self.font.render(f"LOJAS: {self.qtd_lojas_visiveis}", True, TEXT_COLOR), (WIDTH//2 + 10, 23))
+                self.screen.blit(self.font.render(f"PEDIDOS: {self.pedidos_pendentes}", True, TEXT_COLOR), (WIDTH - 240, 23))
 
-                # INFO DE EVENTOS NO PAINEL
+                # INFO DE TEXTO (L2)
+                self.screen.blit(self.font.render(f"VEL: {self.multiplicador_vel:.1f}x", True, TEXT_COLOR), (225, 68))
+                
+                if self.eventos.modo == "manual":
+                    self.screen.blit(self.font.render("ACIDENTES", True, TEXT_COLOR), (575, 68))
+
                 clima_txt = "LIMPO" if not self.eventos.chuva_ativa else "CHUVA (Vel -20%)"
                 clima_col = TEXT_COLOR if not self.eventos.chuva_ativa else COLOR_RAIN
-                self.screen.blit(self.font.render(f"CLIMA: {clima_txt}", True, clima_col), (250, 45))
+                self.screen.blit(self.font.render(f"CLIMA: {clima_txt}", True, clima_col), (WIDTH - 250, 55))
                 
-                acidentes_count = len(self.eventos.acidentes)
-                acid_txt = f"ACIDENTES: {acidentes_count}" if acidentes_count > 0 else "VIAS LIBERADAS"
+                acidentes_count = len(self.eventos.acidentes) + len(self.eventos.acidentes_manuais)
+                acid_txt = f"ACIDENTES ATIVOS: {acidentes_count}" if acidentes_count > 0 else "VIAS LIBERADAS"
                 acid_col = COLOR_ACCIDENT if acidentes_count > 0 else (0, 150, 0)
-                self.screen.blit(self.font.render(acid_txt, True, acid_col), (WIDTH//2 + 20, 45))
+                self.screen.blit(self.font.render(acid_txt, True, acid_col), (WIDTH - 250, 80))
 
             pygame.display.flip()
             self.clock.tick(60)
         pygame.quit()
-
+        
 if __name__ == "__main__":
     Simulador().run()
