@@ -37,7 +37,7 @@ class Entregador:
     def __init__(self, data, start_node, pos_map):
         self.id = data.get('id', '999')
         self.tipo = data.get('tipo', 'moto')
-        self.vel = float(data.get('velocidade', 2.5))
+        self.vel = max(0.8, float(data.get('velocidade', 2.5))) 
         self.cap_max = int(data.get('capacidade', 1))
         self.carga_atual = 0
         
@@ -51,28 +51,28 @@ class Entregador:
         self.current_job = None
 
     def update(self, G, pos_map):
-        # Se não tem destino (IDLE ou fim de rota), entra em modo ROAMING (vagar pelas ruas)
-        if not self.target_node:
+        # Define o próximo alvo apenas quando terminar o movimento atual
+        if self.target_node is None:
             if self.path:
                 self.target_node = self.path.pop(0)
             else:
-                # Roaming: escolhe um vizinho aleatório para nunca parar
-                vizinhos = list(G.neighbors(self.node))
-                if vizinhos:
-                    self.target_node = random.choice(vizinhos)
-                if self.state != "IDLE" and not self.path:
+                if self.state == "IDLE":
+                    # Modo Roaming: nunca para
+                    vizinhos = list(G.neighbors(self.node))
+                    if vizinhos: self.target_node = random.choice(vizinhos)
+                else:
                     self.handle_arrival()
 
-        if self.target_node:
+        if self.target_node is not None:
             tx, ty = pos_map[self.target_node]
             dx, dy = tx - self.x, ty - self.y
             dist = math.hypot(dx, dy)
             
-            # Movimentação estrita pelos nós
-            if dist < self.vel:
-                self.node = self.target_node
+            if dist <= self.vel:
+                # Chegou exatamente no nó (evita atravessar prédios)
                 self.x, self.y = tx, ty
-                self.target_node = None # Força a pegar o próximo do path ou roaming
+                self.node = self.target_node
+                self.target_node = None 
             else:
                 self.x += (dx/dist) * self.vel
                 self.y += (dy/dist) * self.vel
@@ -90,9 +90,12 @@ class Entregador:
                 self.path = []
 
     def draw(self, surf, pos_map):
-        # Desenha a linha da rota apenas se estiver em serviço
-        if self.state != "IDLE" and self.path:
-            pts = [(self.x, self.y)] + [pos_map[n] for n in self.path]
+        # Desenha a rota seguindo estritamente os nós
+        if self.state != "IDLE":
+            pts = [(self.x, self.y)]
+            if self.target_node is not None: pts.append(pos_map[self.target_node])
+            for n in self.path: pts.append(pos_map[n])
+                
             if len(pts) > 1:
                 pygame.draw.lines(surf, self.color, False, pts, 4)
         
@@ -115,14 +118,13 @@ class Botao:
         txt = font.render(self.text, True, TEXT_COLOR)
         surf.blit(txt, (self.rect.centerx - txt.get_width()//2, self.rect.centery - txt.get_height()//2))
 
-# --- MOTOR PRINCIPAL ---
-
 class Simulador:
     def __init__(self):
         pygame.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
-        pygame.display.set_caption("Hackathon 2026: Logística Dinâmica")
+        pygame.display.set_caption("Hackathon 2026: Logística de Precisão")
         self.font = pygame.font.SysFont("segoeui", 16, bold=True)
+        self.shop_font = pygame.font.SysFont("arial", 10, bold=True)
         self.title_font = pygame.font.SysFont("segoeui", 28, bold=True)
         self.clock = pygame.time.Clock()
         self.running = True
@@ -130,7 +132,7 @@ class Simulador:
         
         self.db_entregadores = self.carregar_csv("entregadores.csv")
         self.db_lojas_raw = self.carregar_csv("lojas.csv")
-        self.lojas_no_mapa = [] # Lista processada para o mapa atual
+        self.lojas_no_mapa = []
         self.ativos = []
         self.pedidos_pendentes = 0
         self.qtd_lojas_visiveis = 3
@@ -141,35 +143,29 @@ class Simulador:
             return list(csv.DictReader(f))
 
     def setup_map(self, filename):
-        print(f"Carregando {filename}...")
         try:
             G_raw = ox.load_graphml(filename)
             self.G = G_raw.to_undirected()
             self.nodes = list(self.G.nodes)
-            
-            # Processa coordenadas
             nodes_data = dict(self.G.nodes(data=True))
             xs = [d['x'] for d in nodes_data.values()]
             ys = [d['y'] for d in nodes_data.values()]
             self.min_x, self.max_x = min(xs), max(xs)
             self.min_y, self.max_y = min(ys), max(ys)
-            
             self.pos_map = {n: self.to_px(nodes_data[n]['x'], nodes_data[n]['y']) for n in self.nodes}
             
-            # VINCULAÇÃO DINÂMICA DAS LOJAS AO MAPA ATUAL
-            # Usamos o ID da loja como semente para que ela fique sempre no mesmo nó no mesmo mapa
+            # Reposiciona as lojas para nós válidos deste mapa específico
             self.lojas_no_mapa = []
-            for i, loja in enumerate(self.db_lojas_raw):
+            for loja in self.db_lojas_raw:
                 random.seed(loja['id']) 
                 node_idx = random.randint(0, len(self.nodes)-1)
-                loja_processada = loja.copy()
-                loja_processada['node_id'] = self.nodes[node_idx]
-                self.lojas_no_mapa.append(loja_processada)
+                loja_proc = loja.copy()
+                loja_proc['node_id'] = self.nodes[node_idx]
+                self.lojas_no_mapa.append(loja_proc)
             
-            self.ativos = [] # Reinicia entregadores ao mudar de mapa
+            self.ativos = []
             self.state = "SIM"
-        except Exception as e: 
-            print(f"Erro ao carregar mapa: {e}")
+        except Exception as e: print(f"Erro ao carregar mapa: {e}")
 
     def to_px(self, lon, lat):
         pad = 80
@@ -178,7 +174,6 @@ class Simulador:
         return x, y
 
     def despachar(self):
-        # Filtra entregadores que podem aceitar serviço
         disponiveis = [e for e in self.ativos if e.state == "IDLE" or (e.tipo == "carro" and e.carga_atual < e.cap_max)]
         lojas_ativas = self.lojas_no_mapa[:self.qtd_lojas_visiveis]
         
@@ -187,20 +182,19 @@ class Simulador:
             loja = random.choice(lojas_ativas)
             destino = random.choice(self.nodes)
             try:
-                # Calcula rota estritamente pelo grafo
                 l_node = loja['node_id']
-                # Caminho: Onde ele está -> Loja -> Destino Final
                 p1 = nx.shortest_path(self.G, e.node, l_node, weight='length')
                 p2 = nx.shortest_path(self.G, l_node, destino, weight='length')
+                full_path = p1[1:] + p2[1:]
                 
-                e.path = p1[1:] + p2[1:]
-                e.current_job = {"loja_id": loja['id']}
-                e.state = "TO_SHOP"
-                e.carga_atual += 1
-                self.pedidos_pendentes -= 1
-                registrar_evento(e.id, loja['id'], "DESPACHADO")
-            except Exception as ex: 
-                pass
+                if full_path:
+                    e.path = full_path
+                    e.current_job = {"loja_id": loja['id']}
+                    e.state = "TO_SHOP"
+                    e.carga_atual += 1
+                    self.pedidos_pendentes -= 1
+                    registrar_evento(e.id, loja['id'], "DESPACHADO")
+            except: pass
 
     def run(self):
         btn_mack = Botao(WIDTH//2-150, 250, 300, 50, "MACKENZIE / HIGIENÓPOLIS")
@@ -239,37 +233,35 @@ class Simulador:
             if self.state == "MENU":
                 txt = self.title_font.render("SIMULADOR LOGÍSTICA URBANA", True, TEXT_COLOR)
                 self.screen.blit(txt, (WIDTH//2 - txt.get_width()//2, 150))
-                btn_mack.draw(self.screen, self.font)
-                btn_itaim.draw(self.screen, self.font)
-                btn_pinheiros.draw(self.screen, self.font)
+                btn_mack.draw(self.screen, self.font); btn_itaim.draw(self.screen, self.font); btn_pinheiros.draw(self.screen, self.font)
             
             elif self.state == "SIM":
-                # 1. Desenha as Ruas
+                # Ruas
                 for u, v in self.G.edges():
                     pygame.draw.line(self.screen, LINE_EMPTY, self.pos_map[u], self.pos_map[v], 1)
                 
-                # 2. Desenha as Lojas Visíveis
+                # Restaurantes com NOMES
                 for l in self.lojas_no_mapa[:self.qtd_lojas_visiveis]:
                     nid = l['node_id']
-                    pygame.draw.rect(self.screen, (60, 60, 60), (*self.pos_map[nid], 12, 12))
-                    # Nome da loja pequeno acima do ponto
-                    lbl = pygame.font.SysFont("arial", 10).render(l['nome'][:15], True, (100,100,100))
-                    self.screen.blit(lbl, (self.pos_map[nid][0]-10, self.pos_map[nid][1]-15))
-
-                # 3. Lógica de Despacho e Update
+                    px, py = self.pos_map[nid]
+                    pygame.draw.rect(self.screen, (60, 60, 60), (px-6, py-6, 12, 12))
+                    # Renderiza o nome da loja
+                    txt_loja = self.shop_font.render(l['nome'].upper(), True, (80, 80, 80))
+                    self.screen.blit(txt_loja, (px + 10, py - 5))
+                
                 self.despachar()
                 for e in self.ativos:
                     e.update(self.G, self.pos_map)
                     e.draw(self.screen, self.pos_map)
                 
-                # 4. Interface de Controle
+                # Interface superior
                 pygame.draw.rect(self.screen, UI_PANEL, (0, 0, WIDTH, 75))
                 btn_e_minus.draw(self.screen, self.font); btn_e_plus.draw(self.screen, self.font)
                 btn_l_minus.draw(self.screen, self.font); btn_l_plus.draw(self.screen, self.font)
                 btn_p_minus.draw(self.screen, self.font); btn_p_plus.draw(self.screen, self.font)
                 
                 self.screen.blit(self.font.render(f"FROTA: {len(self.ativos)}", True, TEXT_COLOR), (140, 27))
-                self.screen.blit(self.font.render(f"LOJAS ATIVAS: {self.qtd_lojas_visiveis}", True, TEXT_COLOR), (WIDTH//2 + 20, 27))
+                self.screen.blit(self.font.render(f"LOJAS: {self.qtd_lojas_visiveis}", True, TEXT_COLOR), (WIDTH//2 + 20, 27))
                 self.screen.blit(self.font.render(f"PEDIDOS: {self.pedidos_pendentes}", True, TEXT_COLOR), (WIDTH - 310, 27))
 
             pygame.display.flip()
