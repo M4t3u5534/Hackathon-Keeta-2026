@@ -51,13 +51,11 @@ class Entregador:
         self.current_job = None
 
     def update(self, G, pos_map):
-        # Define o próximo alvo apenas quando terminar o movimento atual
         if self.target_node is None:
             if self.path:
                 self.target_node = self.path.pop(0)
             else:
                 if self.state == "IDLE":
-                    # Modo Roaming: nunca para
                     vizinhos = list(G.neighbors(self.node))
                     if vizinhos: self.target_node = random.choice(vizinhos)
                 else:
@@ -69,7 +67,6 @@ class Entregador:
             dist = math.hypot(dx, dy)
             
             if dist <= self.vel:
-                # Chegou exatamente no nó (evita atravessar prédios)
                 self.x, self.y = tx, ty
                 self.node = self.target_node
                 self.target_node = None 
@@ -90,12 +87,10 @@ class Entregador:
                 self.path = []
 
     def draw(self, surf, pos_map):
-        # Desenha a rota seguindo estritamente os nós
         if self.state != "IDLE":
             pts = [(self.x, self.y)]
             if self.target_node is not None: pts.append(pos_map[self.target_node])
             for n in self.path: pts.append(pos_map[n])
-                
             if len(pts) > 1:
                 pygame.draw.lines(surf, self.color, False, pts, 4)
         
@@ -154,7 +149,6 @@ class Simulador:
             self.min_y, self.max_y = min(ys), max(ys)
             self.pos_map = {n: self.to_px(nodes_data[n]['x'], nodes_data[n]['y']) for n in self.nodes}
             
-            # Reposiciona as lojas para nós válidos deste mapa específico
             self.lojas_no_mapa = []
             for loja in self.db_lojas_raw:
                 random.seed(loja['id']) 
@@ -197,14 +191,20 @@ class Simulador:
             except: pass
 
     def run(self):
+        # Botões do Menu
         btn_mack = Botao(WIDTH//2-150, 250, 300, 50, "MACKENZIE / HIGIENÓPOLIS")
         btn_itaim = Botao(WIDTH//2-150, 320, 300, 50, "ITAIM BIBI")
         btn_pinheiros = Botao(WIDTH//2-150, 390, 300, 50, "PINHEIROS")
         
-        btn_e_minus = Botao(30, 15, 45, 45, "-", (255, 200, 200))
-        btn_e_plus = Botao(85, 15, 45, 45, "+", (200, 255, 200))
+        # Botões da Simulação (Reposicionados para dar espaço ao "Voltar")
+        btn_voltar = Botao(20, 15, 100, 45, "VOLTAR", (200, 200, 200)) # Novo Botão
+        
+        btn_e_minus = Botao(140, 15, 45, 45, "-", (255, 200, 200))
+        btn_e_plus = Botao(195, 15, 45, 45, "+", (200, 255, 200))
+        
         btn_l_minus = Botao(WIDTH//2 - 90, 15, 45, 45, "-", (255, 200, 200))
         btn_l_plus = Botao(WIDTH//2 - 35, 15, 45, 45, "+", (200, 255, 200))
+        
         btn_p_minus = Botao(WIDTH-130, 15, 45, 45, "-", (255, 200, 200))
         btn_p_plus = Botao(WIDTH-75, 15, 45, 45, "+", (200, 255, 200))
 
@@ -218,6 +218,11 @@ class Simulador:
                         if btn_itaim.rect.collidepoint(ev.pos): self.setup_map("mapa_itaim.graphml")
                         if btn_pinheiros.rect.collidepoint(ev.pos): self.setup_map("mapa_pinheiros.graphml")
                     elif self.state == "SIM":
+                        # Lógica do Botão Voltar
+                        if btn_voltar.rect.collidepoint(ev.pos):
+                            self.state = "MENU"
+                            self.ativos = [] # Limpa a frota ao sair
+                        
                         if btn_e_plus.rect.collidepoint(ev.pos) and len(self.ativos) < len(self.db_entregadores):
                             d = self.db_entregadores[len(self.ativos)]
                             self.ativos.append(Entregador(d, random.choice(self.nodes), self.pos_map))
@@ -236,16 +241,13 @@ class Simulador:
                 btn_mack.draw(self.screen, self.font); btn_itaim.draw(self.screen, self.font); btn_pinheiros.draw(self.screen, self.font)
             
             elif self.state == "SIM":
-                # Ruas
                 for u, v in self.G.edges():
                     pygame.draw.line(self.screen, LINE_EMPTY, self.pos_map[u], self.pos_map[v], 1)
                 
-                # Restaurantes com NOMES
                 for l in self.lojas_no_mapa[:self.qtd_lojas_visiveis]:
                     nid = l['node_id']
                     px, py = self.pos_map[nid]
                     pygame.draw.rect(self.screen, (60, 60, 60), (px-6, py-6, 12, 12))
-                    # Renderiza o nome da loja
                     txt_loja = self.shop_font.render(l['nome'].upper(), True, (80, 80, 80))
                     self.screen.blit(txt_loja, (px + 10, py - 5))
                 
@@ -256,11 +258,12 @@ class Simulador:
                 
                 # Interface superior
                 pygame.draw.rect(self.screen, UI_PANEL, (0, 0, WIDTH, 75))
+                btn_voltar.draw(self.screen, self.font) # Desenha o Voltar
                 btn_e_minus.draw(self.screen, self.font); btn_e_plus.draw(self.screen, self.font)
                 btn_l_minus.draw(self.screen, self.font); btn_l_plus.draw(self.screen, self.font)
                 btn_p_minus.draw(self.screen, self.font); btn_p_plus.draw(self.screen, self.font)
                 
-                self.screen.blit(self.font.render(f"FROTA: {len(self.ativos)}", True, TEXT_COLOR), (140, 27))
+                self.screen.blit(self.font.render(f"FROTA: {len(self.ativos)}", True, TEXT_COLOR), (250, 27))
                 self.screen.blit(self.font.render(f"LOJAS: {self.qtd_lojas_visiveis}", True, TEXT_COLOR), (WIDTH//2 + 20, 27))
                 self.screen.blit(self.font.render(f"PEDIDOS: {self.pedidos_pendentes}", True, TEXT_COLOR), (WIDTH - 310, 27))
 
