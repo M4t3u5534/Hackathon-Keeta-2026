@@ -15,8 +15,10 @@ UI_PANEL = (230, 225, 215)
 TEXT_COLOR = (60, 60, 60)
 LINE_EMPTY = (210, 210, 210)    
 ROUTE_COLORS = [(255, 51, 102), (0, 194, 209), (255, 204, 0), (0, 153, 102), (155, 89, 182)]
-COLOR_RAIN = (100, 149, 237)
-COLOR_ACCIDENT = (255, 69, 0)
+
+# Cores de Eventos
+COLOR_RAIN = (100, 149, 237) # CornflowerBlue
+COLOR_ACCIDENT = (255, 69, 0) # Red-Orange
 
 # --- PROTEÇÃO DE LOG ---
 log_lock = threading.Lock()
@@ -39,47 +41,49 @@ class GerenciadorEventos:
     def __init__(self, G):
         self.G = G
         self.chuva_ativa = False
-        self.acidentes = {} 
-        self.niveis_transito = {}
-        self.modo_manual = False # Inicia em automático
+        self.chuva_timer = 0
+        self.acidentes = {} # {(u, v): tempo_restante}
+        self.niveis_transito = {} # {(u, v): fator_multiplicador}
         
     def atualizar(self):
-        # O trânsito sempre flutua (é o "ruído" da cidade)
-        for u, v, k, data in self.G.edges(data=True, keys=True):
-            if random.random() < 0.01 or (u, v) not in self.niveis_transito:
-                self.niveis_transito[(u, v)] = random.choices([1.0, 0.6, 0.3], weights=[70, 20, 10])[0]
-
-        # Lógica Automática vs Manual
-        if not self.modo_manual:
-            # Chuva automática
-            if not self.chuva_ativa and random.random() < 0.002:
-                self.chuva_ativa = True
-            elif self.chuva_ativa and random.random() < 0.005:
+        # 1. Gerenciar Chuva
+        if self.chuva_ativa:
+            self.chuva_timer -= 1
+            if self.chuva_timer <= 0:
                 self.chuva_ativa = False
-            
-            # Acidentes automáticos
-            self.acidentes = {edge: t - 1 for edge, t in self.acidentes.items() if t > 0}
-            if random.random() < 0.003:
-                edges = list(self.G.edges())
-                if edges:
-                    e = random.choice(edges)
-                    self.acidentes[(e[0], e[1])] = random.randint(300, 800)
-        
-        # Aplica os pesos no grafo
-        for u, v, k, data in self.G.edges(data=True, keys=True):
-            p_chuva = 0.8 if self.chuva_ativa else 1.0
-            p_acid = 0.05 if (u, v) in self.acidentes else 1.0
-            f_transito = self.niveis_transito.get((u, v), 1.0)
-            
-            fator_final = p_chuva * p_acid * f_transito
-            data['fator_velocidade'] = fator_final
-            data['peso_dinamico'] = data['length'] / max(0.01, fator_final)
+        else:
+            if random.random() < 0.002: # 0.2% de chance por frame de começar a chover
+                self.chuva_ativa = True
+                self.chuva_timer = random.randint(300, 1000)
 
-    def trigger_acidente(self):
-        edges = list(self.G.edges())
-        if edges:
-            e = random.choice(edges)
-            self.acidentes[(e[0], e[1])] = 1000 # Longa duração no manual
+        # 2. Gerenciar Acidentes
+        # Limpar acidentes antigos
+        self.acidentes = {edge: t - 1 for edge, t in self.acidentes.items() if t > 0}
+        # Chance de novo acidente
+        if random.random() < 0.005:
+            edges = list(self.G.edges())
+            if edges:
+                e = random.choice(edges)
+                self.acidentes[(e[0], e[1])] = random.randint(200, 600)
+
+        # 3. Gerenciar Trânsito (Atualização dinâmica de pesos)
+        # Níveis: 1.0 (Livre), 0.6 (Moderado), 0.3 (Pesado)
+        for u, v, k, data in self.G.edges(data=True, keys=True):
+            # Mudança aleatória de tráfego
+            if random.random() < 0.01 or (u, v) not in self.niveis_transito:
+                fator = random.choices([1.0, 0.6, 0.3], weights=[70, 20, 10])[0]
+                self.niveis_transito[(u, v)] = fator
+            
+            # Cálculo de penalidade total
+            penalidade_chuva = 0.8 if self.chuva_ativa else 1.0
+            penalidade_acidente = 0.1 if (u, v) in self.acidentes else 1.0
+            fator_transito = self.niveis_transito[(u, v)]
+            
+            # Peso dinâmico = comprimento / (velocidade_ajustada)
+            # Simplificado: comprimento * (1 / fatores)
+            multiplicador_atraso = 1.0 / (penalidade_chuva * penalidade_acidente * fator_transito)
+            data['peso_dinamico'] = data['length'] * multiplicador_atraso
+            data['fator_velocidade'] = (penalidade_chuva * penalidade_acidente * fator_transito)
 
 # --- CLASSES CORE ---
 
@@ -91,9 +95,11 @@ class Entregador:
         self.vel = self.base_vel
         self.cap_max = int(data.get('capacidade', 1))
         self.carga_atual = 0
+        
         self.node = start_node
         self.x, self.y = pos_map[start_node]
         self.color = random.choice(ROUTE_COLORS)
+        
         self.state = "IDLE" 
         self.target_node = None
         self.path = []
@@ -107,16 +113,20 @@ class Entregador:
                 if self.state == "IDLE":
                     vizinhos = list(G.neighbors(self.node))
                     if vizinhos: self.target_node = random.choice(vizinhos)
-                else: self.handle_arrival(eventos)
+                else:
+                    self.handle_arrival(eventos)
 
         if self.target_node is not None:
+            # Ajustar velocidade baseada na via atual
             edge_data = G.get_edge_data(self.node, self.target_node)
             fator = 1.0
             if edge_data:
+                # Pega o primeiro valor se for multigraph
                 data = list(edge_data.values())[0] if isinstance(edge_data, dict) and 0 in edge_data else edge_data
                 fator = data.get('fator_velocidade', 1.0)
             
             self.vel = self.base_vel * fator
+
             tx, ty = pos_map[self.target_node]
             dx, dy = tx - self.x, ty - self.y
             dist = math.hypot(dx, dy)
@@ -147,22 +157,26 @@ class Entregador:
             pts = [(self.x, self.y)]
             if self.target_node is not None: pts.append(pos_map[self.target_node])
             for n in self.path: pts.append(pos_map[n])
-            if len(pts) > 1: pygame.draw.lines(surf, self.color, False, pts, 4)
+            if len(pts) > 1:
+                pygame.draw.lines(surf, self.color, False, pts, 4)
         
         pos = (int(self.x), int(self.y))
-        pygame.draw.circle(surf, self.color, pos, 6)
-        pygame.draw.circle(surf, (255,255,255), pos, 6, 1)
+        if self.tipo == "carro":
+            pygame.draw.rect(surf, self.color, (pos[0]-8, pos[1]-8, 16, 16))
+            pygame.draw.rect(surf, (255,255,255), (pos[0]-8, pos[1]-8, 16, 16), 1)
+        else:
+            pygame.draw.circle(surf, self.color, pos, 6)
+            pygame.draw.circle(surf, (255,255,255), pos, 6, 1)
 
 class Botao:
-    def __init__(self, x, y, w, h, text, color=(220,220,220), text_size=14):
+    def __init__(self, x, y, w, h, text, color=(220,220,220)):
         self.rect = pygame.Rect(x, y, w, h)
         self.text = text
         self.color = color
-        self.font = pygame.font.SysFont("segoeui", text_size, bold=True)
-    def draw(self, surf):
-        pygame.draw.rect(surf, self.color, self.rect, border_radius=5)
-        pygame.draw.rect(surf, (150,150,150), self.rect, 1, border_radius=5)
-        txt = self.font.render(self.text, True, TEXT_COLOR)
+    def draw(self, surf, font):
+        pygame.draw.rect(surf, self.color, self.rect, border_radius=8)
+        pygame.draw.rect(surf, (150,150,150), self.rect, 2, border_radius=8)
+        txt = font.render(self.text, True, TEXT_COLOR)
         surf.blit(txt, (self.rect.centerx - txt.get_width()//2, self.rect.centery - txt.get_height()//2))
 
 class Simulador:
@@ -170,15 +184,16 @@ class Simulador:
         pygame.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption("Hackathon 2026: Logística de Precisão")
-        self.font = pygame.font.SysFont("segoeui", 14, bold=True)
+        self.font = pygame.font.SysFont("segoeui", 16, bold=True)
+        self.shop_font = pygame.font.SysFont("arial", 10, bold=True)
         self.title_font = pygame.font.SysFont("segoeui", 28, bold=True)
         self.clock = pygame.time.Clock()
         self.running = True
         self.state = "MENU"
-        self.sim_speed = 60 # FPS Original
         
         self.db_entregadores = self.carregar_csv("entregadores.csv")
         self.db_lojas_raw = self.carregar_csv("lojas.csv")
+        self.lojas_no_mapa = []
         self.ativos = []
         self.pedidos_pendentes = 0
         self.qtd_lojas_visiveis = 3
@@ -186,24 +201,35 @@ class Simulador:
 
     def carregar_csv(self, path):
         if not os.path.exists(path): return []
-        with open(path, "r", encoding="utf-8") as f: return list(csv.DictReader(f))
+        with open(path, "r", encoding="utf-8") as f:
+            return list(csv.DictReader(f))
 
     def setup_map(self, filename):
-        G_raw = ox.load_graphml(filename)
-        self.G = G_raw.to_undirected()
-        self.nodes = list(self.G.nodes)
-        nodes_data = dict(self.G.nodes(data=True))
-        xs = [d['x'] for d in nodes_data.values()]
-        ys = [d['y'] for d in nodes_data.values()]
-        self.min_x, self.max_x, self.min_y, self.max_y = min(xs), max(xs), min(ys), max(ys)
-        self.pos_map = {n: self.to_px(nodes_data[n]['x'], nodes_data[n]['y']) for n in self.nodes}
-        self.eventos = GerenciadorEventos(self.G)
-        self.lojas_no_mapa = []
-        for l in self.db_lojas_raw:
-            random.seed(l['id']); node_idx = random.randint(0, len(self.nodes)-1)
-            lp = l.copy(); lp['node_id'] = self.nodes[node_idx]
-            self.lojas_no_mapa.append(lp)
-        self.state = "SIM"
+        try:
+            G_raw = ox.load_graphml(filename)
+            self.G = G_raw.to_undirected()
+            self.nodes = list(self.G.nodes)
+            nodes_data = dict(self.G.nodes(data=True))
+            xs = [d['x'] for d in nodes_data.values()]
+            ys = [d['y'] for d in nodes_data.values()]
+            self.min_x, self.max_x = min(xs), max(xs)
+            self.min_y, self.max_y = min(ys), max(ys)
+            self.pos_map = {n: self.to_px(nodes_data[n]['x'], nodes_data[n]['y']) for n in self.nodes}
+            
+            # Inicializa Eventos para este mapa
+            self.eventos = GerenciadorEventos(self.G)
+            
+            self.lojas_no_mapa = []
+            for loja in self.db_lojas_raw:
+                random.seed(loja['id']) 
+                node_idx = random.randint(0, len(self.nodes)-1)
+                loja_proc = loja.copy()
+                loja_proc['node_id'] = self.nodes[node_idx]
+                self.lojas_no_mapa.append(loja_proc)
+            
+            self.ativos = []
+            self.state = "SIM"
+        except Exception as e: print(f"Erro ao carregar mapa: {e}")
 
     def to_px(self, lon, lat):
         pad = 80
@@ -212,105 +238,133 @@ class Simulador:
         return x, y
 
     def despachar(self):
-        disp = [e for e in self.ativos if e.state == "IDLE"]
-        lojas = self.lojas_no_mapa[:self.qtd_lojas_visiveis]
-        if disp and self.pedidos_pendentes > 0 and lojas:
-            e = random.choice(disp); loja = random.choice(lojas); destino = random.choice(self.nodes)
+        disponiveis = [e for e in self.ativos if e.state == "IDLE" or (e.tipo == "carro" and e.carga_atual < e.cap_max)]
+        lojas_ativas = self.lojas_no_mapa[:self.qtd_lojas_visiveis]
+        
+        if disponiveis and self.pedidos_pendentes > 0 and lojas_ativas:
+            e = random.choice(disponiveis)
+            loja = random.choice(lojas_ativas)
+            destino = random.choice(self.nodes)
             try:
-                p1 = nx.shortest_path(self.G, e.node, loja['node_id'], weight='peso_dinamico')
-                p2 = nx.shortest_path(self.G, loja['node_id'], destino, weight='peso_dinamico')
-                e.path = p1[1:] + p2[1:]; e.current_job = {"loja_id": loja['id']}
-                e.state = "TO_SHOP"; e.carga_atual += 1; self.pedidos_pendentes -= 1
-                registrar_evento(e.id, loja['id'], "DESPACHADO", "Chuva" if self.eventos.chuva_ativa else "Limpo")
+                l_node = loja['node_id']
+                # AGORA USA O PESO DINÂMICO QUE CONSIDERA TRÂNSITO E ACIDENTES
+                p1 = nx.shortest_path(self.G, e.node, l_node, weight='peso_dinamico')
+                p2 = nx.shortest_path(self.G, l_node, destino, weight='peso_dinamico')
+                full_path = p1[1:] + p2[1:]
+                
+                if full_path:
+                    e.path = full_path
+                    e.current_job = {"loja_id": loja['id']}
+                    e.state = "TO_SHOP"
+                    e.carga_atual += 1
+                    self.pedidos_pendentes -= 1
+                    clima_str = "Chuva" if self.eventos.chuva_ativa else "Limpo"
+                    registrar_evento(e.id, loja['id'], "DESPACHADO", clima_str)
             except: pass
 
     def run(self):
-        # Botões de Controle
-        btn_voltar = Botao(15, 10, 80, 35, "VOLTAR")
-        btn_modo = Botao(105, 10, 100, 35, "MODO: AUTO", (200, 255, 200))
-        btn_chuva = Botao(215, 10, 100, 35, "CHUVA: OFF")
-        btn_acid_plus = Botao(325, 10, 100, 35, "+ ACIDENTE", (255, 200, 200))
-        btn_acid_clear = Botao(435, 10, 100, 35, "LIMPAR", (220, 220, 220))
+        btn_mack = Botao(WIDTH//2-150, 250, 300, 50, "MACKENZIE / HIGIENÓPOLIS")
+        btn_itaim = Botao(WIDTH//2-150, 320, 300, 50, "ITAIM BIBI")
+        btn_pinheiros = Botao(WIDTH//2-150, 390, 300, 50, "PINHEIROS")
         
-        btn_vel_minus = Botao(WIDTH-120, 10, 45, 35, "<<")
-        btn_vel_plus = Botao(WIDTH-60, 10, 45, 35, ">>")
+        btn_voltar = Botao(20, 15, 100, 45, "VOLTAR", (200, 200, 200)) 
+        btn_e_minus = Botao(140, 15, 45, 45, "-", (255, 200, 200))
+        btn_e_plus = Botao(195, 15, 45, 45, "+", (200, 255, 200))
+        btn_l_minus = Botao(WIDTH//2 - 90, 15, 45, 45, "-", (255, 200, 200))
+        btn_l_plus = Botao(WIDTH//2 - 35, 15, 45, 45, "+", (200, 255, 200))
+        btn_p_minus = Botao(WIDTH-130, 15, 45, 45, "-", (255, 200, 200))
+        btn_p_plus = Botao(WIDTH-75, 15, 45, 45, "+", (200, 255, 200))
 
         while self.running:
             self.screen.fill(BG_COLOR)
-            m_pos = pygame.mouse.get_pos()
-            
             for ev in pygame.event.get():
                 if ev.type == pygame.QUIT: self.running = False
                 if ev.type == pygame.MOUSEBUTTONDOWN:
                     if self.state == "MENU":
-                        if pygame.Rect(WIDTH//2-150, 320, 300, 50).collidepoint(m_pos): self.setup_map("mapa_itaim.graphml")
+                        if btn_mack.rect.collidepoint(ev.pos): self.setup_map("mapa_mackenzie.graphml")
+                        if btn_itaim.rect.collidepoint(ev.pos): self.setup_map("mapa_itaim.graphml")
+                        if btn_pinheiros.rect.collidepoint(ev.pos): self.setup_map("mapa_pinheiros.graphml")
                     elif self.state == "SIM":
-                        if btn_voltar.rect.collidepoint(m_pos): self.state = "MENU"; self.ativos = []
+                        if btn_voltar.rect.collidepoint(ev.pos):
+                            self.state = "MENU"
+                            self.ativos = [] 
                         
-                        # Alternar Modo
-                        if btn_modo.rect.collidepoint(m_pos):
-                            self.eventos.modo_manual = not self.eventos.modo_manual
-                            btn_modo.text = "MODO: MANUAL" if self.eventos.modo_manual else "MODO: AUTO"
-                            btn_modo.color = (255, 230, 150) if self.eventos.modo_manual else (200, 255, 200)
-                        
-                        # Controles Manuais
-                        if self.eventos.modo_manual:
-                            if btn_chuva.rect.collidepoint(m_pos):
-                                self.eventos.chuva_ativa = not self.eventos.chuva_ativa
-                                btn_chuva.text = "CHUVA: ON" if self.eventos.chuva_ativa else "CHUVA: OFF"
-                            if btn_acid_plus.rect.collidepoint(m_pos): self.eventos.trigger_acidente()
-                            if btn_acid_clear.rect.collidepoint(m_pos): self.eventos.acidentes = {}
-
-                        # Velocidade
-                        if btn_vel_plus.rect.collidepoint(m_pos): self.sim_speed = min(240, self.sim_speed + 30)
-                        if btn_vel_minus.rect.collidepoint(m_pos): self.sim_speed = max(30, self.sim_speed - 30)
-                        
-                        # Frota e Pedidos (Simulado por cliques rápidos no teclado para facilitar)
-                        if m_pos[1] > 100: # Se clicar no mapa, gera pedido
-                            self.pedidos_pendentes += 1
-                            if len(self.ativos) < 10:
-                                d = self.db_entregadores[len(self.ativos) % len(self.db_entregadores)]
-                                self.ativos.append(Entregador(d, random.choice(self.nodes), self.pos_map))
+                        if btn_e_plus.rect.collidepoint(ev.pos) and len(self.ativos) < len(self.db_entregadores):
+                            d = self.db_entregadores[len(self.ativos)]
+                            self.ativos.append(Entregador(d, random.choice(self.nodes), self.pos_map))
+                        if btn_e_minus.rect.collidepoint(ev.pos) and self.ativos: self.ativos.pop()
+                        if btn_l_plus.rect.collidepoint(ev.pos) and self.qtd_lojas_visiveis < len(self.lojas_no_mapa):
+                            self.qtd_lojas_visiveis += 1
+                        if btn_l_minus.rect.collidepoint(ev.pos) and self.qtd_lojas_visiveis > 1:
+                            self.qtd_lojas_visiveis -= 1
+                        if btn_p_plus.rect.collidepoint(ev.pos): self.pedidos_pendentes += 1
+                        if btn_p_minus.rect.collidepoint(ev.pos) and self.pedidos_pendentes > 0:
+                            self.pedidos_pendentes -= 1
 
             if self.state == "MENU":
-                txt = self.title_font.render("LOGÍSTICA URBANA 2026", True, TEXT_COLOR)
-                self.screen.blit(txt, (WIDTH//2 - txt.get_width()//2, 200))
-                Botao(WIDTH//2-150, 320, 300, 50, "INICIAR SIMULAÇÃO (ITAIM)").draw(self.screen)
+                txt = self.title_font.render("SIMULADOR LOGÍSTICA URBANA", True, TEXT_COLOR)
+                self.screen.blit(txt, (WIDTH//2 - txt.get_width()//2, 150))
+                btn_mack.draw(self.screen, self.font); btn_itaim.draw(self.screen, self.font); btn_pinheiros.draw(self.screen, self.font)
             
             elif self.state == "SIM":
+                # Atualizar Eventos
                 self.eventos.atualizar()
-                
-                # Desenho do Mapa
+
+                # Desenhar Arestas (Vias) com cores dinâmicas para trânsito/acidente
                 for u, v, k, data in self.G.edges(data=True, keys=True):
-                    color = COLOR_ACCIDENT if (u, v) in self.eventos.acidentes else LINE_EMPTY
-                    width = 3 if (u, v) in self.eventos.acidentes else 1
+                    color = LINE_EMPTY
+                    width = 1
+                    if (u, v) in self.eventos.acidentes:
+                        color = COLOR_ACCIDENT
+                        width = 3
+                    elif data.get('fator_velocidade', 1.0) < 0.5:
+                        color = (200, 150, 0) # Alerta Trânsito
+                    
                     pygame.draw.line(self.screen, color, self.pos_map[u], self.pos_map[v], width)
+                
+                # Desenhar Lojas
+                for l in self.lojas_no_mapa[:self.qtd_lojas_visiveis]:
+                    nid = l['node_id']
+                    px, py = self.pos_map[nid]
+                    pygame.draw.rect(self.screen, (60, 60, 60), (px-6, py-6, 12, 12))
+                    txt_loja = self.shop_font.render(l['nome'].upper(), True, (80, 80, 80))
+                    self.screen.blit(txt_loja, (px + 10, py - 5))
                 
                 self.despachar()
                 for e in self.ativos:
                     e.update(self.G, self.pos_map, self.eventos)
                     e.draw(self.screen, self.pos_map)
                 
+                # Efeito visual de Chuva na tela inteira (opcional, gotas sutis)
                 if self.eventos.chuva_ativa:
-                    s = pygame.Surface((WIDTH, HEIGHT), pygame.SRCALPHA); s.fill((100, 149, 237, 40))
-                    self.screen.blit(s, (0,0))
+                    overlay = pygame.Surface((WIDTH, HEIGHT), pygame.SRCALPHA)
+                    overlay.fill((100, 149, 237, 30)) # Azul transparente
+                    self.screen.blit(overlay, (0,0))
 
-                # Painel UI
-                pygame.draw.rect(self.screen, UI_PANEL, (0, 0, WIDTH, 60))
-                btn_voltar.draw(self.screen); btn_modo.draw(self.screen)
-                btn_vel_minus.draw(self.screen); btn_vel_plus.draw(self.screen)
+                # Interface superior
+                pygame.draw.rect(self.screen, UI_PANEL, (0, 0, WIDTH, 85))
+                btn_voltar.draw(self.screen, self.font)
+                btn_e_minus.draw(self.screen, self.font); btn_e_plus.draw(self.screen, self.font)
+                btn_l_minus.draw(self.screen, self.font); btn_l_plus.draw(self.screen, self.font)
+                btn_p_minus.draw(self.screen, self.font); btn_p_plus.draw(self.screen, self.font)
                 
-                if self.eventos.modo_manual:
-                    btn_chuva.draw(self.screen); btn_acid_plus.draw(self.screen); btn_acid_clear.draw(self.screen)
+                # Info de Texto
+                self.screen.blit(self.font.render(f"FROTA: {len(self.ativos)}", True, TEXT_COLOR), (250, 15))
+                self.screen.blit(self.font.render(f"LOJAS: {self.qtd_lojas_visiveis}", True, TEXT_COLOR), (WIDTH//2 + 20, 15))
+                self.screen.blit(self.font.render(f"PEDIDOS: {self.pedidos_pendentes}", True, TEXT_COLOR), (WIDTH - 310, 15))
 
-                # Info Status
-                status_txt = f"Frota: {len(self.ativos)} | Pedidos: {self.pedidos_pendentes} | Speed: {self.sim_speed} FPS"
-                self.screen.blit(self.font.render(status_txt, True, TEXT_COLOR), (15, 65))
-                if self.eventos.acidentes:
-                    self.screen.blit(self.font.render(f"AVISO: {len(self.eventos.acidentes)} VIAS BLOQUEADAS", True, COLOR_ACCIDENT), (WIDTH-250, 65))
+                # INFO DE EVENTOS NO PAINEL
+                clima_txt = "LIMPO" if not self.eventos.chuva_ativa else "CHUVA (Vel -20%)"
+                clima_col = TEXT_COLOR if not self.eventos.chuva_ativa else COLOR_RAIN
+                self.screen.blit(self.font.render(f"CLIMA: {clima_txt}", True, clima_col), (250, 45))
+                
+                acidentes_count = len(self.eventos.acidentes)
+                acid_txt = f"ACIDENTES: {acidentes_count}" if acidentes_count > 0 else "VIAS LIBERADAS"
+                acid_col = COLOR_ACCIDENT if acidentes_count > 0 else (0, 150, 0)
+                self.screen.blit(self.font.render(acid_txt, True, acid_col), (WIDTH//2 + 20, 45))
 
             pygame.display.flip()
-            self.clock.tick(self.sim_speed)
+            self.clock.tick(60)
         pygame.quit()
 
 if __name__ == "__main__":
