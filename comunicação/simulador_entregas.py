@@ -23,19 +23,50 @@ UI_PANEL_HEIGHT = 155
 Y_R1_LBL, Y_R1_BTN, H_R1 = 8,   28, 40   # label y, botão y, altura do botão
 Y_R2_LBL, Y_R2_BTN, H_R2 = 82, 100, 38
 
-# ─── PRECIFICAÇÃO ──────────────────────────────────────────────────────────────
-PRECO_BASE_KM  = 2.50   # R$ / km  (restaurante → destino)
-PRECO_POR_ITEM = 0.50   # R$ / item transportado
-RAIN_BONUS     = 0.15   # +15 % de bônus em caso de chuva
+# ─── PRECIFICAÇÃO (valores reais iFood / Keeta) ────────────────────────────────
+# Moto
+PRECO_BASE_MOTO    = 2.00   # R$ taxa base fixa (moto)
+PRECO_KM_MOTO      = 1.50   # R$ / km  (moto)
+PRECO_MINIMO_MOTO  = 5.00   # R$ mínimo garantido (moto)
+# Carro
+PRECO_BASE_CARRO   = 3.00   # R$ taxa base fixa (carro)
+PRECO_KM_CARRO     = 2.00   # R$ / km  (carro)
+PRECO_MINIMO_CARRO = 7.00   # R$ mínimo garantido (carro)
+# Ajustes dinâmicos
+RAIN_BONUS         = 0.25   # +25 % de bônus em caso de chuva
 
 # ─── LOG ───────────────────────────────────────────────────────────────────────
 log_lock = threading.Lock()
 LOG_FILE  = "log_entregas.csv"
 
 
-def registrar_entrega_final(id_e, id_r, delta_t_s, dist_m, qtd_itens,
-                             chuva_ativa, nivel_transito, nivel_acidente):
-    """Grava APENAS o status final ENTREGUE com todas as métricas no CSV."""
+def calcular_preco(dist_m, tipo_veiculo, chuva_ativa):
+    """Calcula o preço de um pedido no modelo real de food delivery."""
+    dist_km = dist_m / 1000.0
+    if tipo_veiculo == "carro":
+        preco = PRECO_BASE_CARRO + dist_km * PRECO_KM_CARRO
+        preco = max(preco, PRECO_MINIMO_CARRO)
+    else:   # moto (padrão)
+        preco = PRECO_BASE_MOTO + dist_km * PRECO_KM_MOTO
+        preco = max(preco, PRECO_MINIMO_MOTO)
+    if chuva_ativa:
+        preco *= (1.0 + RAIN_BONUS)
+    return preco
+
+
+def registrar_entrega_final(id_e, tipo_veiculo, id_r,
+                             delta_t_s, preco_pedido,
+                             total_corrida, pedidos_corrida,
+                             chuva_ativa, nivel_transito, nivel_acidente,
+                             time_scale):
+    """
+    Grava o status final ENTREGUE com todas as métricas no CSV.
+    - preco_pedido   : valor deste pedido individual
+    - total_corrida  : soma de TODOS os pedidos da corrida (None enquanto não encerrada)
+    - pedidos_corrida: quantidade de pedidos na corrida
+    - time_scale     : escala de tempo ativa durante a entrega
+    - tipo_veiculo   : tipo do veículo do entregador
+    """
     def _write():
         with log_lock:
             existe = os.path.exists(LOG_FILE)
@@ -43,28 +74,31 @@ def registrar_entrega_final(id_e, id_r, delta_t_s, dist_m, qtd_itens,
                 w = csv.writer(f)
                 if not existe:
                     w.writerow([
-                        "Timestamp", "Entregador_ID", "Restaurante_ID",
-                        "Status_Final", "Tempo_Entrega_s",
-                        "Preco_Corrida_R$", "Intemperismo"
+                        "Timestamp", "Entregador_ID", "Tipo_Veiculo",
+                        "Restaurante_ID", "Status_Final",
+                        "Tempo_Entrega_s", "Preco_Pedido_R$",
+                        "Total_Corrida_R$", "Pedidos_na_Corrida",
+                        "Time_Scale", "Intemperismo"
                     ])
-                # Cálculo do preço
-                dist_km = dist_m / 1000.0
-                preco   = dist_km * PRECO_BASE_KM + qtd_itens * PRECO_POR_ITEM
-                if chuva_ativa:
-                    preco *= (1.0 + RAIN_BONUS)
 
-                # Descrição do intemperismo no momento da entrega
                 intemp = []
                 if chuva_ativa:        intemp.append("Chuva")
                 if nivel_transito > 0: intemp.append("Trânsito")
                 if nivel_acidente > 0: intemp.append("Acidente")
 
+                total_str = f"R$ {total_corrida:.2f}" if total_corrida is not None else "—"
+
                 w.writerow([
                     time.strftime("%H:%M:%S"),
-                    id_e, id_r,
+                    id_e,
+                    tipo_veiculo,
+                    id_r,
                     "ENTREGUE",
                     round(delta_t_s, 1),
-                    f"R$ {preco:.2f}",
+                    f"R$ {preco_pedido:.2f}",
+                    total_str,
+                    pedidos_corrida,
+                    f"{time_scale:.0f}x",
                     ", ".join(intemp) if intemp else "Nenhum"
                 ])
     threading.Thread(target=_write, daemon=True).start()
@@ -106,6 +140,11 @@ class Entregador:
         {'node': int, 'phase': 'SHOP'|'DEST', 'job': {...}}
 
     Estados internos: IDLE | MOVING | WAITING
+
+    Rastreamento de corrida:
+        _corrida_jobs_total      : total de pedidos aceitos nesta corrida
+        _corrida_delivered_count : quantos já foram entregues
+        _corrida_total_preco     : soma dos preços entregues
     """
 
     def __init__(self, data, start_node, pos_map):
@@ -123,10 +162,16 @@ class Entregador:
         self.stop_queue  = []          # paradas pendentes
         self.wait_start  = 0
 
+        # Rastreamento de corrida (soma de recebimentos)
+        self._corrida_jobs_total      = 0
+        self._corrida_delivered_count = 0
+        self._corrida_total_preco     = 0.0
+
     # ── Atualização de física e lógica ────────────────────────────────────────
     def update(self, G, pos_map, edge_speed_kph, meters_per_pixel, time_scale,
                current_time, mod_carro, mod_moto, edge_transito, edge_acidente,
-               chuva_ativa, nivel_transito, nivel_acidentes):
+               chuva_ativa, nivel_transito, nivel_acidentes,
+               hotspot_ativo=False, hotspot_centers=None):
 
         # ── WAITING: aguardando na parada atual (coleta ou entrega) ──────────
         if self.state == "WAITING":
@@ -141,13 +186,33 @@ class Entregador:
             stop = self.stop_queue.pop(0)
 
             if stop['phase'] == "DEST":
-                # Registrar entrega final
-                job     = stop['job']
-                delta_t = (current_time - job['accept_time']) / 1000.0
+                # Calcular preço deste pedido
+                job      = stop['job']
+                delta_t  = (current_time - job['accept_time']) / 1000.0
+                preco    = calcular_preco(job['dist_m'], self.tipo, chuva_ativa)
+
+                # Acumular na corrida
+                self._corrida_delivered_count += 1
+                self._corrida_total_preco     += preco
+
+                # Preencher total_corrida apenas no último pedido da corrida
+                if self._corrida_delivered_count >= self._corrida_jobs_total:
+                    total_corrida = self._corrida_total_preco
+                else:
+                    total_corrida = None
+
                 registrar_entrega_final(
-                    self.id, job['loja_id'],
-                    delta_t, job['dist_m'], job['qtd_itens'],
-                    chuva_ativa, nivel_transito, nivel_acidentes
+                    id_e             = self.id,
+                    tipo_veiculo     = self.tipo,
+                    id_r             = job['loja_id'],
+                    delta_t_s        = delta_t,
+                    preco_pedido     = preco,
+                    total_corrida    = total_corrida,
+                    pedidos_corrida  = self._corrida_jobs_total,
+                    chuva_ativa      = chuva_ativa,
+                    nivel_transito   = nivel_transito,
+                    nivel_acidente   = nivel_acidentes,
+                    time_scale       = time_scale,
                 )
                 self.carga_atual = max(0, self.carga_atual - 1)
             # SHOP: coleta realizada — sem log (apenas final)
@@ -191,7 +256,19 @@ class Entregador:
                     if self.state == "IDLE":
                         viz = list(G.neighbors(self.node))
                         if viz:
-                            self.target_node = random.choice(viz)
+                            # ── Atração por Hotspot (80 % dos entregadores) ──
+                            if hotspot_ativo and hotspot_centers and random.random() < 0.80:
+                                px, py = pos_map.get(self.node, (self.x, self.y))
+                                nearest_hc = min(
+                                    hotspot_centers,
+                                    key=lambda c: math.hypot(c[0] - px, c[1] - py)
+                                )
+                                def _dist_hs(n_node):
+                                    npx, npy = pos_map.get(n_node, (px, py))
+                                    return math.hypot(npx - nearest_hc[0], npy - nearest_hc[1])
+                                self.target_node = min(viz, key=_dist_hs)
+                            else:
+                                self.target_node = random.choice(viz)
                         else:
                             break
                     else:                          # MOVING → chegou na parada
@@ -297,6 +374,56 @@ class Simulador:
         self._auto_last_transito = 0
         self._auto_last_acidente = 0
 
+        # ── HotSpot ──────────────────────────────────────────────────────────
+        self.hotspot_ativo = False
+        # Surface reutilizável para os círculos semi-transparentes
+        self._hotspot_surf = None
+
+    # ── HotSpot: calcula centros (até 3 lojas visíveis) ──────────────────────
+    def _get_hotspot_centers(self):
+        """Retorna até 3 posições (px, py) das lojas usadas como hotspot."""
+        centers = []
+        lojas = self.lojas_no_mapa[:self.qtd_lojas_visiveis]
+        for loja in lojas[:3]:
+            nid = loja.get('node_id')
+            if nid and nid in self.pos_map:
+                centers.append(self.pos_map[nid])
+        return centers
+
+    # ── HotSpot: desenha círculos semi-transparentes ──────────────────────────
+    def _draw_hotspots(self):
+        """
+        Desenha até 3 círculos vermelhos semi-transparentes nas regiões de hotspot.
+        Raio fixo de 70px — cobre 2-3 restaurantes sem dominar o mapa.
+        """
+        centers = self._get_hotspot_centers()
+        if not centers:
+            return
+
+        RADIUS     = 70          # px — fixo
+        FILL_ALPHA = 55          # preenchimento translúcido (0-255)
+        RING_ALPHA = 200         # borda mais opaca
+        FILL_COLOR = (220, 30, 30)
+        RING_COLOR = (200, 10, 10)
+
+        # Cria/recria surface apenas quando necessário
+        if (self._hotspot_surf is None
+                or self._hotspot_surf.get_width()  != self.width
+                or self._hotspot_surf.get_height() != self.height):
+            self._hotspot_surf = pygame.Surface((self.width, self.height), pygame.SRCALPHA)
+
+        self._hotspot_surf.fill((0, 0, 0, 0))
+        for cx, cy in centers:
+            icx, icy = int(cx), int(cy)
+            # Preenchimento translúcido
+            pygame.draw.circle(self._hotspot_surf,
+                               (*FILL_COLOR, FILL_ALPHA), (icx, icy), RADIUS)
+            # Borda mais visível
+            pygame.draw.circle(self._hotspot_surf,
+                               (*RING_COLOR, RING_ALPHA), (icx, icy), RADIUS, 3)
+
+        self.screen.blit(self._hotspot_surf, (0, 0))
+
     # ── Utilitários de aresta ─────────────────────────────────────────────────
     def _adicionar_intemperies_aresta(self, conjunto, novo_nivel):
         if not self.G:
@@ -338,6 +465,8 @@ class Simulador:
             for e in self.ativos:
                 if not e.target_node:
                     e.x, e.y = self.pos_map[e.node]
+            # Invalida surface de hotspot ao redimensionar
+            self._hotspot_surf = None
 
     def setup_map(self, filename):
         print(f"Carregando {filename}...")
@@ -378,6 +507,7 @@ class Simulador:
             self.edge_acidente   = set()
             self.nivel_transito  = 0
             self.nivel_acidentes = 0
+            self._hotspot_surf   = None
             self.state = "SIM"
         except Exception as e:
             print(f"Erro ao carregar mapa: {e}")
@@ -390,30 +520,75 @@ class Simulador:
         y = pad_top  + (self.max_y - lat) / (self.max_y - self.min_y)  * (self.height - pad_top - pad_bot)
         return x, y
 
-    # ── Despacho de pedidos (suporta capacidade multi-parada) ─────────────────
+    # ── Despacho de pedidos — distância + hotspot ─────────────────────────────
     def despachar(self):
+        """
+        Associa entregadores IDLE a pedidos usando peso por distância:
+        - O entregador mais próximo do cluster de lojas recebe a corrida.
+        - Se HotSpot ativo, as lojas dentro das regiões de hotspot têm prioridade
+          (80 % das corridas são direcionadas para elas).
+        """
         lojas_ativas = self.lojas_no_mapa[:self.qtd_lojas_visiveis]
         if not lojas_ativas or self.pedidos_pendentes <= 0:
             return
 
-        for e in self.ativos:
-            if e.state != "IDLE":
-                continue
-            if self.pedidos_pendentes <= 0:
+        idle_list = [e for e in self.ativos if e.state == "IDLE"]
+        if not idle_list:
+            return
+
+        hotspot_centers = self._get_hotspot_centers() if self.hotspot_ativo else []
+        now = pygame.time.get_ticks()
+
+        # Pré-calcula score de proximidade a hotspot para cada loja
+        def _loja_hotspot_dist(loja):
+            if not hotspot_centers:
+                return float('inf')
+            lp = self.pos_map.get(loja['node_id'], (0, 0))
+            return min(math.hypot(lp[0] - hc[0], lp[1] - hc[1]) for hc in hotspot_centers)
+
+        while self.pedidos_pendentes > 0 and idle_list:
+            # ── Selecionar pool de lojas ──────────────────────────────────────
+            if self.hotspot_ativo and hotspot_centers and random.random() < 0.80:
+                # Ordenar lojas pela proximidade ao hotspot e usar a metade mais próxima
+                lojas_sorted = sorted(lojas_ativas, key=_loja_hotspot_dist)
+                n_pool       = max(1, (len(lojas_sorted) + 1) // 2)
+                lojas_pool   = lojas_sorted[:n_pool]
+            else:
+                lojas_pool = lojas_ativas
+
+            if not lojas_pool:
                 break
 
-            # Quantos pedidos este veículo pode assumir agora
-            n_orders = min(e.cap_max, self.pedidos_pendentes, len(lojas_ativas))
+            # Usa capacidade máxima disponível entre os entregadores idle
+            max_cap   = max(e.cap_max for e in idle_list)
+            n_orders  = min(max_cap, self.pedidos_pendentes, len(lojas_pool))
             if n_orders <= 0:
+                break
+
+            selected_lojas = random.sample(lojas_pool, n_orders)
+
+            # ── Centro do cluster de lojas ────────────────────────────────────
+            cx_lojas = sum(self.pos_map.get(l['node_id'], (0, 0))[0]
+                           for l in selected_lojas) / n_orders
+            cy_lojas = sum(self.pos_map.get(l['node_id'], (0, 0))[1]
+                           for l in selected_lojas) / n_orders
+
+            # ── Entregador IDLE mais próximo do cluster ───────────────────────
+            best_e = min(idle_list,
+                         key=lambda e: math.hypot(e.x - cx_lojas, e.y - cy_lojas))
+
+            # Ajusta n_orders à capacidade real do entregador escolhido
+            n_orders = min(best_e.cap_max, n_orders)
+            selected_lojas = selected_lojas[:n_orders]
+
+            if n_orders <= 0:
+                idle_list.remove(best_e)
                 continue
 
-            now            = pygame.time.get_ticks()
-            selected_lojas = random.sample(lojas_ativas, n_orders)
-            destinos       = [random.choice(self.nodes) for _ in range(n_orders)]
+            destinos = [random.choice(self.nodes) for _ in range(n_orders)]
 
             jobs = []
             for loja, dest in zip(selected_lojas, destinos):
-                # Distância euclidiana (px → metros) entre restaurante e destino
                 l_pos  = self.pos_map.get(loja['node_id'], (0, 0))
                 d_pos  = self.pos_map.get(dest, (0, 0))
                 dist_m = math.hypot(d_pos[0] - l_pos[0],
@@ -424,7 +599,7 @@ class Simulador:
                     'dest_node':  dest,
                     'accept_time': now,
                     'qtd_itens':  1,
-                    'dist_m':     max(dist_m, 100.0),   # mínimo 100 m
+                    'dist_m':     max(dist_m, 100.0),
                 })
 
             # Fila: todos os restaurantes primeiro, depois todos os destinos
@@ -433,16 +608,21 @@ class Simulador:
                 [{'node': j['dest_node'], 'phase': 'DEST', 'job': j} for j in jobs]
             )
 
-            ponto = e.target_node if e.target_node else e.node
+            ponto = best_e.target_node if best_e.target_node else best_e.node
             try:
                 p = nx.shortest_path(self.G, ponto, stop_queue[0]['node'], weight='length')
-                e.path        = p[1:]
-                e.stop_queue  = stop_queue
-                e.carga_atual = n_orders
-                e.state       = "MOVING"
-                self.pedidos_pendentes -= n_orders
+                best_e.path                     = p[1:]
+                best_e.stop_queue               = stop_queue
+                best_e.carga_atual              = n_orders
+                best_e.state                    = "MOVING"
+                best_e._corrida_jobs_total      = n_orders
+                best_e._corrida_delivered_count = 0
+                best_e._corrida_total_preco     = 0.0
+                self.pedidos_pendentes         -= n_orders
             except Exception:
-                pass
+                pass   # nó inacessível — tenta de novo no próximo frame
+
+            idle_list.remove(best_e)
 
     # ── Modo automático ───────────────────────────────────────────────────────
     def _update_auto(self, current_time):
@@ -592,12 +772,17 @@ class Simulador:
             # CHUVA (checkbox)
             chuva_cor = (180, 200, 255) if self.chuva_ativa else (220, 220, 220)
             txt_chuva = "[✓] ATIVA"  if self.chuva_ativa else "[ ] INATIVA"
-            btn_chuva = Botao(600, Y_R2_BTN, 130, H_R2, txt_chuva, chuva_cor)
+            btn_chuva = Botao(590, Y_R2_BTN, 120, H_R2, txt_chuva, chuva_cor)
 
             # AUTO (checkbox)
-            auto_cor  = (180, 255, 180) if self.auto_mode else (220, 220, 220)
-            txt_auto  = "[✓] LIGADO" if self.auto_mode  else "[ ] DESLIG."
-            btn_auto  = Botao(755, Y_R2_BTN, 130, H_R2, txt_auto,  auto_cor)
+            auto_cor  = (180, 255, 180) if self.auto_mode  else (220, 220, 220)
+            txt_auto  = "[✓] LIGADO" if self.auto_mode     else "[ ] DESLIG."
+            btn_auto  = Botao(730, Y_R2_BTN, 120, H_R2, txt_auto,  auto_cor)
+
+            # HOTSPOT (checkbox) — novo
+            hs_cor    = (255, 160, 160) if self.hotspot_ativo else (220, 220, 220)
+            txt_hs    = "[✓] ATIVO"  if self.hotspot_ativo   else "[ ] DESLIG."
+            btn_hs    = Botao(870, Y_R2_BTN, 120, H_R2, txt_hs,    hs_cor)
 
             # ── Fundo ─────────────────────────────────────────────────────
             self.screen.fill((220, 228, 235) if self.chuva_ativa else BG_COLOR)
@@ -674,7 +859,7 @@ class Simulador:
                                 self.edge_acidente, self.nivel_acidentes - 1)
                             self.nivel_acidentes = len(self.edge_acidente)
 
-                        # Chuva / Auto
+                        # Chuva / Auto / HotSpot
                         if btn_chuva.rect.collidepoint(ev.pos):
                             self.chuva_ativa = not self.chuva_ativa
                         if btn_auto.rect.collidepoint(ev.pos):
@@ -683,6 +868,9 @@ class Simulador:
                                 self._auto_last_chuva    = current_time
                                 self._auto_last_transito = current_time
                                 self._auto_last_acidente = current_time
+                        if btn_hs.rect.collidepoint(ev.pos):
+                            self.hotspot_ativo = not self.hotspot_ativo
+                            self._hotspot_surf = None   # força redraw da surface
 
             # ── Renderização ──────────────────────────────────────────────
             if self.state == "MENU":
@@ -699,6 +887,10 @@ class Simulador:
                 # Mapa e entidades
                 self._draw_edges()
 
+                # ── Hotspot circles (abaixo dos entregadores) ─────────────
+                if self.hotspot_ativo:
+                    self._draw_hotspots()
+
                 for l in self.lojas_no_mapa[:self.qtd_lojas_visiveis]:
                     nid = l['node_id']
                     pygame.draw.rect(self.screen, (60, 60, 60),
@@ -713,12 +905,16 @@ class Simulador:
                 mod_carro = 0.60 if self.chuva_ativa else 1.0
                 mod_moto  = 0.60 if self.chuva_ativa else 1.0
 
+                hotspot_centers = self._get_hotspot_centers() if self.hotspot_ativo else []
+
                 for e in self.ativos:
                     e.update(self.G, self.pos_map, self.edge_speed_kph,
                              self.meters_per_pixel, self.time_scale, current_time,
                              mod_carro, mod_moto,
                              self.edge_transito, self.edge_acidente,
-                             self.chuva_ativa, self.nivel_transito, self.nivel_acidentes)
+                             self.chuva_ativa, self.nivel_transito, self.nivel_acidentes,
+                             hotspot_ativo=self.hotspot_ativo,
+                             hotspot_centers=hotspot_centers)
                     e.draw(self.screen, self.pos_map)
 
                 self._draw_speed_legend()
@@ -742,7 +938,7 @@ class Simulador:
                 for btn in [btn_v, btn_e_m, btn_e_p, btn_l_m, btn_l_p,
                              btn_p_m, btn_p_p, btn_t_m, btn_t_p,
                              btn_tr_m, btn_tr_p, btn_ac_m, btn_ac_p,
-                             btn_chuva, btn_auto]:
+                             btn_chuva, btn_auto, btn_hs]:
                     btn.draw(self.screen, self.font)
 
                 # ── Labels acima de cada grupo de botões ──────────────────
@@ -779,6 +975,9 @@ class Simulador:
                           btn_chuva.rect.centerx,  Y_R2_LBL)
                 lbl_acima("MODO AUTO",
                           btn_auto.rect.centerx,   Y_R2_LBL)
+                lbl_acima("HOTSPOT",
+                          btn_hs.rect.centerx,     Y_R2_LBL,
+                          cor=(180, 30, 30) if self.hotspot_ativo else TEXT_COLOR)
 
                 # Escala
                 self.screen.blit(
