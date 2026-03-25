@@ -15,6 +15,7 @@ def gerar_entregadores():
     Gera entregadores com velocidade máxima do veículo em km/h.
 
     Referência de velocidade urbana em SP para entregas:
+      - Bike  : 10–25 km/h (ágil, mas depende da força física e ciclovias)
       - Moto  : 30–50 km/h (mais ágil, pode circular em faixas estreitas)
       - Carro : 20–40 km/h (limitado pelo trânsito e por não ter a mobilidade da moto)
 
@@ -25,12 +26,17 @@ def gerar_entregadores():
     entregadores = []
 
     for i in range(1, 31):
-        tipo = random.choice(['moto', 'moto', 'moto', 'carro'])
+        # Adicionando 'bike' na lista de sorteio (você pode ajustar a proporção se quiser mais motos ou bikes)
+        tipo = random.choice(['bike', 'moto', 'moto', 'carro'])
 
-        if tipo == 'moto':
-            # Motos: mais rápidas, capacidade unitária
-            vel = round(random.uniform(30.0, 50.0), 1)
+        if tipo == 'bike':
+            # Bikes: mais lentas no geral, capacidade unitária
+            vel = round(random.uniform(10.0, 25.0), 1)
             cap = 1
+        elif tipo == 'moto':
+            # Motos: mais rápidas, capacidade 1 ou 2
+            vel = round(random.uniform(30.0, 50.0), 1)
+            cap = random.choice([1, 2])
         else:
             # Carros: mais lentos no trânsito urbano, maior capacidade
             vel = round(random.uniform(20.0, 40.0), 1)
@@ -48,7 +54,7 @@ def gerar_entregadores():
         writer.writeheader()
         writer.writerows(entregadores)
 
-    print("✅ entregadores.csv gerado com 30 entregadores (velocidade em km/h).")
+    print("✅ entregadores.csv gerado com 30 entregadores (bike, moto e carro).")
 
 
 def gerar_lojas():

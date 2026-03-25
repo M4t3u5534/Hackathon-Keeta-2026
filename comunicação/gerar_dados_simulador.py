@@ -54,9 +54,9 @@ def gerar_entregadores():
 def gerar_lojas():
     fieldnames = ['id', 'nome', 'node_id']
     nomes_lojas = [
-        'McDonalds Higienopolis', 'Subway Maria Antonia', 'Restaurante Mackenzie',
-        'Starbucks Consolação',  'Pizzaria Veridiana',    'Padaria Baronesa',
-        'Burger King Angélica',  'Outback Pátio Higienópolis', 'Bacio di Latte',
+        'McDonalds', 'Subway', 'Restaurante Hackathon',
+        'Starbucks',  'Pizzaria Veridiana',    'Padaria Baronesa',
+        'Burger King',  'Outback', 'Bacio di Latte',
         'Z Deli Sandwiches',     'Benjamin A Padaria',    'Temakeria Makis Place',
     ]
 
