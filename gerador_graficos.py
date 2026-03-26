@@ -1,46 +1,50 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import os
+import seaborn as sns
 
-# 1. Configuração de pastas
-output_dir = "relatorio_performance"
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
+# 1. Carregamento e Limpeza
+# Definindo nomes de colunas baseados na estrutura do CSV
+cols = [
+    'Horario', 'Entregador_ID', 'Veiculo', 'Local_ID', 'Status', 
+    'Distancia', 'Taxa_Entrega', 'Valor_Pedido', 'Qtd_Items', 
+    'Multiplicador', 'Condicoes', 'Atraso_Segundos'
+]
 
-# 2. Carregamento dos dados
-# O arquivo não possui cabeçalho explícito baseado no snippet, 
-# então definimos os nomes das colunas.
-colunas = ['horario', 'id_entrega', 'local', 'status', 'tempo_min', 'valor', 'condicao']
-df = pd.read_csv('log_entregas.csv', names=colunas, header=None)
+df = pd.read_csv('log_entregas.csv', names=cols, header=None)
 
-# 3. Processamento
-# Definimos o que é considerado "Nenhum" intemperismo
-df['categoria_clima'] = df['condicao'].apply(
-    lambda x: 'Sem Intempéries' if str(x).strip() == 'Nenhum' else 'Com Intempéries'
-)
+# Limpeza de dados financeiros e temporais
+df['Taxa_Entrega'] = df['Taxa_Entrega'].str.replace('R$ ', '', regex=False).str.replace(',', '.').astype(float)
+df['Atraso_Segundos'] = df['Atraso_Segundos'].str.replace('s', '', regex=False).str.replace('+', '', regex=False).astype(float)
+df['Horario_H'] = pd.to_datetime(df['Horario']).dt.hour
 
-# 4. Cálculo das Médias
-stats = df.groupby('categoria_clima')['tempo_min'].mean()
-print("Média de tempo por condição:\n", stats)
+# 2. Configuração Visual
+sns.set_theme(style="whitegrid")
+plt.rcParams['figure.figsize'] = [12, 6]
 
-# 5. Geração do Gráfico
-plt.figure(figsize=(10, 6))
-colors = ['#e74c3c', '#2ecc71'] # Vermelho para intempéries, Verde para normal
-stats.plot(kind='bar', color=colors, edgecolor='black')
+# --- Gráfico 1: Performance por Veículo ---
+plt.figure()
+sns.boxplot(x='Veiculo', y='Atraso_Segundos', data=df, palette='viridis')
+plt.title('Distribuição de Atrasos/Adiantamentos por Tipo de Veículo')
+plt.ylabel('Segundos (Positivo = Atraso, Negativo = Adiantamento)')
+plt.show()
 
-plt.title('Impacto de Intempéries no Tempo Médio de Entrega', fontsize=14)
-plt.xlabel('Condição Climática/Trânsito', fontsize=12)
-plt.ylabel('Tempo Médio (minutos)', fontsize=12)
-plt.xticks(rotation=0)
-plt.grid(axis='y', linestyle='--', alpha=0.7)
+# --- Gráfico 2: Impacto das Condições no Atraso ---
+# Simplificando a coluna de condições para pegar a principal (ex: 'Chuva')
+df['Condicao_Principal'] = df['Condicoes'].apply(lambda x: str(x).split(',')[0].replace('"', ''))
 
-# Adicionando os valores nas barras
-for i, v in enumerate(stats):
-    plt.text(i, v + 0.5, f"{v:.2f} min", ha='center', fontweight='bold')
+plt.figure()
+sns.barplot(x='Condicao_Principal', y='Atraso_Segundos', data=df, estimator='mean', palette='magma')
+plt.title('Média de Atraso por Condição Ambiental/Tráfego')
+plt.show()
 
-# 6. Salvando o arquivo
-file_path = os.path.join(output_dir, "analise_tempo_intemperies.png")
-plt.savefig(file_path, bbox_inches='tight')
-plt.close()
+# --- Gráfico 3: Volume de Entregas por Hora ---
+plt.figure()
+sns.countplot(x='Horario_H', data=df, color='skyblue')
+plt.title('Volume de Entregas por Hora do Dia')
+plt.xlabel('Hora (H)')
+plt.ylabel('Total de Entregas')
+plt.show()
 
-print(f"\nSucesso! O gráfico foi salvo em: {file_path}")
+# 3. Resumo Estatístico para insights rápidos
+print("Resumo de Eficiência por Veículo (Média de Atraso):")
+print(df.groupby('Veiculo')['Atraso_Segundos'].mean())
