@@ -45,7 +45,7 @@ RAIN_BONUS         = 0.25   # +25 % de bônus em caso de chuva
 HOLDING_BONUS      = 0.30   # +30% de bônus para pedidos aceitos via holding time
 
 # ─── PROBABILIDADE DE MACHUCADO POR FRAME (enquanto em aresta de acidente) ────
-INJURY_PROB_MOTO  = 0.0012   # ~7% por segundo real a 60fps
+INJURY_PROB_MOTO  = 1 #0.0012   # ~7% por segundo real a 60fps
 INJURY_PROB_CARRO = 0.0005   # ~3% por segundo real a 60fps
 INJURY_PROB_BIKE  = 0.0018   # ~10% por segundo real a 60fps (bike mais perigosa)
 INJURY_MIN_S      = 5.0      # mínimo de segundos parado lesionado
@@ -168,79 +168,104 @@ class Gota:
 # ─── AMBULÂNCIA ───────────────────────────────────────────────────────────────
 class Ambulancia:
     """
-    Animação de ambulância que vem de fora do mapa, vai até o local do acidente,
-    para brevemente e some. Quando active=False a animação terminou.
+    Animação de ambulância que vem de fora do mapa, entra pelas ruas,
+    segue a rota até o local do acidente, para brevemente e some.
+    Quando active=False a animação terminou.
     """
+
     def __init__(self, start_pos, target_pos, pos_map, G, edge_speed_kph,
                  meters_per_pixel, time_scale):
-        self.start_pos       = start_pos
-        self.target_pos      = target_pos
-        self.pos_map         = pos_map
-        self.G               = G
-        self.edge_speed_kph  = edge_speed_kph
+        self.start_pos        = start_pos
+        self.target_pos       = target_pos
+        self.pos_map          = pos_map
+        self.G                = G
+        self.edge_speed_kph   = edge_speed_kph
         self.meters_per_pixel = meters_per_pixel
-        self.time_scale      = time_scale
-        self.x, self.y       = start_pos
-        self.target_node     = None
-        self.path            = []
-        self.active          = True
-        # Fase: "going" → chegou ao local | "arrived" → esperando
-        self._phase          = "going"
-        self._arrived_timer  = 0   # ms acumulados na fase "arrived"
-        self._arrived_wait   = 600 # ms de pausa (0.6s real) no local do acidente
+        # time_scale inicial — usado apenas como fallback; update() recebe o
+        # valor atual a cada frame para reagir a mudanças em tempo real.
+        self.time_scale       = time_scale
+        self.x, self.y        = float(start_pos[0]), float(start_pos[1])
 
-        # Encontra nó mais próximo do destino
-        closest_node     = None
-        min_dist         = float('inf')
+        # target_node permanece None — o path é quem dita o movimento
+        self.target_node      = None
+        self.path             = []
+        self.active           = True
+
+        # Fase: "going" → chegou ao local | "arrived" → esperando
+        self._phase           = "going"
+        self._arrived_timer   = 0     # ms simulados acumulados na fase "arrived"
+        self._arrived_wait    = 700   # ms reais de pausa no local do acidente
+        self._siren_tick      = 0     # contador de frames para piscar sirene
+
+        # ── Encontra nó mais próximo do DESTINO (acidente) ───────────────────
+        closest_node = None
+        min_dist     = float('inf')
         for node, (nx_, ny_) in pos_map.items():
-            dist = math.hypot(nx_ - target_pos[0], ny_ - target_pos[1])
-            if dist < min_dist:
-                min_dist     = dist
+            d = math.hypot(nx_ - target_pos[0], ny_ - target_pos[1])
+            if d < min_dist:
+                min_dist     = d
                 closest_node = node
 
-        if closest_node is not None:
-            self.target_node = closest_node
-            start_node       = None
-            min_dist_start   = float('inf')
-            for node, (nx_, ny_) in pos_map.items():
-                dist = math.hypot(nx_ - start_pos[0], ny_ - start_pos[1])
-                if dist < min_dist_start:
-                    min_dist_start = dist
-                    start_node     = node
-            try:
-                self.path = nx.shortest_path(
-                    self.G, start_node, self.target_node, weight='length')[1:]
-            except Exception:
-                self.path = []
+        if closest_node is None:
+            return
 
-    def update(self):
+        # ── Encontra nó mais próximo do ponto de ENTRADA (borda do mapa) ─────
+        start_node     = None
+        min_dist_start = float('inf')
+        for node, (nx_, ny_) in pos_map.items():
+            d = math.hypot(nx_ - start_pos[0], ny_ - start_pos[1])
+            if d < min_dist_start:
+                min_dist_start = d
+                start_node     = node
+
+        try:
+            # Path completo incluindo start_node — sem o [1:]
+            self.path = nx.shortest_path(
+                G, start_node, closest_node, weight='length'
+            )
+        except Exception:
+            self.path = [closest_node]
+
+    # ─────────────────────────────────────────────────────────────────────────
+    def update(self, time_scale=None):
+        """
+        Atualiza a posição da ambulância.
+        Recebe time_scale como parâmetro para reagir a mudanças em tempo real.
+        """
         if not self.active:
             return
 
+        # Usa o time_scale passado no frame atual; fallback para o inicial
+        ts = time_scale if time_scale is not None else self.time_scale
+
+        self._siren_tick += 1
+
         if self._phase == "arrived":
-            # Pausa breve no local do acidente (usa 16ms por frame a 60fps)
-            self._arrived_timer += 16
+            # Acumula ms proporcionais ao time_scale para a pausa escalar junto
+            self._arrived_timer += 16 * ts
             if self._arrived_timer >= self._arrived_wait:
-                self.active = False   # animação encerrada
+                self.active = False
             return
 
-        # Velocidade da ambulância (fixa em 60 km/h)
-        speed_kph       = 60.0
-        speed_mps       = speed_kph * (1000.0 / 3600.0)
-        dist_per_frame  = (speed_mps / self.meters_per_pixel / 60) * self.time_scale
+        # Velocidade da ambulância: 40 km/h com sirene
+        speed_kph      = 40.0
+        speed_mps      = speed_kph * (1000.0 / 3600.0)
+        dist_per_frame = (speed_mps / self.meters_per_pixel / 60) * ts
 
         while dist_per_frame > 0:
             if not self.target_node:
                 if self.path:
                     self.target_node = self.path.pop(0)
                 else:
-                    # Chegou ao destino final → fase de pausa
-                    self._phase = "arrived"
+                    self._phase    = "arrived"
                     self.x, self.y = self.target_pos
                     return
 
-            tx, ty = self.pos_map.get(self.target_node, (self.target_pos[0], self.target_pos[1]))
-            dx, dy = tx - self.x, ty - self.y
+            tx, ty = self.pos_map.get(
+                self.target_node,
+                (self.target_pos[0], self.target_pos[1])
+            )
+            dx, dy       = tx - self.x, ty - self.y
             dist_to_node = math.hypot(dx, dy)
 
             if dist_to_node <= dist_per_frame:
@@ -253,24 +278,56 @@ class Ambulancia:
                 dist_per_frame   = 0
 
         if self.target_node is None and not self.path:
-            self._phase = "arrived"
+            self._phase    = "arrived"
             self.x, self.y = self.target_pos
 
+    # ─────────────────────────────────────────────────────────────────────────
     def draw(self, surf):
         if not self.active:
             return
-        # Corpo da ambulância: retângulo branco com borda vermelha
-        rect = pygame.Rect(self.x - 10, self.y - 6, 20, 12)
-        pygame.draw.rect(surf, (255, 255, 255), rect, border_radius=2)
-        pygame.draw.rect(surf, (200, 0, 0),    rect, 2, border_radius=2)
-        # Cruz vermelha no centro
+
         cx, cy = int(self.x), int(self.y)
-        pygame.draw.rect(surf, (200, 0, 0), (cx - 5, cy - 2, 10, 4))  # horizontal
-        pygame.draw.rect(surf, (200, 0, 0), (cx - 2, cy - 5,  4, 10)) # vertical
-        # Luz azul piscante (alterna a cada frame via random)
-        if random.random() < 0.5:
-            pygame.draw.circle(surf, (0, 120, 255), (cx - 8, cy - 4), 3)
-            pygame.draw.circle(surf, (0, 120, 255), (cx + 8, cy - 4), 3)
+        W, H   = 30, 16
+
+        # ── Rodas ─────────────────────────────────────────────────────────────
+        wheel_col = (40, 40, 40)
+        for wx, wy in [
+            (cx - W // 2 - 2, cy - H // 2),
+            (cx + W // 2 - 2, cy - H // 2),
+            (cx - W // 2 - 2, cy + H // 2 - 4),
+            (cx + W // 2 - 2, cy + H // 2 - 4),
+        ]:
+            pygame.draw.rect(surf, wheel_col, (wx, wy, 4, 4), border_radius=1)
+
+        # ── Corpo principal ───────────────────────────────────────────────────
+        body = pygame.Rect(cx - W // 2, cy - H // 2, W, H)
+        pygame.draw.rect(surf, (250, 250, 250), body, border_radius=3)
+
+        # ── Faixa azul no topo ────────────────────────────────────────────────
+        stripe = pygame.Rect(cx - W // 2, cy - H // 2, W, 5)
+        pygame.draw.rect(surf, (20, 90, 200), stripe, border_radius=3)
+
+        # ── Para-brisa / cabine ───────────────────────────────────────────────
+        pygame.draw.rect(
+            surf, (80, 110, 160),
+            (cx - W // 2 + 2, cy - H // 2 + 5, 7, H - 6),
+            border_radius=1
+        )
+
+        # ── Cruz vermelha ─────────────────────────────────────────────────────
+        qx = cx + 6
+        pygame.draw.rect(surf, (215, 20, 20), (qx - 5, cy + 1, 10, 3))
+        pygame.draw.rect(surf, (215, 20, 20), (qx - 1, cy - 3,  3, 9))
+
+        # ── Contorno vermelho ─────────────────────────────────────────────────
+        pygame.draw.rect(surf, (180, 10, 10), body, 1, border_radius=3)
+
+        # ── Sirenes piscantes ─────────────────────────────────────────────────
+        fase     = (self._siren_tick // 8) % 2
+        col_azul = (50, 140, 255) if fase == 0 else (20,  50, 130)
+        col_verm = (255,  50, 50) if fase == 1 else (130, 20,  20)
+        pygame.draw.circle(surf, col_azul, (cx - 7, cy - H // 2 + 2), 3)
+        pygame.draw.circle(surf, col_verm, (cx,     cy - H // 2 + 2), 3)
 
 
 # ─── ENTREGADOR ────────────────────────────────────────────────────────────────
@@ -1437,7 +1494,7 @@ class Simulador:
 
                 # Atualiza e desenha ambulâncias
                 for amb in list(self.ambulancias):
-                    amb.update()
+                    amb.update(self.time_scale)
                     amb.draw(self.screen)
                     if not amb.active:
                         self.ambulancias.remove(amb)

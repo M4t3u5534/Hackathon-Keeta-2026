@@ -311,3 +311,1493 @@
 19:37:46,E019,carro,L01,ESTORNADO,0,R$ 0.00,—,0,4x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
 19:37:46,E019,carro,L06,ESTORNADO,0,R$ 0.00,—,0,4x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
 19:37:46,E019,carro,L05,ESTORNADO,0,R$ 0.00,—,0,4x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
+20:11:33,E002,moto,L02,ENTREGUE,10.7,R$ 7.50,R$ 7.50,1,4x,Nenhum,-0.9s
+20:12:08,E002,moto,L01,ENTREGUE,32.4,R$ 7.50,R$ 7.50,1,4x,Nenhum,+3.5s
+20:12:13,E001,carro,L03,ENTREGUE,25.7,R$ 7.50,R$ 7.50,1,4x,Nenhum,-0.6s
+20:12:21,E004,bike,L01,ENTREGUE,41.8,R$ 7.50,R$ 7.50,1,4x,Nenhum,+1.4s
+20:12:33,E002,moto,L02,ENTREGUE,20.3,R$ 7.50,R$ 7.50,1,4x,Nenhum,+5.2s
+20:12:35,E003,carro,L01,ENTREGUE,24.5,R$ 7.50,R$ 7.50,1,4x,Nenhum,+4.4s
+20:12:38,E005,moto,L01,ENTREGUE,19.1,R$ 9.75,R$ 9.75,1,4x,Nenhum,+1.4s
+20:12:42,E001,carro,L02,ENTREGUE,28.1,R$ 9.75,R$ 9.75,1,4x,Nenhum,-1.1s
+20:12:42,E004,bike,L01,ENTREGUE,15.6,R$ 7.50,R$ 7.50,1,4x,Nenhum,-0.0s
+20:13:03,E002,moto,L02,ENTREGUE,30.9,R$ 7.50,R$ 7.50,1,4x,Nenhum,-2.5s
+20:13:07,E005,moto,L02,ENTREGUE,23.9,R$ 9.75,R$ 9.75,1,4x,Nenhum,+1.5s
+20:13:14,E003,carro,L01,ENTREGUE,39.9,R$ 7.50,—,2,4x,Nenhum,+16.0s
+20:13:23,E003,carro,L02,ENTREGUE,48.6,R$ 7.50,R$ 15.00,2,4x,Nenhum,+5.9s
+20:13:36,E004,bike,L02,ENTREGUE,53.6,R$ 7.50,R$ 7.50,1,4x,Nenhum,-5.1s
+20:14:07,E003,carro,L01,ENTREGUE,13.6,R$ 9.75,R$ 9.75,1,20x,Nenhum,-4.2s
+20:14:08,E005,moto,L01,ENTREGUE,13.8,R$ 9.75,R$ 9.75,1,28x,Nenhum,-8.9s
+20:14:09,E002,moto,L02,ENTREGUE,14.5,R$ 7.50,R$ 7.50,1,28x,Nenhum,-11.8s
+20:14:11,E001,carro,L02,ENTREGUE,15.1,R$ 9.75,R$ 9.75,1,28x,Nenhum,-22.8s
+20:14:13,E004,bike,L02,ENTREGUE,18.0,R$ 9.75,R$ 9.75,1,28x,Nenhum,-20.8s
+20:14:20,E002,moto,L01,ENTREGUE,3.0,R$ 9.75,R$ 9.75,1,28x,Nenhum,-0.4s
+20:14:25,E002,moto,L02,ENTREGUE,3.3,R$ 7.50,R$ 7.50,1,28x,Nenhum,+0.0s
+20:14:25,E004,bike,L01,ENTREGUE,6.0,R$ 9.75,R$ 9.75,1,28x,Nenhum,+2.2s
+20:14:29,E001,carro,L02,ENTREGUE,4.7,R$ 9.75,R$ 9.75,1,28x,Nenhum,+0.0s
+20:14:30,E005,moto,L01,ENTREGUE,1.6,R$ 9.75,R$ 9.75,1,28x,Nenhum,-0.1s
+20:14:30,E002,moto,L02,ENTREGUE,4.6,R$ 7.50,R$ 7.50,1,28x,Nenhum,-0.3s
+20:14:31,E003,carro,L02,ENTREGUE,3.9,R$ 9.75,R$ 9.75,1,28x,Nenhum,-0.1s
+20:14:32,E004,bike,L02,ENTREGUE,6.0,R$ 7.50,R$ 7.50,1,28x,Nenhum,-0.6s
+20:14:33,E001,carro,L01,ENTREGUE,1.6,R$ 9.75,R$ 9.75,1,28x,Nenhum,-0.3s
+20:14:36,E003,carro,L01,ENTREGUE,2.0,R$ 9.75,R$ 9.75,1,28x,Nenhum,+0.0s
+20:14:38,E002,moto,L02,ENTREGUE,4.9,R$ 9.75,R$ 9.75,1,28x,Nenhum,-0.3s
+20:14:38,E004,bike,L02,ENTREGUE,5.9,R$ 7.50,R$ 7.50,1,28x,Nenhum,+0.2s
+20:14:38,E005,moto,L02,ENTREGUE,3.4,R$ 9.75,R$ 9.75,1,28x,Nenhum,-0.3s
+20:14:39,E001,carro,L02,ENTREGUE,3.6,R$ 9.75,R$ 9.75,1,28x,Nenhum,-0.0s
+20:14:39,E003,carro,L01,ENTREGUE,3.3,R$ 7.50,R$ 7.50,1,28x,Nenhum,+0.7s
+20:14:40,E004,bike,L01,ENTREGUE,2.1,R$ 7.50,R$ 7.50,1,28x,Nenhum,-0.3s
+20:14:40,E002,moto,L01,ENTREGUE,2.3,R$ 7.50,R$ 7.50,1,28x,Nenhum,+0.1s
+20:14:41,E005,moto,L01,ENTREGUE,3.1,R$ 7.50,R$ 7.50,1,28x,Nenhum,-0.1s
+20:14:58,E004,bike,L01,ENTREGUE,2.8,R$ 9.75,R$ 9.75,1,28x,Nenhum,+0.6s
+20:14:58,E003,carro,L02,ENTREGUE,2.5,R$ 9.75,R$ 9.75,1,28x,Nenhum,+0.4s
+20:14:59,E005,moto,L03,ENTREGUE,1.6,R$ 9.75,R$ 9.75,1,28x,Nenhum,+0.0s
+20:15:00,E003,carro,L01,ENTREGUE,1.9,R$ 7.50,R$ 7.50,1,28x,Nenhum,+0.1s
+20:22:10,E013,bike,L01,ENTREGUE,23.9,R$ 7.50,R$ 7.50,1,4x,Nenhum,+2.9s
+20:23:07,E011,moto,L06,ENTREGUE,9.6,R$ 7.50,R$ 7.50,1,4x,"Trânsito, Acidente",+0.4s
+20:23:10,E014,moto,L03,ENTREGUE,13.0,R$ 9.38,R$ 9.38,1,4x,"Chuva, Acidente",-0.5s
+20:23:11,E002,moto,L07,ENTREGUE,13.1,R$ 9.38,R$ 9.38,1,4x,"Chuva, Acidente",+2.1s
+20:23:18,E017,carro,L06,ENTREGUE,20.6,R$ 7.50,R$ 7.50,1,4x,Acidente,+2.8s
+20:23:20,E013,bike,L03,ENTREGUE,23.6,R$ 7.50,R$ 7.50,1,4x,Acidente,+7.2s
+20:23:21,E010,moto,L09,ENTREGUE,22.9,R$ 7.50,R$ 7.50,1,4x,Acidente,-1.9s
+20:23:32,E005,moto,L08,ENTREGUE,35.4,R$ 9.38,R$ 9.38,1,1x,"Chuva, Trânsito, Acidente",+9.6s
+20:23:36,E009,moto,L02,ENTREGUE,38.3,R$ 9.38,R$ 9.38,1,1x,"Chuva, Trânsito, Acidente",+7.3s
+20:23:37,E008,moto,L02,ENTREGUE,39.4,R$ 9.38,R$ 9.38,1,1x,"Chuva, Trânsito, Acidente",+15.5s
+20:24:04,E016,bike,L03,ENTREGUE,60.8,R$ 7.50,R$ 7.50,1,1x,"Trânsito, Acidente",+32.4s
+20:24:04,E002,moto,L06,ENTREGUE,53.5,R$ 7.50,R$ 7.50,1,1x,"Trânsito, Acidente",+36.4s
+20:24:06,E006,carro,L04,ENTREGUE,69.5,R$ 7.50,R$ 7.50,1,1x,"Trânsito, Acidente",+34.0s
+20:24:07,E007,carro,L05,ENTREGUE,70.9,R$ 9.38,R$ 9.38,1,3x,"Chuva, Trânsito, Acidente",+41.6s
+20:24:07,E012,moto,L02,ENTREGUE,70.3,R$ 9.38,R$ 9.38,1,3x,"Chuva, Trânsito, Acidente",+32.3s
+20:24:08,E011,moto,L08,ENTREGUE,60.8,R$ 9.38,R$ 9.38,1,17x,"Chuva, Trânsito, Acidente",+37.9s
+20:24:09,E003,carro,L05,ENTREGUE,72.3,R$ 7.50,—,3,21x,"Trânsito, Acidente",+51.3s
+20:24:09,E016,bike,L07,ENTREGUE,68.9,R$ 7.50,R$ 7.50,1,31x,"Trânsito, Acidente",+20.1s
+20:24:09,E015,bike,L03,ENTREGUE,72.6,R$ 9.38,R$ 9.38,1,35x,"Chuva, Trânsito, Acidente",+29.2s
+20:24:10,E004,bike,L07,ENTREGUE,66.8,R$ 9.38,R$ 9.38,1,37x,"Chuva, Trânsito, Acidente",+16.5s
+20:24:10,E001,carro,L03,ENTREGUE,76.3,R$ 9.38,—,3,37x,"Chuva, Trânsito, Acidente",+64.9s
+20:24:10,E003,carro,L06,ENTREGUE,73.4,R$ 9.38,—,3,39x,"Chuva, Trânsito, Acidente",+42.8s
+20:24:10,E022,moto,L03,ENTREGUE,49.6,R$ 7.50,R$ 7.50,1,43x,"Trânsito, Acidente",+30.8s
+20:24:10,E016,bike,L02,ENTREGUE,6.5,R$ 7.50,R$ 7.50,1,47x,"Trânsito, Acidente",-26.5s
+20:24:10,E021,moto,L05,ENTREGUE,54.9,R$ 7.50,R$ 7.50,1,47x,"Trânsito, Acidente",+22.7s
+20:24:10,E011,moto,L02,ENTREGUE,2.1,R$ 7.50,R$ 7.50,1,49x,"Trânsito, Acidente",-0.4s
+20:24:10,E013,bike,L06,ENTREGUE,50.4,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",-9.9s
+20:24:11,E009,moto,L02,ENTREGUE,35.0,R$ 9.38,—,2,51x,"Chuva, Trânsito, Acidente",-43.7s
+20:24:11,E005,moto,L01,ENTREGUE,38.8,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",-42.6s
+20:24:11,E014,moto,L08,ENTREGUE,60.9,R$ 9.38,—,2,51x,"Chuva, Trânsito, Acidente",-8.0s
+20:24:11,E025,bike,L03,ENTREGUE,3.8,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",-8.7s
+20:24:11,E001,carro,L06,ENTREGUE,78.0,R$ 7.50,—,3,51x,"Trânsito, Acidente",+60.7s
+20:24:11,E011,moto,L01,ENTREGUE,1.1,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:11,E017,carro,L02,ENTREGUE,53.5,R$ 9.38,—,3,51x,"Chuva, Trânsito, Acidente",-12.5s
+20:24:12,E030,moto,L03,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:12,E001,carro,L09,ENTREGUE,78.8,R$ 7.50,R$ 24.38,3,51x,"Trânsito, Acidente",+45.1s
+20:24:12,E010,moto,L07,ENTREGUE,51.6,R$ 7.50,—,2,51x,Acidente,-2.8s
+20:24:12,E009,moto,L07,ENTREGUE,36.4,R$ 7.50,R$ 16.88,2,51x,Acidente,-44.0s
+20:24:12,E024,moto,L01,ENTREGUE,11.8,R$ 7.50,R$ 7.50,1,51x,Acidente,-60.9s
+20:24:12,E003,carro,L07,ENTREGUE,75.9,R$ 7.50,R$ 24.38,3,51x,Acidente,+23.7s
+20:24:12,E016,bike,L03,ENTREGUE,3.0,R$ 7.50,R$ 7.50,1,51x,Acidente,-0.6s
+20:24:12,E022,moto,L07,ENTREGUE,2.4,R$ 7.50,R$ 7.50,1,51x,Acidente,-0.1s
+20:24:12,E002,moto,L01,ENTREGUE,8.1,R$ 9.38,R$ 9.38,1,51x,"Chuva, Acidente",-50.5s
+20:24:12,E006,carro,L09,ENTREGUE,6.2,R$ 9.38,—,3,51x,"Chuva, Acidente",-107.0s
+20:24:13,E017,carro,L07,ENTREGUE,54.5,R$ 9.38,—,3,51x,"Chuva, Acidente",-5.2s
+20:24:13,E008,moto,L03,ENTREGUE,36.4,R$ 7.50,—,2,51x,"Trânsito, Acidente",-33.5s
+20:24:13,E014,moto,L03,ENTREGUE,63.0,R$ 7.50,R$ 16.88,2,51x,"Trânsito, Acidente",-13.2s
+20:24:13,E011,moto,L03,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",+0.1s
+20:24:13,E005,moto,L11,ENTREGUE,2.5,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",+0.2s
+20:24:13,E013,bike,L06,ENTREGUE,2.9,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:13,E007,carro,L03,ENTREGUE,6.0,R$ 9.38,—,4,51x,"Chuva, Trânsito, Acidente",-12.9s
+20:24:14,E010,moto,L01,ENTREGUE,53.0,R$ 9.38,R$ 16.88,2,51x,"Chuva, Trânsito, Acidente",-5.3s
+20:24:14,E002,moto,L06,ENTREGUE,1.0,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",-0.1s
+20:24:14,E021,moto,L06,ENTREGUE,3.4,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:14,E027,moto,L02,ENTREGUE,4.7,R$ 9.38,—,2,51x,"Chuva, Trânsito, Acidente",-0.4s
+20:24:14,E017,carro,L03,ENTREGUE,56.0,R$ 9.38,R$ 28.12,3,51x,"Chuva, Trânsito, Acidente",-9.9s
+20:24:14,E008,moto,L09,ENTREGUE,37.5,R$ 7.50,R$ 15.00,2,51x,"Trânsito, Acidente",-43.6s
+20:24:14,E030,moto,L06,ENTREGUE,2.2,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",+0.6s
+20:24:14,E019,carro,L09,ENTREGUE,68.9,R$ 7.50,—,5,51x,"Trânsito, Acidente",-6.2s
+20:24:14,E012,moto,L01,ENTREGUE,6.8,R$ 7.50,—,2,51x,"Trânsito, Acidente",-23.2s
+20:24:14,E023,bike,L02,ENTREGUE,33.8,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",-137.0s
+20:24:14,E011,moto,L03,ENTREGUE,1.0,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",-0.1s
+20:24:14,E016,bike,L01,ENTREGUE,4.1,R$ 7.50,R$ 7.50,1,51x,Acidente,+0.3s
+20:24:14,E022,moto,L02,ENTREGUE,1.9,R$ 7.50,R$ 7.50,1,51x,Acidente,+0.1s
+20:24:15,E006,carro,L07,ENTREGUE,8.3,R$ 9.38,—,3,51x,"Chuva, Acidente",-49.8s
+20:24:15,E005,moto,L03,ENTREGUE,1.5,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:15,E002,moto,L03,ENTREGUE,1.4,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",+0.1s
+20:24:15,E007,carro,L02,ENTREGUE,7.7,R$ 7.50,—,4,51x,Acidente,-24.0s
+20:24:15,E019,carro,L07,ENTREGUE,69.9,R$ 7.50,—,5,51x,Acidente,-5.9s
+20:24:15,E024,moto,L01,ENTREGUE,3.0,R$ 7.50,R$ 7.50,1,51x,Acidente,+0.1s
+20:24:15,E029,carro,L01,ENTREGUE,5.1,R$ 7.50,—,3,51x,Acidente,+1.6s
+20:24:15,E009,moto,L12,ENTREGUE,3.1,R$ 7.50,—,2,51x,Acidente,+0.8s
+20:24:15,E026,bike,L09,ENTREGUE,7.0,R$ 9.38,R$ 9.38,1,51x,"Chuva, Acidente",-4.6s
+20:24:15,E027,moto,L01,ENTREGUE,6.3,R$ 9.38,R$ 18.75,2,51x,"Chuva, Trânsito, Acidente",+1.6s
+20:24:16,E012,moto,L06,ENTREGUE,8.1,R$ 9.38,R$ 16.88,2,51x,"Chuva, Trânsito, Acidente",-4.8s
+20:24:16,E014,moto,L12,ENTREGUE,2.7,R$ 9.38,—,2,51x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:16,E016,bike,L07,ENTREGUE,3.5,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:16,E014,moto,L03,ENTREGUE,3.0,R$ 7.50,R$ 16.88,2,51x,"Trânsito, Acidente",+0.3s
+20:24:16,E028,carro,L07,ENTREGUE,6.5,R$ 7.50,—,4,51x,"Trânsito, Acidente",+4.9s
+20:24:16,E001,carro,L02,ENTREGUE,4.1,R$ 7.50,—,4,51x,"Trânsito, Acidente",+2.9s
+20:24:16,E015,bike,L06,ENTREGUE,6.8,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",+0.4s
+20:24:16,E008,moto,L06,ENTREGUE,2.2,R$ 7.50,—,2,51x,"Trânsito, Acidente",+0.9s
+20:24:16,E006,carro,L03,ENTREGUE,10.1,R$ 7.50,R$ 26.25,3,51x,"Trânsito, Acidente",-44.9s
+20:24:16,E010,moto,L01,ENTREGUE,2.9,R$ 9.38,—,2,51x,"Chuva, Trânsito, Acidente",+0.7s
+20:24:16,E025,bike,L09,ENTREGUE,5.2,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",+1.7s
+20:24:16,E030,moto,L03,ENTREGUE,2.3,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:17,E021,moto,L02,ENTREGUE,2.7,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:17,E029,carro,L06,ENTREGUE,6.4,R$ 9.38,—,3,51x,"Chuva, Trânsito, Acidente",+1.1s
+20:24:17,E019,carro,L01,ENTREGUE,71.3,R$ 9.38,—,5,51x,"Chuva, Trânsito, Acidente",-8.3s
+20:24:17,E007,carro,L07,ENTREGUE,9.3,R$ 9.38,—,4,51x,"Chuva, Trânsito, Acidente",-14.8s
+20:24:17,E009,moto,L01,ENTREGUE,4.6,R$ 9.38,R$ 16.88,2,51x,"Chuva, Trânsito, Acidente",+2.1s
+20:24:17,E020,carro,L02,ENTREGUE,66.7,R$ 7.50,—,5,51x,"Trânsito, Acidente",-10.7s
+20:24:17,E005,moto,L09,ENTREGUE,2.2,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",+0.1s
+20:24:17,E010,moto,L09,ENTREGUE,3.8,R$ 7.50,R$ 16.88,2,51x,"Trânsito, Acidente",+0.8s
+20:24:17,E001,carro,L06,ENTREGUE,5.3,R$ 9.38,—,4,51x,"Chuva, Trânsito, Acidente",+3.0s
+20:24:18,E002,moto,L07,ENTREGUE,2.6,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:18,E011,moto,L01,ENTREGUE,3.3,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",+0.8s
+20:24:18,E004,bike,L01,ENTREGUE,8.0,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:18,E022,moto,L01,ENTREGUE,3.4,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",+0.4s
+20:24:18,E028,carro,L02,ENTREGUE,8.2,R$ 9.38,—,4,51x,"Chuva, Trânsito, Acidente",+2.8s
+20:24:18,E007,carro,L06,ENTREGUE,10.5,R$ 9.38,R$ 35.62,4,51x,"Chuva, Trânsito, Acidente",-1.2s
+20:24:18,E030,moto,L07,ENTREGUE,1.5,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",+0.1s
+20:24:18,E023,bike,L03,ENTREGUE,3.9,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",+1.1s
+20:24:18,E001,carro,L07,ENTREGUE,6.1,R$ 7.50,—,4,51x,"Trânsito, Acidente",+3.3s
+20:24:18,E013,bike,L04,ENTREGUE,4.9,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",+0.7s
+20:24:18,E020,carro,L07,ENTREGUE,68.0,R$ 7.50,—,5,51x,"Trânsito, Acidente",-10.1s
+20:24:18,E014,moto,L06,ENTREGUE,2.3,R$ 9.38,—,2,51x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:18,E029,carro,L07,ENTREGUE,8.3,R$ 9.38,R$ 26.25,3,51x,"Chuva, Trânsito, Acidente",+3.3s
+20:24:19,E008,moto,L03,ENTREGUE,4.4,R$ 9.38,R$ 16.88,2,51x,"Chuva, Trânsito, Acidente",+2.9s
+20:24:19,E021,moto,L02,ENTREGUE,2.1,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:19,E002,moto,L09,ENTREGUE,1.1,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",-0.2s
+20:24:19,E024,moto,L02,ENTREGUE,3.8,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",-0.1s
+20:24:19,E005,moto,L03,ENTREGUE,1.9,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",+0.1s
+20:24:19,E025,bike,L07,ENTREGUE,2.7,R$ 7.50,R$ 7.50,1,51x,"Trânsito, Acidente",+0.2s
+20:24:19,E019,carro,L03,ENTREGUE,73.8,R$ 7.50,—,5,51x,"Trânsito, Acidente",-11.5s
+20:24:19,E001,carro,L01,ENTREGUE,7.1,R$ 7.50,R$ 31.88,4,51x,"Trânsito, Acidente",+2.2s
+20:24:19,E028,carro,L09,ENTREGUE,9.7,R$ 9.38,—,4,53x,"Chuva, Trânsito, Acidente",+3.0s
+20:24:20,E012,moto,L06,ENTREGUE,4.0,R$ 9.38,—,2,55x,"Chuva, Trânsito, Acidente",+2.6s
+20:24:20,E003,carro,L07,ENTREGUE,7.4,R$ 9.38,—,5,57x,"Chuva, Trânsito, Acidente",+4.3s
+20:24:20,E020,carro,L09,ENTREGUE,69.3,R$ 9.38,—,5,57x,"Chuva, Trânsito, Acidente",-11.8s
+20:24:20,E006,carro,L09,ENTREGUE,3.4,R$ 7.50,—,3,59x,"Trânsito, Acidente",+1.5s
+20:24:20,E027,moto,L02,ENTREGUE,4.3,R$ 7.50,—,2,59x,"Trânsito, Acidente",+2.0s
+20:24:20,E017,carro,L01,ENTREGUE,6.0,R$ 7.50,—,3,61x,"Trânsito, Acidente",+3.0s
+20:24:20,E011,moto,L06,ENTREGUE,2.4,R$ 7.50,R$ 7.50,1,63x,"Trânsito, Acidente",+0.2s
+20:24:20,E014,moto,L03,ENTREGUE,3.9,R$ 7.50,R$ 16.88,2,63x,"Trânsito, Acidente",+2.7s
+20:24:20,E030,moto,L02,ENTREGUE,2.0,R$ 7.50,R$ 7.50,1,63x,"Trânsito, Acidente",+0.5s
+20:24:20,E012,moto,L02,ENTREGUE,4.6,R$ 7.50,R$ 16.88,2,63x,"Trânsito, Acidente",+0.6s
+20:24:20,E009,moto,L06,ENTREGUE,3.4,R$ 9.38,—,2,65x,"Chuva, Trânsito, Acidente",+1.6s
+20:24:20,E002,moto,L09,ENTREGUE,1.6,R$ 9.38,R$ 9.38,1,67x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:20,E006,carro,L02,ENTREGUE,3.9,R$ 9.38,—,3,67x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:20,E022,moto,L01,ENTREGUE,2.6,R$ 9.38,R$ 9.38,1,69x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:21,E004,bike,L03,ENTREGUE,3.1,R$ 7.50,R$ 7.50,1,73x,"Trânsito, Acidente",-0.2s
+20:24:21,E016,bike,L01,ENTREGUE,6.4,R$ 7.50,R$ 7.50,1,75x,Acidente,+0.4s
+20:24:21,E017,carro,L07,ENTREGUE,6.9,R$ 7.50,—,3,75x,Acidente,+2.7s
+20:24:21,E020,carro,L01,ENTREGUE,70.5,R$ 7.50,—,5,75x,Acidente,-29.4s
+20:24:21,E009,moto,L02,ENTREGUE,4.1,R$ 9.38,R$ 18.75,2,77x,"Chuva, Acidente",+0.7s
+20:24:21,E027,moto,L07,ENTREGUE,5.5,R$ 9.38,R$ 16.88,2,77x,"Chuva, Acidente",+1.7s
+20:24:21,E016,bike,L09,ENTREGUE,5.2,R$ 9.38,R$ 9.38,1,77x,"Chuva, Acidente",+0.2s
+20:24:21,E025,bike,L07,ENTREGUE,1.8,R$ 9.38,R$ 9.38,1,77x,"Chuva, Acidente",-0.2s
+20:24:21,E003,carro,L09,ENTREGUE,8.8,R$ 9.38,—,5,79x,"Chuva, Trânsito, Acidente",+4.4s
+20:24:21,E019,carro,L06,ENTREGUE,75.7,R$ 9.38,R$ 41.25,5,79x,"Chuva, Trânsito, Acidente",+2.9s
+20:24:21,E010,moto,L06,ENTREGUE,3.7,R$ 9.38,—,2,79x,"Chuva, Trânsito, Acidente",+1.9s
+20:24:21,E021,moto,L01,ENTREGUE,2.5,R$ 9.38,R$ 9.38,1,81x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:21,E005,moto,L10,ENTREGUE,2.1,R$ 7.50,R$ 7.50,1,81x,"Trânsito, Acidente",-0.4s
+20:24:21,E029,carro,L03,ENTREGUE,2.7,R$ 7.50,—,3,81x,"Trânsito, Acidente",+1.3s
+20:24:21,E023,bike,L07,ENTREGUE,3.2,R$ 7.50,R$ 7.50,1,83x,Acidente,-0.3s
+20:24:21,E013,bike,L07,ENTREGUE,3.0,R$ 7.50,R$ 7.50,1,85x,Acidente,-0.4s
+20:24:21,E017,carro,L02,ENTREGUE,7.5,R$ 7.50,R$ 22.50,3,85x,Acidente,+2.1s
+20:24:22,E028,carro,L03,ENTREGUE,11.8,R$ 9.38,R$ 35.62,4,87x,"Chuva, Trânsito, Acidente",+3.8s
+20:24:22,E029,carro,L07,ENTREGUE,3.1,R$ 9.38,—,3,87x,"Chuva, Trânsito, Acidente",+1.5s
+20:24:22,E020,carro,L06,ENTREGUE,71.3,R$ 9.38,R$ 41.25,5,89x,"Chuva, Trânsito, Acidente",-2.2s
+20:24:22,E002,moto,L06,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,89x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:22,E030,moto,L08,ENTREGUE,1.7,R$ 9.38,R$ 9.38,1,89x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:22,E024,moto,L04,ENTREGUE,2.8,R$ 7.50,R$ 7.50,1,91x,"Trânsito, Acidente",-0.6s
+20:24:22,E003,carro,L01,ENTREGUE,9.7,R$ 7.50,—,5,93x,"Trânsito, Acidente",+4.3s
+20:24:22,E006,carro,L03,ENTREGUE,5.6,R$ 7.50,R$ 24.38,3,95x,"Trânsito, Acidente",+1.6s
+20:24:22,E029,carro,L02,ENTREGUE,3.5,R$ 7.50,R$ 24.38,3,95x,"Trânsito, Acidente",+0.6s
+20:24:22,E007,carro,L09,ENTREGUE,4.2,R$ 9.38,—,4,95x,"Chuva, Trânsito, Acidente",+2.3s
+20:24:22,E008,moto,L12,ENTREGUE,3.5,R$ 9.38,—,2,95x,"Chuva, Trânsito, Acidente",+0.5s
+20:24:22,E011,moto,L02,ENTREGUE,2.1,R$ 9.38,R$ 9.38,1,95x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:22,E010,moto,L01,ENTREGUE,4.7,R$ 9.38,R$ 18.75,2,95x,"Chuva, Trânsito, Acidente",-0.3s
+20:24:22,E004,bike,L03,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,97x,"Chuva, Trânsito, Acidente",-0.2s
+20:24:22,E022,moto,L02,ENTREGUE,1.6,R$ 9.38,R$ 9.38,1,97x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:22,E026,bike,L09,ENTREGUE,6.7,R$ 9.38,R$ 9.38,1,97x,"Chuva, Trânsito, Acidente",+1.1s
+20:24:22,E003,carro,L02,ENTREGUE,10.1,R$ 9.38,—,5,99x,"Chuva, Trânsito, Acidente",+3.6s
+20:24:22,E008,moto,L02,ENTREGUE,3.9,R$ 7.50,R$ 16.88,2,100x,"Trânsito, Acidente",+0.1s
+20:24:22,E013,bike,L03,ENTREGUE,1.0,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",-0.0s
+20:24:23,E014,moto,L01,ENTREGUE,2.4,R$ 7.50,—,2,100x,"Trânsito, Acidente",-0.1s
+20:24:23,E021,moto,L02,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",-0.3s
+20:24:23,E007,carro,L01,ENTREGUE,4.8,R$ 9.38,—,4,100x,"Chuva, Trânsito, Acidente",+2.0s
+20:24:23,E011,moto,L03,ENTREGUE,0.8,R$ 7.50,R$ 7.50,1,100x,Acidente,-0.1s
+20:24:23,E005,moto,L09,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.1s
+20:24:23,E025,bike,L11,ENTREGUE,1.9,R$ 7.50,R$ 7.50,1,100x,Acidente,-0.1s
+20:24:23,E003,carro,L06,ENTREGUE,10.8,R$ 7.50,R$ 43.12,5,100x,Acidente,+4.5s
+20:24:23,E009,moto,L01,ENTREGUE,2.0,R$ 7.50,—,2,100x,Acidente,+0.3s
+20:24:23,E014,moto,L08,ENTREGUE,2.9,R$ 7.50,R$ 15.00,2,100x,Acidente,+0.7s
+20:24:23,E001,carro,L03,ENTREGUE,3.8,R$ 7.50,—,4,100x,Acidente,+1.7s
+20:24:23,E016,bike,L06,ENTREGUE,2.2,R$ 7.50,R$ 7.50,1,100x,Acidente,-0.2s
+20:24:23,E007,carro,L02,ENTREGUE,5.2,R$ 9.38,—,4,100x,"Chuva, Acidente",+1.1s
+20:24:23,E027,moto,L02,ENTREGUE,2.2,R$ 9.38,—,2,100x,"Chuva, Acidente",+0.0s
+20:24:23,E011,moto,L03,ENTREGUE,0.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",-0.1s
+20:24:23,E002,moto,L01,ENTREGUE,1.5,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.1s
+20:24:23,E024,moto,L03,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.2s
+20:24:23,E015,bike,L01,ENTREGUE,7.0,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:23,E012,moto,L11,ENTREGUE,3.3,R$ 7.50,—,2,100x,Acidente,+1.4s
+20:24:24,E009,moto,L07,ENTREGUE,2.6,R$ 7.50,R$ 15.00,2,100x,Acidente,+0.1s
+20:24:24,E022,moto,L05,ENTREGUE,1.4,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.4s
+20:24:24,E030,moto,L01,ENTREGUE,1.9,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.1s
+20:24:24,E007,carro,L07,ENTREGUE,5.8,R$ 9.38,R$ 37.50,4,100x,"Chuva, Acidente",+1.7s
+20:24:24,E025,bike,L03,ENTREGUE,0.7,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.0s
+20:24:24,E013,bike,L03,ENTREGUE,1.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.2s
+20:24:24,E008,moto,L09,ENTREGUE,1.3,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:24,E016,bike,L01,ENTREGUE,2.9,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",-0.1s
+20:24:24,E012,moto,L12,ENTREGUE,3.8,R$ 7.50,R$ 15.00,2,100x,"Trânsito, Acidente",+0.4s
+20:24:24,E027,moto,L03,ENTREGUE,2.9,R$ 7.50,R$ 16.88,2,100x,"Trânsito, Acidente",+0.9s
+20:24:24,E024,moto,L10,ENTREGUE,0.9,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.0s
+20:24:24,E005,moto,L02,ENTREGUE,1.1,R$ 7.50,R$ 7.50,1,100x,Acidente,-0.0s
+20:24:24,E008,moto,L01,ENTREGUE,1.6,R$ 7.50,R$ 16.88,2,100x,Acidente,+0.1s
+20:24:24,E019,carro,L02,ENTREGUE,3.0,R$ 7.50,—,5,100x,Acidente,+1.8s
+20:24:24,E019,carro,L06,ENTREGUE,3.2,R$ 9.38,—,5,100x,"Chuva, Trânsito, Acidente",+1.9s
+20:24:24,E001,carro,L06,ENTREGUE,5.2,R$ 7.50,—,4,100x,"Trânsito, Acidente",+2.7s
+20:24:25,E010,moto,L08,ENTREGUE,2.4,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.6s
+20:24:25,E021,moto,L12,ENTREGUE,2.0,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.2s
+20:24:25,E011,moto,L01,ENTREGUE,1.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:25,E004,bike,L02,ENTREGUE,2.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",-0.1s
+20:24:25,E014,moto,L07,ENTREGUE,1.8,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+1.0s
+20:24:25,E017,carro,L09,ENTREGUE,3.3,R$ 9.38,—,3,100x,"Chuva, Trânsito, Acidente",+2.2s
+20:24:25,E028,carro,L06,ENTREGUE,3.2,R$ 9.38,—,4,100x,"Chuva, Trânsito, Acidente",+1.2s
+20:24:25,E009,moto,L03,ENTREGUE,1.3,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:25,E022,moto,L02,ENTREGUE,1.3,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:25,E016,bike,L01,ENTREGUE,1.9,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.4s
+20:24:25,E029,carro,L06,ENTREGUE,2.9,R$ 7.50,—,3,100x,"Trânsito, Acidente",+1.7s
+20:24:25,E006,carro,L01,ENTREGUE,2.9,R$ 7.50,—,3,100x,"Trânsito, Acidente",+0.6s
+20:24:25,E014,moto,L09,ENTREGUE,2.0,R$ 7.50,R$ 16.88,2,100x,"Trânsito, Acidente",+0.2s
+20:24:25,E008,moto,L03,ENTREGUE,0.9,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.1s
+20:24:25,E005,moto,L09,ENTREGUE,1.0,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.0s
+20:24:25,E030,moto,L02,ENTREGUE,1.5,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:24:25,E023,bike,L02,ENTREGUE,3.8,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:25,E008,moto,L07,ENTREGUE,1.1,R$ 9.38,R$ 16.88,2,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:25,E002,moto,L02,ENTREGUE,2.1,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:25,E013,bike,L06,ENTREGUE,1.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:25,E001,carro,L01,ENTREGUE,6.2,R$ 7.50,—,4,100x,"Trânsito, Acidente",+2.5s
+20:24:26,E015,bike,L06,ENTREGUE,2.3,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",-0.0s
+20:24:26,E019,carro,L01,ENTREGUE,4.5,R$ 7.50,—,5,100x,"Trânsito, Acidente",+2.2s
+20:24:26,E020,carro,L06,ENTREGUE,3.9,R$ 7.50,—,5,100x,"Trânsito, Acidente",+2.6s
+20:24:26,E028,carro,L07,ENTREGUE,4.1,R$ 7.50,—,4,100x,"Trânsito, Acidente",+1.9s
+20:24:26,E029,carro,L01,ENTREGUE,3.6,R$ 7.50,—,3,100x,"Trânsito, Acidente",+1.4s
+20:24:26,E003,carro,L03,ENTREGUE,2.7,R$ 9.38,—,5,100x,"Chuva, Trânsito, Acidente",+2.1s
+20:24:26,E021,moto,L08,ENTREGUE,1.1,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:26,E024,moto,L01,ENTREGUE,1.7,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:26,E006,carro,L03,ENTREGUE,3.8,R$ 9.38,—,3,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:26,E010,moto,L09,ENTREGUE,3.7,R$ 9.38,R$ 16.88,2,100x,"Chuva, Trânsito, Acidente",+1.6s
+20:24:26,E001,carro,L07,ENTREGUE,6.6,R$ 9.38,R$ 31.88,4,100x,"Chuva, Trânsito, Acidente",+2.2s
+20:24:26,E027,moto,L06,ENTREGUE,1.9,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+1.1s
+20:24:26,E009,moto,L07,ENTREGUE,2.4,R$ 9.38,R$ 18.75,2,100x,"Chuva, Trânsito, Acidente",+1.4s
+20:24:26,E025,bike,L09,ENTREGUE,2.3,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.4s
+20:24:26,E019,carro,L07,ENTREGUE,5.0,R$ 7.50,—,5,100x,"Trânsito, Acidente",+1.9s
+20:24:26,E012,moto,L09,ENTREGUE,2.3,R$ 7.50,—,2,100x,Acidente,+0.4s
+20:24:26,E028,carro,L03,ENTREGUE,4.6,R$ 7.50,—,4,100x,Acidente,+2.3s
+20:24:26,E005,moto,L06,ENTREGUE,1.1,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.0s
+20:24:26,E022,moto,L02,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.0s
+20:24:26,E013,bike,L03,ENTREGUE,0.9,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",-0.0s
+20:24:27,E029,carro,L02,ENTREGUE,4.4,R$ 7.50,R$ 22.50,3,100x,"Trânsito, Acidente",+2.2s
+20:24:27,E012,moto,L07,ENTREGUE,2.6,R$ 7.50,R$ 15.00,2,100x,Acidente,+0.5s
+20:24:27,E026,bike,L01,ENTREGUE,4.3,R$ 7.50,R$ 7.50,1,100x,Acidente,+1.0s
+20:24:27,E030,moto,L09,ENTREGUE,1.4,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.3s
+20:24:27,E011,moto,L01,ENTREGUE,2.0,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.5s
+20:24:27,E014,moto,L07,ENTREGUE,1.7,R$ 7.50,—,2,100x,Acidente,+1.0s
+20:24:27,E027,moto,L02,ENTREGUE,2.8,R$ 7.50,R$ 16.88,2,100x,Acidente,+1.4s
+20:24:27,E007,carro,L02,ENTREGUE,3.1,R$ 9.38,—,4,100x,"Chuva, Acidente",+1.9s
+20:24:27,E017,carro,L03,ENTREGUE,5.3,R$ 9.38,—,3,100x,"Chuva, Acidente",+2.4s
+20:24:27,E016,bike,L12,ENTREGUE,2.9,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.3s
+20:24:27,E006,carro,L07,ENTREGUE,4.8,R$ 9.38,R$ 26.25,3,100x,"Chuva, Acidente",+2.0s
+20:24:27,E019,carro,L03,ENTREGUE,5.8,R$ 9.38,R$ 41.25,5,100x,"Chuva, Trânsito, Acidente",+2.6s
+20:24:27,E024,moto,L06,ENTREGUE,1.2,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.2s
+20:24:27,E003,carro,L02,ENTREGUE,4.1,R$ 7.50,—,5,100x,Acidente,+2.6s
+20:24:27,E020,carro,L07,ENTREGUE,5.4,R$ 7.50,—,5,100x,Acidente,+4.4s
+20:24:27,E022,moto,L04,ENTREGUE,0.8,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.3s
+20:24:27,E004,bike,L09,ENTREGUE,2.4,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.1s
+20:24:27,E023,bike,L05,ENTREGUE,1.9,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.7s
+20:24:27,E021,moto,L09,ENTREGUE,1.4,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.3s
+20:24:27,E013,bike,L07,ENTREGUE,0.9,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.1s
+20:24:27,E005,moto,L09,ENTREGUE,1.0,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.3s
+20:24:27,E007,carro,L06,ENTREGUE,3.6,R$ 7.50,—,4,100x,Acidente,+1.9s
+20:24:27,E002,moto,L02,ENTREGUE,1.9,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.1s
+20:24:27,E008,moto,L06,ENTREGUE,2.0,R$ 9.38,—,2,100x,"Chuva, Acidente",+1.1s
+20:24:27,E014,moto,L02,ENTREGUE,2.4,R$ 9.38,R$ 16.88,2,100x,"Chuva, Acidente",+0.7s
+20:24:28,E003,carro,L01,ENTREGUE,4.6,R$ 7.50,—,5,100x,"Trânsito, Acidente",+2.7s
+20:24:28,E007,carro,L09,ENTREGUE,4.0,R$ 7.50,—,4,100x,"Trânsito, Acidente",+1.3s
+20:24:28,E016,bike,L09,ENTREGUE,2.7,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.7s
+20:24:28,E010,moto,L03,ENTREGUE,1.9,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.2s
+20:24:28,E008,moto,L02,ENTREGUE,2.5,R$ 7.50,R$ 16.88,2,100x,"Trânsito, Acidente",+0.8s
+20:24:28,E003,carro,L06,ENTREGUE,4.8,R$ 9.38,—,5,100x,"Chuva, Trânsito, Acidente",+2.4s
+20:24:28,E030,moto,L06,ENTREGUE,1.0,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:28,E027,moto,L03,ENTREGUE,1.2,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:28,E022,moto,L02,ENTREGUE,0.8,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",-0.1s
+20:24:28,E020,carro,L01,ENTREGUE,6.5,R$ 7.50,—,5,100x,"Trânsito, Acidente",+3.5s
+20:24:28,E028,carro,L01,ENTREGUE,6.6,R$ 7.50,R$ 31.88,4,100x,"Trânsito, Acidente",+2.2s
+20:24:28,E026,bike,L05,ENTREGUE,1.6,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.7s
+20:24:28,E024,moto,L07,ENTREGUE,1.2,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:28,E021,moto,L02,ENTREGUE,1.1,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:28,E009,moto,L07,ENTREGUE,2.4,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+1.5s
+20:24:28,E030,moto,L01,ENTREGUE,1.7,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:28,E013,bike,L03,ENTREGUE,1.1,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:28,E011,moto,L08,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:28,E017,carro,L07,ENTREGUE,6.9,R$ 9.38,R$ 28.12,3,100x,"Chuva, Trânsito, Acidente",+4.3s
+20:24:28,E002,moto,L07,ENTREGUE,1.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:28,E004,bike,L09,ENTREGUE,1.3,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:28,E003,carro,L07,ENTREGUE,5.5,R$ 9.38,R$ 43.12,5,100x,"Chuva, Trânsito, Acidente",+3.1s
+20:24:29,E016,bike,L07,ENTREGUE,0.9,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",-0.0s
+20:24:29,E022,moto,L07,ENTREGUE,0.6,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",-0.0s
+20:24:29,E020,carro,L02,ENTREGUE,6.9,R$ 7.50,—,5,100x,"Trânsito, Acidente",+3.2s
+20:24:29,E021,moto,L06,ENTREGUE,0.4,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",-0.0s
+20:24:29,E011,moto,L02,ENTREGUE,0.3,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",-0.0s
+20:24:29,E027,moto,L06,ENTREGUE,2.0,R$ 7.50,R$ 16.88,2,100x,"Trânsito, Acidente",+0.7s
+20:24:29,E008,moto,L03,ENTREGUE,1.0,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.1s
+20:24:29,E012,moto,L01,ENTREGUE,2.3,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+1.0s
+20:24:29,E025,bike,L11,ENTREGUE,2.8,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:29,E007,carro,L03,ENTREGUE,5.2,R$ 9.38,R$ 33.75,4,100x,"Chuva, Trânsito, Acidente",+1.9s
+20:24:29,E010,moto,L07,ENTREGUE,3.1,R$ 9.38,R$ 16.88,2,100x,"Chuva, Trânsito, Acidente",+1.5s
+20:24:29,E005,moto,L01,ENTREGUE,1.7,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:29,E030,moto,L06,ENTREGUE,1.2,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:29,E001,carro,L07,ENTREGUE,3.3,R$ 7.50,—,4,100x,"Trânsito, Acidente",+2.1s
+20:24:29,E022,moto,L03,ENTREGUE,0.6,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:29,E009,moto,L01,ENTREGUE,3.2,R$ 7.50,R$ 16.88,2,100x,"Trânsito, Acidente",+1.1s
+20:24:29,E029,carro,L11,ENTREGUE,2.7,R$ 7.50,—,3,100x,"Trânsito, Acidente",+1.4s
+20:24:29,E030,moto,L03,ENTREGUE,0.9,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",-0.0s
+20:24:29,E008,moto,L07,ENTREGUE,1.6,R$ 9.38,R$ 16.88,2,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:29,E001,carro,L06,ENTREGUE,3.6,R$ 9.38,—,4,100x,"Chuva, Trânsito, Acidente",+2.0s
+20:24:30,E013,bike,L07,ENTREGUE,1.1,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:30,E006,carro,L03,ENTREGUE,2.7,R$ 9.38,—,3,100x,"Chuva, Trânsito, Acidente",+1.4s
+20:24:30,E030,moto,L09,ENTREGUE,0.4,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:30,E014,moto,L06,ENTREGUE,2.3,R$ 7.50,—,2,100x,"Trânsito, Acidente",+1.2s
+20:24:30,E024,moto,L09,ENTREGUE,1.5,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.4s
+20:24:30,E029,carro,L07,ENTREGUE,3.4,R$ 9.38,—,3,100x,"Chuva, Acidente",+1.7s
+20:24:30,E021,moto,L11,ENTREGUE,1.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",-0.0s
+20:24:30,E001,carro,L09,ENTREGUE,4.1,R$ 9.38,—,4,100x,"Chuva, Acidente",+1.7s
+20:24:30,E002,moto,L06,ENTREGUE,1.5,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.1s
+20:24:30,E005,moto,L03,ENTREGUE,1.0,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:30,E020,carro,L03,ENTREGUE,8.4,R$ 9.38,R$ 39.38,5,100x,"Chuva, Trânsito, Acidente",+4.3s
+20:24:30,E016,bike,L09,ENTREGUE,3.3,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:30,E011,moto,L01,ENTREGUE,1.3,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:30,E010,moto,L07,ENTREGUE,1.2,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.2s
+20:24:30,E012,moto,L03,ENTREGUE,3.6,R$ 7.50,R$ 16.88,2,100x,Acidente,+1.3s
+20:24:30,E006,carro,L07,ENTREGUE,3.5,R$ 7.50,—,3,100x,Acidente,+2.6s
+20:24:30,E001,carro,L02,ENTREGUE,4.5,R$ 7.50,R$ 33.75,4,100x,Acidente,+1.6s
+20:24:30,E021,moto,L02,ENTREGUE,0.4,R$ 7.50,R$ 7.50,1,100x,Acidente,-0.0s
+20:24:30,E017,carro,L01,ENTREGUE,2.0,R$ 9.38,—,3,100x,"Chuva, Acidente",+0.6s
+20:24:30,E022,moto,L06,ENTREGUE,1.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.3s
+20:24:30,E030,moto,L03,ENTREGUE,1.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",-0.0s
+20:24:30,E024,moto,L07,ENTREGUE,0.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",-0.0s
+20:24:30,E010,moto,L03,ENTREGUE,1.5,R$ 9.38,R$ 16.88,2,100x,"Chuva, Acidente",+0.1s
+20:24:31,E014,moto,L02,ENTREGUE,3.3,R$ 7.50,R$ 15.00,2,100x,"Trânsito, Acidente",+1.7s
+20:24:31,E030,moto,L02,ENTREGUE,1.1,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:31,E025,bike,L04,ENTREGUE,1.9,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:31,E016,bike,L01,ENTREGUE,2.3,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.4s
+20:24:31,E029,carro,L01,ENTREGUE,4.3,R$ 7.50,R$ 24.38,3,100x,"Trânsito, Acidente",+1.7s
+20:24:31,E019,carro,L07,ENTREGUE,3.9,R$ 7.50,—,5,100x,"Trânsito, Acidente",+3.0s
+20:24:31,E017,carro,L03,ENTREGUE,2.5,R$ 9.38,—,3,100x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:31,E027,moto,L07,ENTREGUE,2.2,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+1.2s
+20:24:31,E001,carro,L07,ENTREGUE,0.6,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:31,E002,moto,L01,ENTREGUE,1.1,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:31,E023,bike,L01,ENTREGUE,4.0,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:31,E008,moto,L02,ENTREGUE,2.0,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.7s
+20:24:31,E010,moto,L07,ENTREGUE,0.8,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:31,E017,carro,L07,ENTREGUE,2.9,R$ 7.50,R$ 26.25,3,100x,"Trânsito, Acidente",+1.1s
+20:24:31,E002,moto,L03,ENTREGUE,0.3,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",-0.0s
+20:24:31,E026,bike,L03,ENTREGUE,3.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:31,E027,moto,L01,ENTREGUE,2.7,R$ 9.38,R$ 18.75,2,100x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:31,E029,carro,L07,ENTREGUE,0.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:32,E013,bike,L01,ENTREGUE,1.9,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:32,E019,carro,L01,ENTREGUE,4.5,R$ 9.38,—,5,100x,"Chuva, Trânsito, Acidente",+3.0s
+20:24:32,E004,bike,L02,ENTREGUE,3.3,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:32,E006,carro,L09,ENTREGUE,4.9,R$ 7.50,R$ 24.38,3,100x,"Trânsito, Acidente",+3.1s
+20:24:32,E009,moto,L01,ENTREGUE,2.6,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.8s
+20:24:32,E015,bike,L12,ENTREGUE,6.2,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+1.3s
+20:24:32,E005,moto,L01,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.3s
+20:24:32,E021,moto,L09,ENTREGUE,1.4,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.4s
+20:24:32,E011,moto,L09,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.3s
+20:24:32,E001,carro,L03,ENTREGUE,1.5,R$ 7.50,R$ 16.88,2,100x,"Trânsito, Acidente",+0.8s
+20:24:32,E022,moto,L03,ENTREGUE,1.3,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:32,E019,carro,L06,ENTREGUE,5.0,R$ 9.38,—,5,100x,"Chuva, Trânsito, Acidente",+2.9s
+20:24:32,E030,moto,L08,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.7s
+20:24:32,E030,moto,L02,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:32,E007,carro,L03,ENTREGUE,3.2,R$ 9.38,—,4,100x,"Chuva, Trânsito, Acidente",+2.1s
+20:24:32,E019,carro,L09,ENTREGUE,5.4,R$ 7.50,—,5,100x,"Trânsito, Acidente",+2.1s
+20:24:32,E028,carro,L03,ENTREGUE,4.2,R$ 7.50,—,4,100x,"Trânsito, Acidente",+2.2s
+20:24:32,E005,moto,L06,ENTREGUE,0.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:32,E008,moto,L07,ENTREGUE,3.1,R$ 9.38,R$ 16.88,2,100x,"Chuva, Trânsito, Acidente",+1.2s
+20:24:33,E009,moto,L02,ENTREGUE,3.3,R$ 9.38,R$ 16.88,2,100x,"Chuva, Trânsito, Acidente",+1.0s
+20:24:33,E024,moto,L01,ENTREGUE,1.9,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:24:33,E003,carro,L02,ENTREGUE,4.3,R$ 7.50,—,5,100x,"Trânsito, Acidente",+3.3s
+20:24:33,E016,bike,L06,ENTREGUE,2.0,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.3s
+20:24:33,E007,carro,L02,ENTREGUE,3.9,R$ 7.50,—,4,100x,"Trânsito, Acidente",+2.2s
+20:24:33,E012,moto,L12,ENTREGUE,2.7,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.3s
+20:24:33,E022,moto,L06,ENTREGUE,0.5,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.0s
+20:24:33,E002,moto,L09,ENTREGUE,1.4,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.3s
+20:24:33,E011,moto,L03,ENTREGUE,0.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:33,E019,carro,L03,ENTREGUE,6.1,R$ 9.38,R$ 43.12,5,100x,"Chuva, Trânsito, Acidente",+2.5s
+20:24:33,E013,bike,L02,ENTREGUE,1.3,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:33,E027,moto,L03,ENTREGUE,1.4,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:33,E016,bike,L02,ENTREGUE,3.0,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.4s
+20:24:33,E029,carro,L09,ENTREGUE,1.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:33,E017,carro,L03,ENTREGUE,1.9,R$ 7.50,—,3,100x,"Trânsito, Acidente",+1.5s
+20:24:33,E030,moto,L02,ENTREGUE,1.4,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:34,E012,moto,L06,ENTREGUE,0.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:34,E021,moto,L07,ENTREGUE,1.0,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:34,E014,moto,L09,ENTREGUE,2.9,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:34,E003,carro,L09,ENTREGUE,5.1,R$ 9.38,—,5,100x,"Chuva, Trânsito, Acidente",+3.4s
+20:24:34,E030,moto,L02,ENTREGUE,1.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.4s
+20:24:34,E010,moto,L06,ENTREGUE,2.3,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+1.4s
+20:24:34,E006,carro,L01,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.3s
+20:24:34,E008,moto,L02,ENTREGUE,1.3,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.2s
+20:24:34,E001,carro,L02,ENTREGUE,1.6,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.3s
+20:24:34,E027,moto,L02,ENTREGUE,2.2,R$ 7.50,R$ 16.88,2,100x,"Trânsito, Acidente",+1.1s
+20:24:34,E007,carro,L09,ENTREGUE,5.0,R$ 7.50,—,4,100x,"Trânsito, Acidente",+2.7s
+20:24:34,E028,carro,L01,ENTREGUE,5.7,R$ 7.50,—,4,100x,"Trânsito, Acidente",+2.2s
+20:24:34,E017,carro,L01,ENTREGUE,2.6,R$ 7.50,—,3,100x,"Trânsito, Acidente",+1.0s
+20:24:34,E005,moto,L07,ENTREGUE,0.6,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:34,E004,bike,L03,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:34,E003,carro,L03,ENTREGUE,5.6,R$ 9.38,—,5,100x,"Chuva, Trânsito, Acidente",+3.2s
+20:24:34,E008,moto,L03,ENTREGUE,1.5,R$ 9.38,R$ 16.88,2,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:34,E020,carro,L09,ENTREGUE,4.0,R$ 9.38,—,5,100x,"Chuva, Trânsito, Acidente",+3.3s
+20:24:34,E024,moto,L02,ENTREGUE,0.9,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:34,E028,carro,L02,ENTREGUE,6.2,R$ 7.50,—,4,100x,"Trânsito, Acidente",+1.4s
+20:24:35,E017,carro,L06,ENTREGUE,3.1,R$ 7.50,R$ 22.50,3,100x,"Trânsito, Acidente",+1.4s
+20:24:35,E023,bike,L09,ENTREGUE,3.4,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.6s
+20:24:35,E010,moto,L12,ENTREGUE,3.2,R$ 9.38,R$ 18.75,2,100x,"Chuva, Trânsito, Acidente",+1.7s
+20:24:35,E019,carro,L06,ENTREGUE,0.9,R$ 12.19,—,3,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:35,E003,carro,L01,ENTREGUE,6.1,R$ 9.38,—,5,100x,"Chuva, Trânsito, Acidente",+2.9s
+20:24:35,E025,bike,L01,ENTREGUE,3.8,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+1.4s
+20:24:35,E022,moto,L02,ENTREGUE,1.8,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.7s
+20:24:35,E007,carro,L07,ENTREGUE,5.9,R$ 7.50,R$ 31.88,4,100x,"Trânsito, Acidente",+2.7s
+20:24:35,E030,moto,L09,ENTREGUE,1.4,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:35,E009,moto,L09,ENTREGUE,2.3,R$ 7.50,—,2,100x,"Trânsito, Acidente",+1.2s
+20:24:35,E002,moto,L01,ENTREGUE,1.9,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.2s
+20:24:35,E013,bike,L03,ENTREGUE,1.9,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",-0.0s
+20:24:35,E011,moto,L07,ENTREGUE,0.8,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",+0.1s
+20:24:35,E024,moto,L07,ENTREGUE,0.9,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",+0.3s
+20:24:35,E027,moto,L01,ENTREGUE,1.1,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",+0.3s
+20:24:35,E030,moto,L09,ENTREGUE,1.4,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",+0.3s
+20:24:35,E003,carro,L07,ENTREGUE,6.8,R$ 9.38,R$ 45.00,5,100x,"Chuva, Trânsito, Acidente",+2.9s
+20:24:35,E019,carro,L03,ENTREGUE,1.6,R$ 12.19,—,3,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:35,E029,carro,L07,ENTREGUE,0.5,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:35,E016,bike,L07,ENTREGUE,0.6,R$ 9.75,R$ 9.75,1,100x,Acidente,-0.0s
+20:24:35,E016,bike,L10,ENTREGUE,2.0,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.2s
+20:24:36,E008,moto,L07,ENTREGUE,1.1,R$ 9.75,—,2,100x,Acidente,+0.5s
+20:24:36,E021,moto,L02,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,100x,Acidente,-0.2s
+20:24:36,E020,carro,L07,ENTREGUE,5.5,R$ 9.38,—,5,100x,"Chuva, Acidente",+3.7s
+20:24:36,E012,moto,L09,ENTREGUE,2.0,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:24:36,E026,bike,L02,ENTREGUE,4.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.7s
+20:24:36,E009,moto,L05,ENTREGUE,3.2,R$ 9.38,R$ 16.88,2,100x,"Chuva, Trânsito, Acidente",+1.3s
+20:24:36,E019,carro,L07,ENTREGUE,2.2,R$ 9.75,R$ 34.12,3,100x,"Trânsito, Acidente",+1.4s
+20:24:36,E001,carro,L06,ENTREGUE,0.7,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.1s
+20:24:36,E028,carro,L09,ENTREGUE,7.9,R$ 7.50,R$ 30.00,4,100x,Acidente,+3.5s
+20:24:36,E008,moto,L06,ENTREGUE,1.8,R$ 12.19,R$ 21.94,2,100x,"Chuva, Acidente",+0.9s
+20:24:36,E007,carro,L05,ENTREGUE,1.1,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:36,E023,bike,L03,ENTREGUE,1.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:36,E010,moto,L02,ENTREGUE,1.5,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:36,E020,carro,L02,ENTREGUE,6.2,R$ 9.38,—,5,100x,"Chuva, Trânsito, Acidente",+3.3s
+20:24:36,E015,bike,L04,ENTREGUE,3.5,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+1.0s
+20:24:36,E017,carro,L06,ENTREGUE,1.8,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+1.2s
+20:24:36,E005,moto,L06,ENTREGUE,0.9,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:36,E014,moto,L09,ENTREGUE,1.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.4s
+20:24:36,E022,moto,L02,ENTREGUE,1.3,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:37,E010,moto,L06,ENTREGUE,1.8,R$ 9.75,R$ 21.94,2,100x,"Trânsito, Acidente",+0.3s
+20:24:37,E006,carro,L06,ENTREGUE,2.6,R$ 9.75,—,3,100x,"Trânsito, Acidente",+1.7s
+20:24:37,E013,bike,L10,ENTREGUE,0.9,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.0s
+20:24:37,E021,moto,L07,ENTREGUE,0.4,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",-0.1s
+20:24:37,E024,moto,L01,ENTREGUE,1.3,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:24:37,E017,carro,L09,ENTREGUE,2.4,R$ 9.38,R$ 18.75,2,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:24:37,E030,moto,L01,ENTREGUE,1.4,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.4s
+20:24:37,E020,carro,L06,ENTREGUE,7.0,R$ 7.50,—,5,100x,"Trânsito, Acidente",+3.3s
+20:24:37,E016,bike,L07,ENTREGUE,1.1,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:37,E022,moto,L07,ENTREGUE,0.5,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.0s
+20:24:37,E027,moto,L06,ENTREGUE,1.9,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+1.0s
+20:24:38,E006,carro,L09,ENTREGUE,3.6,R$ 9.75,—,3,100x,"Trânsito, Acidente",+2.3s
+20:24:38,E025,bike,L06,ENTREGUE,1.1,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:38,E021,moto,L03,ENTREGUE,0.4,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:38,E030,moto,L02,ENTREGUE,0.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:38,E016,bike,L05,ENTREGUE,1.9,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.5s
+20:24:38,E014,moto,L06,ENTREGUE,1.2,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.7s
+20:24:38,E012,moto,L02,ENTREGUE,2.3,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.6s
+20:24:38,E020,carro,L01,ENTREGUE,8.1,R$ 7.50,R$ 43.12,5,100x,Acidente,+3.9s
+20:24:38,E006,carro,L07,ENTREGUE,4.4,R$ 12.19,R$ 31.69,3,100x,"Chuva, Trânsito, Acidente",+2.0s
+20:24:38,E014,moto,L01,ENTREGUE,1.5,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+0.4s
+20:24:38,E009,moto,L07,ENTREGUE,0.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:39,E002,moto,L03,ENTREGUE,1.0,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.4s
+20:24:39,E027,moto,L02,ENTREGUE,3.2,R$ 7.50,R$ 16.88,2,100x,"Trânsito, Acidente",+1.4s
+20:24:39,E010,moto,L01,ENTREGUE,1.8,R$ 7.50,—,2,100x,Acidente,+0.5s
+20:24:39,E021,moto,L03,ENTREGUE,0.6,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.1s
+20:24:39,E024,moto,L05,ENTREGUE,1.5,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.4s
+20:24:39,E012,moto,L01,ENTREGUE,2.8,R$ 7.50,R$ 15.00,2,100x,Acidente,+0.8s
+20:24:39,E013,bike,L05,ENTREGUE,1.4,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.1s
+20:24:39,E001,carro,L09,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.0s
+20:24:39,E030,moto,L02,ENTREGUE,1.0,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.0s
+20:24:39,E007,carro,L03,ENTREGUE,1.4,R$ 12.19,—,2,100x,"Chuva, Acidente",+0.9s
+20:24:39,E030,moto,L02,ENTREGUE,1.0,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",+0.0s
+20:24:39,E026,bike,L02,ENTREGUE,3.3,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.0s
+20:24:39,E010,moto,L03,ENTREGUE,2.4,R$ 7.50,R$ 15.00,2,100x,Acidente,+0.2s
+20:24:39,E019,carro,L08,ENTREGUE,2.8,R$ 9.75,—,3,100x,Acidente,+1.6s
+20:24:39,E007,carro,L02,ENTREGUE,1.8,R$ 9.75,R$ 21.94,2,100x,Acidente,+0.3s
+20:24:39,E011,moto,L05,ENTREGUE,1.1,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.3s
+20:24:39,E022,moto,L01,ENTREGUE,1.5,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.5s
+20:24:39,E008,moto,L09,ENTREGUE,2.2,R$ 9.38,—,2,100x,"Chuva, Acidente",+0.4s
+20:24:39,E029,carro,L03,ENTREGUE,0.8,R$ 12.19,—,2,100x,"Chuva, Acidente",+0.2s
+20:24:39,E004,bike,L06,ENTREGUE,1.0,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:39,E003,carro,L01,ENTREGUE,1.7,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.4s
+20:24:39,E013,bike,L06,ENTREGUE,0.3,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.1s
+20:24:39,E030,moto,L07,ENTREGUE,0.7,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:40,E002,moto,L09,ENTREGUE,1.1,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.2s
+20:24:40,E015,bike,L05,ENTREGUE,2.5,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:40,E009,moto,L06,ENTREGUE,0.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:40,E017,carro,L01,ENTREGUE,1.9,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+0.4s
+20:24:40,E008,moto,L06,ENTREGUE,2.8,R$ 9.38,R$ 18.75,2,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:40,E019,carro,L02,ENTREGUE,3.5,R$ 12.19,—,3,100x,"Chuva, Trânsito, Acidente",+1.4s
+20:24:40,E028,carro,L01,ENTREGUE,3.0,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+1.1s
+20:24:40,E020,carro,L02,ENTREGUE,1.1,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:40,E024,moto,L09,ENTREGUE,0.9,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:40,E029,carro,L06,ENTREGUE,1.5,R$ 9.75,R$ 21.94,2,100x,"Trânsito, Acidente",+0.9s
+20:24:40,E017,carro,L04,ENTREGUE,2.1,R$ 9.75,R$ 21.94,2,100x,"Trânsito, Acidente",+0.2s
+20:24:40,E023,bike,L09,ENTREGUE,3.5,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+1.8s
+20:24:40,E016,bike,L02,ENTREGUE,2.8,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.3s
+20:24:41,E001,carro,L02,ENTREGUE,1.6,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:41,E013,bike,L07,ENTREGUE,0.6,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:41,E025,bike,L01,ENTREGUE,2.4,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.3s
+20:24:41,E022,moto,L03,ENTREGUE,1.4,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.4s
+20:24:41,E002,moto,L04,ENTREGUE,1.0,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.1s
+20:24:41,E009,moto,L01,ENTREGUE,0.8,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:41,E010,moto,L01,ENTREGUE,1.6,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.0s
+20:24:41,E014,moto,L06,ENTREGUE,2.8,R$ 12.19,—,2,100x,"Chuva, Acidente",+1.5s
+20:24:42,E020,carro,L07,ENTREGUE,1.0,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.0s
+20:24:42,E003,carro,L02,ENTREGUE,2.0,R$ 7.50,—,2,100x,Acidente,+1.0s
+20:24:42,E019,carro,L12,ENTREGUE,5.4,R$ 9.75,R$ 31.69,3,100x,Acidente,+1.9s
+20:24:42,E007,carro,L04,ENTREGUE,0.8,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.1s
+20:24:42,E004,bike,L09,ENTREGUE,1.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:42,E011,moto,L12,ENTREGUE,1.3,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:42,E030,moto,L12,ENTREGUE,1.3,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:42,E005,moto,L06,ENTREGUE,1.0,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:42,E003,carro,L01,ENTREGUE,2.6,R$ 7.50,R$ 15.00,2,100x,"Trânsito, Acidente",+0.7s
+20:24:42,E012,moto,L09,ENTREGUE,1.8,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.4s
+20:24:42,E025,bike,L04,ENTREGUE,1.4,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:42,E015,bike,L07,ENTREGUE,1.7,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:42,E001,carro,L01,ENTREGUE,3.5,R$ 9.75,R$ 21.94,2,100x,"Trânsito, Acidente",+1.8s
+20:24:42,E008,moto,L09,ENTREGUE,1.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:42,E014,moto,L01,ENTREGUE,3.8,R$ 12.19,R$ 24.38,2,100x,"Chuva, Trânsito, Acidente",+2.0s
+20:24:43,E006,carro,L02,ENTREGUE,3.1,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+1.8s
+20:24:43,E017,carro,L03,ENTREGUE,1.3,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:43,E002,moto,L09,ENTREGUE,1.5,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.3s
+20:24:43,E024,moto,L10,ENTREGUE,1.0,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.2s
+20:24:43,E030,moto,L07,ENTREGUE,0.5,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:43,E012,moto,L01,ENTREGUE,2.4,R$ 9.75,R$ 19.50,2,100x,"Trânsito, Acidente",+0.9s
+20:24:43,E010,moto,L09,ENTREGUE,1.5,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:43,E027,moto,L08,ENTREGUE,2.0,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:43,E002,moto,L07,ENTREGUE,0.3,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.1s
+20:24:43,E030,moto,L01,ENTREGUE,1.8,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:43,E028,carro,L06,ENTREGUE,3.2,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+1.6s
+20:24:43,E026,bike,L11,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.2s
+20:24:43,E016,bike,L07,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.1s
+20:24:44,E009,moto,L09,ENTREGUE,1.7,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:24:44,E025,bike,L06,ENTREGUE,0.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.1s
+20:24:44,E008,moto,L03,ENTREGUE,0.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:44,E027,moto,L05,ENTREGUE,2.7,R$ 9.38,R$ 18.75,2,100x,"Chuva, Trânsito, Acidente",+0.8s
+20:24:44,E006,carro,L09,ENTREGUE,4.4,R$ 7.50,R$ 16.88,2,100x,"Trânsito, Acidente",+2.3s
+20:24:44,E011,moto,L09,ENTREGUE,1.2,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.3s
+20:24:44,E014,moto,L01,ENTREGUE,1.2,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.3s
+20:24:44,E002,moto,L06,ENTREGUE,0.7,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:44,E007,carro,L03,ENTREGUE,1.4,R$ 9.75,—,3,100x,Acidente,+0.7s
+20:24:44,E005,moto,L07,ENTREGUE,0.7,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",+0.1s
+20:24:44,E028,carro,L02,ENTREGUE,4.0,R$ 9.38,R$ 18.75,2,100x,"Chuva, Acidente",+1.8s
+20:24:44,E013,bike,L10,ENTREGUE,2.6,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.2s
+20:24:44,E009,moto,L03,ENTREGUE,2.5,R$ 7.50,R$ 16.88,2,100x,Acidente,+0.5s
+20:24:44,E019,carro,L03,ENTREGUE,0.9,R$ 9.75,—,2,100x,Acidente,+0.1s
+20:24:44,E012,moto,L09,ENTREGUE,1.1,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.1s
+20:24:44,E014,moto,L09,ENTREGUE,1.8,R$ 9.38,R$ 16.88,2,100x,"Chuva, Acidente",+0.6s
+20:24:44,E004,bike,L09,ENTREGUE,2.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.7s
+20:24:44,E016,bike,L09,ENTREGUE,3.0,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.4s
+20:24:44,E001,carro,L02,ENTREGUE,1.8,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:44,E011,moto,L06,ENTREGUE,0.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:45,E022,moto,L05,ENTREGUE,1.2,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:45,E024,moto,L04,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:45,E030,moto,L07,ENTREGUE,0.7,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:45,E029,carro,L07,ENTREGUE,2.3,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.8s
+20:24:45,E030,moto,L01,ENTREGUE,1.7,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.3s
+20:24:45,E017,carro,L07,ENTREGUE,1.9,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.7s
+20:24:45,E002,moto,L12,ENTREGUE,0.8,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",-0.1s
+20:24:45,E019,carro,L07,ENTREGUE,1.5,R$ 9.75,R$ 19.50,2,100x,Acidente,+0.7s
+20:24:45,E021,moto,L02,ENTREGUE,1.5,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.2s
+20:24:45,E023,bike,L02,ENTREGUE,4.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.2s
+20:24:45,E016,bike,L06,ENTREGUE,1.3,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:45,E005,moto,L07,ENTREGUE,0.8,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:45,E027,moto,L06,ENTREGUE,1.5,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.7s
+20:24:45,E003,carro,L07,ENTREGUE,1.8,R$ 7.50,—,2,100x,"Trânsito, Acidente",+1.2s
+20:24:45,E010,moto,L12,ENTREGUE,2.3,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.4s
+20:24:45,E003,carro,L01,ENTREGUE,1.9,R$ 7.50,R$ 15.00,2,100x,"Trânsito, Acidente",+0.3s
+20:24:45,E007,carro,L06,ENTREGUE,3.0,R$ 9.75,—,3,100x,"Trânsito, Acidente",+1.7s
+20:24:45,E006,carro,L06,ENTREGUE,1.3,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.4s
+20:24:45,E008,moto,L03,ENTREGUE,1.3,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:45,E022,moto,L03,ENTREGUE,0.8,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:46,E011,moto,L07,ENTREGUE,0.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:46,E024,moto,L02,ENTREGUE,1.0,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.4s
+20:24:46,E029,carro,L02,ENTREGUE,3.2,R$ 9.38,R$ 18.75,2,100x,"Chuva, Trânsito, Acidente",+1.0s
+20:24:46,E017,carro,L09,ENTREGUE,3.0,R$ 9.75,R$ 19.50,2,100x,"Trânsito, Acidente",+0.5s
+20:24:46,E002,moto,L09,ENTREGUE,1.0,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.3s
+20:24:46,E027,moto,L02,ENTREGUE,2.3,R$ 7.50,R$ 16.88,2,100x,"Trânsito, Acidente",+1.2s
+20:24:46,E008,moto,L02,ENTREGUE,1.8,R$ 9.75,R$ 21.94,2,100x,"Trânsito, Acidente",+0.3s
+20:24:46,E005,moto,L02,ENTREGUE,0.8,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:46,E015,bike,L09,ENTREGUE,2.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:46,E020,carro,L12,ENTREGUE,4.0,R$ 9.38,—,3,100x,"Chuva, Trânsito, Acidente",+1.8s
+20:24:46,E010,moto,L07,ENTREGUE,0.6,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:46,E009,moto,L03,ENTREGUE,1.9,R$ 9.75,—,2,100x,"Trânsito, Acidente",+1.2s
+20:24:46,E016,bike,L06,ENTREGUE,1.4,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.4s
+20:24:46,E011,moto,L06,ENTREGUE,0.6,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.0s
+20:24:46,E012,moto,L02,ENTREGUE,1.1,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.3s
+20:24:46,E008,moto,L11,ENTREGUE,0.4,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.0s
+20:24:47,E005,moto,L06,ENTREGUE,0.5,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.0s
+20:24:47,E026,bike,L02,ENTREGUE,2.9,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",-0.0s
+20:24:47,E028,carro,L07,ENTREGUE,2.6,R$ 9.38,—,3,100x,"Chuva, Trânsito, Acidente",+1.7s
+20:24:47,E010,moto,L06,ENTREGUE,1.2,R$ 9.38,R$ 18.75,2,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:47,E009,moto,L01,ENTREGUE,2.3,R$ 9.75,R$ 19.50,2,100x,"Trânsito, Acidente",+0.6s
+20:24:47,E001,carro,L03,ENTREGUE,2.1,R$ 9.75,—,2,100x,"Trânsito, Acidente",+1.5s
+20:24:47,E007,carro,L09,ENTREGUE,4.4,R$ 9.75,R$ 29.25,3,100x,Acidente,+2.9s
+20:24:47,E027,moto,L02,ENTREGUE,0.7,R$ 9.75,R$ 9.75,1,100x,Acidente,-0.0s
+20:24:47,E020,carro,L05,ENTREGUE,4.8,R$ 7.50,—,3,100x,Acidente,+1.1s
+20:24:47,E030,moto,L07,ENTREGUE,0.9,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.1s
+20:24:47,E022,moto,L06,ENTREGUE,0.9,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.1s
+20:24:47,E013,bike,L06,ENTREGUE,1.3,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.1s
+20:24:47,E024,moto,L07,ENTREGUE,1.3,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.2s
+20:24:47,E019,carro,L01,ENTREGUE,1.9,R$ 9.75,—,2,100x,Acidente,+0.7s
+20:24:47,E014,moto,L01,ENTREGUE,1.7,R$ 9.38,R$ 9.38,1,100x,"Chuva, Acidente",+0.2s
+20:24:47,E025,bike,L09,ENTREGUE,3.4,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",+1.4s
+20:24:47,E028,carro,L02,ENTREGUE,3.1,R$ 9.38,—,3,100x,"Chuva, Acidente",+1.3s
+20:24:47,E019,carro,L03,ENTREGUE,2.1,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:47,E006,carro,L01,ENTREGUE,1.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:47,E005,moto,L06,ENTREGUE,0.6,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.1s
+20:24:47,E002,moto,L06,ENTREGUE,1.2,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.4s
+20:24:48,E029,carro,L03,ENTREGUE,0.3,R$ 9.75,R$ 9.75,1,100x,Acidente,-0.0s
+20:24:48,E001,carro,L12,ENTREGUE,3.0,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+1.8s
+20:24:48,E027,moto,L03,ENTREGUE,0.7,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:48,E021,moto,L02,ENTREGUE,1.1,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:48,E023,bike,L04,ENTREGUE,2.2,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.8s
+20:24:48,E012,moto,L09,ENTREGUE,1.6,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.5s
+20:24:48,E016,bike,L01,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.8s
+20:24:48,E009,moto,L03,ENTREGUE,0.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:48,E027,moto,L07,ENTREGUE,1.2,R$ 12.19,R$ 24.38,2,100x,"Chuva, Trânsito, Acidente",+0.7s
+20:24:48,E007,carro,L01,ENTREGUE,1.2,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:24:48,E017,carro,L09,ENTREGUE,1.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:48,E016,bike,L09,ENTREGUE,2.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:48,E003,carro,L09,ENTREGUE,2.3,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:24:48,E005,moto,L01,ENTREGUE,0.7,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.1s
+20:24:48,E028,carro,L03,ENTREGUE,4.3,R$ 9.38,R$ 28.12,3,100x,"Chuva, Trânsito, Acidente",+1.3s
+20:24:48,E020,carro,L03,ENTREGUE,6.3,R$ 7.50,R$ 24.38,3,100x,"Trânsito, Acidente",+2.3s
+20:24:48,E024,moto,L01,ENTREGUE,1.3,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:49,E003,carro,L06,ENTREGUE,2.7,R$ 12.19,R$ 24.38,2,100x,"Chuva, Trânsito, Acidente",+0.8s
+20:24:49,E004,bike,L09,ENTREGUE,3.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.8s
+20:24:49,E008,moto,L03,ENTREGUE,0.7,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.2s
+20:24:49,E029,carro,L06,ENTREGUE,1.4,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.6s
+20:24:49,E022,moto,L08,ENTREGUE,1.0,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:49,E008,moto,L10,ENTREGUE,1.0,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:49,E019,carro,L06,ENTREGUE,0.8,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:49,E030,moto,L01,ENTREGUE,1.8,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:24:49,E011,moto,L06,ENTREGUE,1.2,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:49,E012,moto,L07,ENTREGUE,2.8,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+1.0s
+20:24:49,E025,bike,L06,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:49,E006,carro,L02,ENTREGUE,1.5,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.4s
+20:24:49,E016,bike,L07,ENTREGUE,1.3,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.2s
+20:24:50,E022,moto,L09,ENTREGUE,0.5,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.1s
+20:24:50,E007,carro,L06,ENTREGUE,0.5,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.1s
+20:24:50,E005,moto,L09,ENTREGUE,1.1,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.4s
+20:24:50,E017,carro,L03,ENTREGUE,0.4,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",+0.0s
+20:24:50,E008,moto,L07,ENTREGUE,0.8,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.2s
+20:24:50,E006,carro,L09,ENTREGUE,0.5,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:50,E010,moto,L07,ENTREGUE,2.8,R$ 9.75,—,2,100x,Acidente,+1.6s
+20:24:50,E029,carro,L02,ENTREGUE,2.4,R$ 9.75,R$ 19.50,2,100x,Acidente,+1.1s
+20:24:50,E009,moto,L09,ENTREGUE,1.8,R$ 9.75,—,2,100x,Acidente,+0.6s
+20:24:50,E003,carro,L04,ENTREGUE,1.5,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.1s
+20:24:50,E011,moto,L09,ENTREGUE,0.5,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.0s
+20:24:50,E001,carro,L02,ENTREGUE,2.5,R$ 9.38,—,2,100x,"Chuva, Acidente",+1.1s
+20:24:50,E030,moto,L07,ENTREGUE,0.7,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",-0.0s
+20:24:50,E002,moto,L06,ENTREGUE,0.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",-0.0s
+20:24:50,E019,carro,L03,ENTREGUE,1.9,R$ 12.19,R$ 24.38,2,100x,"Chuva, Trânsito, Acidente",+1.1s
+20:24:50,E027,moto,L09,ENTREGUE,1.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:51,E024,moto,L07,ENTREGUE,0.8,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.0s
+20:24:51,E021,moto,L01,ENTREGUE,1.8,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.3s
+20:24:51,E005,moto,L07,ENTREGUE,0.7,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:51,E015,bike,L01,ENTREGUE,4.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+1.1s
+20:24:51,E020,carro,L07,ENTREGUE,2.0,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+1.3s
+20:24:51,E029,carro,L07,ENTREGUE,0.8,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.0s
+20:24:51,E023,bike,L03,ENTREGUE,1.6,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:51,E007,carro,L06,ENTREGUE,0.9,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.0s
+20:24:51,E025,bike,L07,ENTREGUE,0.8,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.0s
+20:24:51,E009,moto,L01,ENTREGUE,2.8,R$ 9.75,R$ 19.50,2,100x,"Trânsito, Acidente",+1.6s
+20:24:51,E001,carro,L09,ENTREGUE,3.4,R$ 7.50,R$ 16.88,2,100x,"Trânsito, Acidente",+1.8s
+20:24:51,E016,bike,L03,ENTREGUE,0.5,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:51,E013,bike,L01,ENTREGUE,3.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:51,E002,moto,L08,ENTREGUE,0.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:51,E006,carro,L01,ENTREGUE,0.8,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:51,E020,carro,L02,ENTREGUE,2.5,R$ 9.38,R$ 18.75,2,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:51,E010,moto,L09,ENTREGUE,4.2,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+2.4s
+20:24:51,E011,moto,L01,ENTREGUE,0.9,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:52,E027,moto,L07,ENTREGUE,0.7,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.2s
+20:24:52,E017,carro,L03,ENTREGUE,1.8,R$ 9.75,—,2,100x,"Trânsito, Acidente",+1.1s
+20:24:52,E016,bike,L10,ENTREGUE,2.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:52,E022,moto,L09,ENTREGUE,1.0,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:52,E028,carro,L07,ENTREGUE,1.7,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.3s
+20:24:52,E010,moto,L09,ENTREGUE,0.6,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:52,E024,moto,L09,ENTREGUE,1.1,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.2s
+20:24:52,E002,moto,L01,ENTREGUE,0.9,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:52,E027,moto,L03,ENTREGUE,1.4,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:52,E005,moto,L07,ENTREGUE,0.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:53,E022,moto,L07,ENTREGUE,0.7,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:53,E011,moto,L06,ENTREGUE,0.9,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:53,E021,moto,L03,ENTREGUE,0.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:53,E017,carro,L02,ENTREGUE,3.0,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+2.0s
+20:24:53,E029,carro,L02,ENTREGUE,1.8,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:53,E016,bike,L07,ENTREGUE,1.3,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:53,E008,moto,L07,ENTREGUE,3.0,R$ 9.75,—,2,100x,"Trânsito, Acidente",+1.7s
+20:24:53,E005,moto,L07,ENTREGUE,0.5,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:53,E027,moto,L07,ENTREGUE,0.5,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",-0.0s
+20:24:53,E006,carro,L07,ENTREGUE,1.1,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.5s
+20:24:54,E013,bike,L07,ENTREGUE,0.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:54,E029,carro,L06,ENTREGUE,2.4,R$ 9.75,R$ 21.94,2,100x,"Trânsito, Acidente",+0.9s
+20:24:54,E024,moto,L03,ENTREGUE,0.8,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.2s
+20:24:54,E003,carro,L02,ENTREGUE,1.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:54,E008,moto,L09,ENTREGUE,3.8,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+1.6s
+20:24:54,E009,moto,L02,ENTREGUE,2.1,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:54,E001,carro,L01,ENTREGUE,2.6,R$ 12.19,—,3,100x,"Chuva, Trânsito, Acidente",+1.0s
+20:24:54,E027,moto,L07,ENTREGUE,0.8,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.3s
+20:24:54,E028,carro,L01,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.2s
+20:24:54,E006,carro,L09,ENTREGUE,2.2,R$ 9.75,R$ 19.50,2,100x,"Trânsito, Acidente",+0.6s
+20:24:54,E025,bike,L09,ENTREGUE,2.3,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:55,E022,moto,L09,ENTREGUE,1.0,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:55,E012,moto,L09,ENTREGUE,1.2,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:55,E009,moto,L09,ENTREGUE,2.8,R$ 9.75,R$ 21.94,2,100x,"Trânsito, Acidente",+1.0s
+20:24:55,E027,moto,L06,ENTREGUE,1.5,R$ 7.50,R$ 15.00,2,100x,"Trânsito, Acidente",+0.8s
+20:24:55,E001,carro,L09,ENTREGUE,3.4,R$ 9.75,—,3,100x,"Trânsito, Acidente",+1.7s
+20:24:55,E002,moto,L01,ENTREGUE,2.0,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:55,E023,bike,L11,ENTREGUE,3.1,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:24:55,E010,moto,L03,ENTREGUE,2.7,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+1.5s
+20:24:55,E010,moto,L01,ENTREGUE,2.8,R$ 12.19,R$ 24.38,2,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:24:55,E011,moto,L07,ENTREGUE,0.5,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:55,E013,bike,L07,ENTREGUE,1.6,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.5s
+20:24:55,E017,carro,L07,ENTREGUE,2.2,R$ 9.75,—,2,100x,"Trânsito, Acidente",+1.3s
+20:24:55,E027,moto,L03,ENTREGUE,0.4,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:55,E026,bike,L03,ENTREGUE,1.3,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:55,E020,carro,L01,ENTREGUE,1.4,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:56,E022,moto,L06,ENTREGUE,1.0,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:56,E030,moto,L08,ENTREGUE,1.2,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.2s
+20:24:56,E016,bike,L01,ENTREGUE,1.9,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.0s
+20:24:56,E030,moto,L01,ENTREGUE,1.8,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.5s
+20:24:56,E005,moto,L01,ENTREGUE,1.9,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.5s
+20:24:56,E006,carro,L07,ENTREGUE,1.1,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.5s
+20:24:56,E016,bike,L06,ENTREGUE,2.4,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.2s
+20:24:56,E006,carro,L06,ENTREGUE,1.2,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+0.4s
+20:24:56,E008,moto,L01,ENTREGUE,1.7,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.4s
+20:24:56,E015,bike,L06,ENTREGUE,2.3,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.4s
+20:24:56,E029,carro,L03,ENTREGUE,1.7,R$ 9.75,—,2,100x,"Trânsito, Acidente",+1.0s
+20:24:56,E024,moto,L02,ENTREGUE,1.4,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:56,E022,moto,L07,ENTREGUE,0.5,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.0s
+20:24:56,E017,carro,L01,ENTREGUE,3.2,R$ 9.75,R$ 19.50,2,100x,"Trânsito, Acidente",+1.7s
+20:24:56,E025,bike,L03,ENTREGUE,1.1,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:56,E011,moto,L06,ENTREGUE,0.7,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",-0.1s
+20:24:56,E001,carro,L02,ENTREGUE,5.0,R$ 12.19,R$ 34.12,3,100x,"Chuva, Trânsito, Acidente",+3.3s
+20:24:57,E007,carro,L03,ENTREGUE,1.7,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+1.3s
+20:24:57,E021,moto,L03,ENTREGUE,0.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.1s
+20:24:57,E002,moto,L02,ENTREGUE,1.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.4s
+20:24:57,E012,moto,L04,ENTREGUE,2.1,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.7s
+20:24:57,E020,carro,L09,ENTREGUE,1.2,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:57,E023,bike,L06,ENTREGUE,1.7,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:57,E007,carro,L01,ENTREGUE,2.0,R$ 9.75,R$ 21.94,2,100x,"Trânsito, Acidente",+0.6s
+20:24:57,E008,moto,L07,ENTREGUE,0.8,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:57,E021,moto,L02,ENTREGUE,0.3,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:57,E006,carro,L01,ENTREGUE,1.0,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:57,E029,carro,L02,ENTREGUE,2.9,R$ 9.75,R$ 19.50,2,100x,"Trânsito, Acidente",+1.8s
+20:24:57,E030,moto,L06,ENTREGUE,1.0,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.2s
+20:24:57,E005,moto,L02,ENTREGUE,1.1,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.0s
+20:24:57,E027,moto,L01,ENTREGUE,1.8,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.5s
+20:24:58,E022,moto,L02,ENTREGUE,1.1,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:58,E014,moto,L04,ENTREGUE,2.0,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+1.4s
+20:24:58,E009,moto,L01,ENTREGUE,2.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:58,E030,moto,L03,ENTREGUE,1.0,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:24:58,E026,bike,L07,ENTREGUE,1.8,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:24:58,E010,moto,L02,ENTREGUE,2.0,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.8s
+20:24:58,E021,moto,L01,ENTREGUE,0.6,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:58,E017,carro,L02,ENTREGUE,1.5,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:58,E007,carro,L07,ENTREGUE,0.7,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:24:58,E027,moto,L07,ENTREGUE,2.4,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+0.7s
+20:24:58,E008,moto,L03,ENTREGUE,1.9,R$ 9.38,R$ 18.75,2,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:58,E019,carro,L03,ENTREGUE,1.1,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:24:58,E012,moto,L02,ENTREGUE,3.5,R$ 9.38,R$ 18.75,2,100x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:58,E014,moto,L08,ENTREGUE,2.6,R$ 12.19,R$ 24.38,2,100x,"Chuva, Trânsito, Acidente",+0.4s
+20:24:58,E016,bike,L02,ENTREGUE,2.0,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:24:58,E002,moto,L01,ENTREGUE,1.5,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.9s
+20:24:58,E010,moto,L10,ENTREGUE,2.5,R$ 9.75,R$ 19.50,2,100x,"Trânsito, Acidente",+0.7s
+20:24:58,E023,bike,L07,ENTREGUE,1.1,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.4s
+20:24:58,E011,moto,L06,ENTREGUE,0.6,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.2s
+20:24:58,E005,moto,L07,ENTREGUE,0.8,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.2s
+20:24:58,E024,moto,L07,ENTREGUE,2.0,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:24:58,E003,carro,L07,ENTREGUE,1.1,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.3s
+20:24:59,E004,bike,L02,ENTREGUE,2.8,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.6s
+20:24:59,E028,carro,L03,ENTREGUE,1.4,R$ 9.75,—,2,100x,Acidente,+0.3s
+20:24:59,E021,moto,L09,ENTREGUE,1.0,R$ 7.50,R$ 7.50,1,100x,Acidente,+0.4s
+20:24:59,E022,moto,L03,ENTREGUE,1.0,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.3s
+20:24:59,E019,carro,L06,ENTREGUE,2.1,R$ 12.19,R$ 24.38,2,100x,"Chuva, Acidente",+1.4s
+20:24:59,E025,bike,L07,ENTREGUE,1.2,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",+0.0s
+20:24:59,E020,carro,L01,ENTREGUE,2.3,R$ 12.19,—,2,100x,"Chuva, Acidente",+0.8s
+20:24:59,E012,moto,L04,ENTREGUE,0.7,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",-0.1s
+20:24:59,E013,bike,L09,ENTREGUE,2.4,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.4s
+20:24:59,E006,carro,L09,ENTREGUE,2.2,R$ 7.50,—,2,100x,Acidente,+1.0s
+20:25:00,E017,carro,L03,ENTREGUE,0.6,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.0s
+20:25:00,E003,carro,L06,ENTREGUE,2.1,R$ 9.75,R$ 19.50,2,100x,Acidente,+1.4s
+20:25:00,E030,moto,L09,ENTREGUE,1.3,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",-0.0s
+20:25:00,E001,carro,L02,ENTREGUE,1.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Acidente",+0.3s
+20:25:00,E016,bike,L01,ENTREGUE,3.4,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:25:00,E020,carro,L07,ENTREGUE,3.2,R$ 9.75,R$ 21.94,2,100x,"Trânsito, Acidente",+0.7s
+20:25:00,E022,moto,L09,ENTREGUE,0.9,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:25:00,E021,moto,L09,ENTREGUE,0.9,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:25:00,E028,carro,L06,ENTREGUE,2.8,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+1.7s
+20:25:00,E009,moto,L01,ENTREGUE,1.6,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+0.4s
+20:25:00,E006,carro,L07,ENTREGUE,3.2,R$ 9.38,R$ 16.88,2,100x,"Chuva, Trânsito, Acidente",+1.2s
+20:25:00,E013,bike,L03,ENTREGUE,0.9,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.0s
+20:25:00,E027,moto,L03,ENTREGUE,0.5,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:25:00,E016,bike,L06,ENTREGUE,1.8,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.6s
+20:25:01,E007,carro,L11,ENTREGUE,1.4,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.6s
+20:25:01,E009,moto,L07,ENTREGUE,1.8,R$ 9.75,R$ 21.94,2,100x,"Trânsito, Acidente",+0.2s
+20:25:01,E022,moto,L06,ENTREGUE,0.4,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:25:01,E024,moto,L02,ENTREGUE,1.8,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",-0.1s
+20:25:01,E004,bike,L07,ENTREGUE,1.2,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:25:01,E008,moto,L02,ENTREGUE,1.8,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.3s
+20:25:01,E029,carro,L02,ENTREGUE,2.2,R$ 9.75,—,3,100x,"Trânsito, Acidente",+0.9s
+20:25:01,E002,moto,L01,ENTREGUE,2.2,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:25:01,E007,carro,L07,ENTREGUE,2.1,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:25:01,E017,carro,L06,ENTREGUE,0.3,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:25:01,E021,moto,L01,ENTREGUE,0.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:25:02,E029,carro,L08,ENTREGUE,2.7,R$ 9.75,—,3,100x,"Trânsito, Acidente",+0.7s
+20:25:02,E024,moto,L11,ENTREGUE,0.9,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:25:02,E019,carro,L01,ENTREGUE,2.4,R$ 7.50,—,3,100x,"Trânsito, Acidente",+0.9s
+20:25:02,E012,moto,L07,ENTREGUE,2.0,R$ 9.75,—,2,100x,"Trânsito, Acidente",+1.1s
+20:25:02,E027,moto,L08,ENTREGUE,1.7,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.5s
+20:25:02,E016,bike,L09,ENTREGUE,1.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.7s
+20:25:02,E003,carro,L06,ENTREGUE,1.1,R$ 12.19,—,3,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:25:02,E029,carro,L07,ENTREGUE,3.7,R$ 9.75,R$ 29.25,3,100x,"Trânsito, Acidente",+1.6s
+20:25:03,E027,moto,L07,ENTREGUE,2.1,R$ 7.50,R$ 15.00,2,100x,"Trânsito, Acidente",+0.4s
+20:25:03,E015,bike,L05,ENTREGUE,2.6,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:25:03,E030,moto,L01,ENTREGUE,1.2,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:25:03,E009,moto,L04,ENTREGUE,0.6,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:25:03,E019,carro,L06,ENTREGUE,3.1,R$ 9.38,—,3,100x,"Chuva, Trânsito, Acidente",+1.1s
+20:25:03,E012,moto,L11,ENTREGUE,2.7,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+1.1s
+20:25:03,E011,moto,L07,ENTREGUE,0.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.0s
+20:25:03,E007,carro,L03,ENTREGUE,0.3,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",-0.0s
+20:25:03,E020,carro,L02,ENTREGUE,1.6,R$ 9.75,—,2,100x,"Trânsito, Acidente",+1.2s
+20:25:03,E003,carro,L07,ENTREGUE,1.8,R$ 9.75,—,3,100x,"Trânsito, Acidente",+1.2s
+20:25:03,E030,moto,L02,ENTREGUE,0.9,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.2s
+20:25:03,E022,moto,L06,ENTREGUE,0.4,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",-0.0s
+20:25:03,E019,carro,L07,ENTREGUE,3.6,R$ 7.50,R$ 24.38,3,100x,"Trânsito, Acidente",+1.5s
+20:25:03,E003,carro,L03,ENTREGUE,2.0,R$ 12.19,R$ 34.12,3,100x,"Chuva, Trânsito, Acidente",+1.3s
+20:25:03,E026,bike,L09,ENTREGUE,4.0,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:25:03,E017,carro,L01,ENTREGUE,1.6,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:25:03,E021,moto,L09,ENTREGUE,1.5,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.8s
+20:25:03,E014,moto,L11,ENTREGUE,2.7,R$ 12.19,—,2,100x,"Chuva, Trânsito, Acidente",+1.3s
+20:25:03,E016,bike,L03,ENTREGUE,1.1,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:25:04,E002,moto,L02,ENTREGUE,1.4,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.2s
+20:25:04,E017,carro,L03,ENTREGUE,2.0,R$ 9.75,R$ 21.94,2,100x,Acidente,+0.3s
+20:25:04,E024,moto,L09,ENTREGUE,1.8,R$ 9.75,R$ 9.75,1,100x,Acidente,+0.4s
+20:25:04,E001,carro,L06,ENTREGUE,2.6,R$ 9.75,—,2,100x,Acidente,+1.4s
+20:25:04,E025,bike,L06,ENTREGUE,1.2,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:25:04,E009,moto,L05,ENTREGUE,0.9,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:25:04,E016,bike,L12,ENTREGUE,1.5,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",-0.0s
+20:25:04,E029,carro,L06,ENTREGUE,1.4,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.5s
+20:25:04,E014,moto,L01,ENTREGUE,3.5,R$ 9.75,R$ 21.94,2,100x,"Trânsito, Acidente",+1.4s
+20:25:04,E001,carro,L09,ENTREGUE,3.1,R$ 9.75,R$ 19.50,2,100x,"Trânsito, Acidente",+0.7s
+20:25:04,E030,moto,L02,ENTREGUE,1.0,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.0s
+20:25:04,E007,carro,L02,ENTREGUE,1.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:25:05,E020,carro,L03,ENTREGUE,3.3,R$ 9.75,R$ 19.50,2,100x,"Trânsito, Acidente",+1.5s
+20:25:05,E010,moto,L01,ENTREGUE,1.8,R$ 9.75,—,2,100x,"Trânsito, Acidente",+0.5s
+20:25:05,E022,moto,L01,ENTREGUE,1.3,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+0.1s
+20:25:05,E030,moto,L09,ENTREGUE,1.1,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.2s
+20:25:05,E013,bike,L09,ENTREGUE,3.1,R$ 12.19,R$ 12.19,1,100x,"Chuva, Trânsito, Acidente",+0.6s
+20:25:05,E005,moto,L05,ENTREGUE,1.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:25:05,E003,carro,L03,ENTREGUE,1.5,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.9s
+20:25:05,E021,moto,L01,ENTREGUE,1.9,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.2s
+20:25:05,E001,carro,L04,ENTREGUE,0.9,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:25:05,E029,carro,L07,ENTREGUE,2.6,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+1.8s
+20:25:05,E016,bike,L08,ENTREGUE,1.2,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.5s
+20:25:05,E010,moto,L03,ENTREGUE,2.6,R$ 12.19,R$ 21.94,2,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:25:05,E030,moto,L09,ENTREGUE,0.6,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:25:05,E003,carro,L02,ENTREGUE,1.7,R$ 9.38,R$ 16.88,2,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:25:06,E012,moto,L02,ENTREGUE,2.0,R$ 7.50,—,2,100x,"Trânsito, Acidente",+1.1s
+20:25:06,E017,carro,L11,ENTREGUE,1.8,R$ 7.50,—,2,100x,"Trânsito, Acidente",+0.8s
+20:25:06,E004,bike,L01,ENTREGUE,3.7,R$ 9.75,R$ 9.75,1,100x,"Trânsito, Acidente",+1.0s
+20:25:06,E021,moto,L03,ENTREGUE,0.5,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",-0.1s
+20:25:06,E009,moto,L06,ENTREGUE,0.6,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.0s
+20:25:06,E015,bike,L07,ENTREGUE,1.7,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:25:06,E027,moto,L09,ENTREGUE,1.9,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:25:06,E011,moto,L05,ENTREGUE,0.9,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:25:06,E024,moto,L11,ENTREGUE,1.2,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.2s
+20:25:06,E022,moto,L02,ENTREGUE,1.3,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.5s
+20:25:06,E012,moto,L07,ENTREGUE,2.6,R$ 7.50,R$ 15.00,2,100x,"Trânsito, Acidente",+1.1s
+20:25:06,E030,moto,L11,ENTREGUE,0.9,R$ 7.50,R$ 7.50,1,100x,"Trânsito, Acidente",+0.1s
+20:25:06,E017,carro,L05,ENTREGUE,2.4,R$ 7.50,R$ 15.00,2,100x,"Trânsito, Acidente",+0.5s
+20:25:06,E026,bike,L11,ENTREGUE,2.0,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:25:06,E005,moto,L08,ENTREGUE,1.3,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:25:06,E025,bike,L08,ENTREGUE,1.8,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.7s
+20:25:07,E027,moto,L11,ENTREGUE,2.5,R$ 9.38,R$ 18.75,2,100x,"Chuva, Trânsito, Acidente",+0.3s
+20:25:07,E011,moto,L10,ENTREGUE,0.8,R$ 9.38,R$ 9.38,1,100x,"Chuva, Trânsito, Acidente",+0.2s
+20:25:07,E003,carro,L02,ENTREGUE,1.4,R$ 9.38,—,2,100x,"Chuva, Trânsito, Acidente",+0.1s
+20:25:07,E030,moto,L08,ENTREGUE,1.6,R$ 9.38,R$ 9.38,1,98x,"Chuva, Trânsito, Acidente",+0.5s
+20:25:07,E007,carro,L09,ENTREGUE,2.0,R$ 9.38,R$ 9.38,1,98x,"Chuva, Trânsito, Acidente",+0.2s
+20:25:07,E019,carro,L06,ENTREGUE,3.0,R$ 7.50,—,3,96x,"Trânsito, Acidente",+2.2s
+20:25:07,E013,bike,L11,ENTREGUE,1.5,R$ 7.50,R$ 7.50,1,96x,"Trânsito, Acidente",+0.2s
+20:25:07,E009,moto,L11,ENTREGUE,1.3,R$ 7.50,—,2,94x,"Trânsito, Acidente",+0.4s
+20:25:07,E027,moto,L03,ENTREGUE,0.7,R$ 9.38,R$ 9.38,1,94x,"Chuva, Trânsito, Acidente",+0.0s
+20:25:08,E005,moto,L02,ENTREGUE,0.9,R$ 9.38,R$ 9.38,1,90x,"Chuva, Trânsito, Acidente",+0.0s
+20:25:08,E030,moto,L03,ENTREGUE,0.8,R$ 9.38,R$ 9.38,1,90x,"Chuva, Trânsito, Acidente",+0.0s
+20:25:08,E021,moto,L08,ENTREGUE,1.3,R$ 9.38,R$ 9.38,1,90x,"Chuva, Trânsito, Acidente",+0.5s
+20:25:08,E003,carro,L07,ENTREGUE,2.0,R$ 9.38,R$ 18.75,2,90x,"Chuva, Trânsito, Acidente",+1.0s
+20:25:08,E009,moto,L03,ENTREGUE,1.7,R$ 7.50,R$ 15.00,2,88x,"Trânsito, Acidente",+0.5s
+20:25:08,E014,moto,L02,ENTREGUE,1.9,R$ 7.50,—,2,88x,"Trânsito, Acidente",+0.5s
+20:25:08,E002,moto,L03,ENTREGUE,1.1,R$ 7.50,R$ 7.50,1,86x,"Trânsito, Acidente",+0.1s
+20:25:08,E019,carro,L12,ENTREGUE,3.6,R$ 7.50,—,3,86x,"Trânsito, Acidente",+1.6s
+20:25:08,E015,bike,L10,ENTREGUE,1.9,R$ 7.50,R$ 7.50,1,86x,"Trânsito, Acidente",+0.3s
+20:25:08,E028,carro,L10,ENTREGUE,4.4,R$ 9.75,—,3,86x,"Trânsito, Acidente",+2.4s
+20:25:08,E024,moto,L03,ENTREGUE,0.8,R$ 9.38,R$ 9.38,1,82x,"Chuva, Trânsito, Acidente",+0.1s
+20:25:08,E006,carro,L11,ENTREGUE,3.5,R$ 9.38,—,3,82x,"Chuva, Trânsito, Acidente",+2.2s
+20:25:08,E005,moto,L09,ENTREGUE,0.6,R$ 7.50,R$ 7.50,1,78x,"Trânsito, Acidente",-0.0s
+20:25:08,E027,moto,L07,ENTREGUE,0.8,R$ 7.50,R$ 7.50,1,78x,"Trânsito, Acidente",+0.1s
+20:25:08,E023,bike,L02,ENTREGUE,4.4,R$ 7.50,R$ 7.50,1,78x,"Trânsito, Acidente",+0.3s
+20:25:08,E016,bike,L12,ENTREGUE,3.1,R$ 7.50,R$ 7.50,1,76x,"Trânsito, Acidente",+1.2s
+20:25:08,E010,moto,L03,ENTREGUE,1.5,R$ 7.50,—,2,76x,"Trânsito, Acidente",+0.5s
+20:25:08,E007,carro,L04,ENTREGUE,1.3,R$ 7.50,R$ 7.50,1,76x,"Trânsito, Acidente",+0.3s
+20:25:08,E001,carro,L08,ENTREGUE,2.7,R$ 7.50,—,2,76x,"Trânsito, Acidente",+1.8s
+20:25:08,E016,bike,L12,ENTREGUE,3.6,R$ 7.50,R$ 7.50,1,76x,"Trânsito, Acidente",+0.6s
+20:25:09,E014,moto,L10,ENTREGUE,3.0,R$ 9.38,R$ 16.88,2,72x,"Chuva, Trânsito, Acidente",+0.8s
+20:25:09,E009,moto,L07,ENTREGUE,0.8,R$ 7.50,R$ 7.50,1,72x,"Trânsito, Acidente",+0.0s
+20:25:09,E003,carro,L03,ENTREGUE,1.2,R$ 7.50,R$ 7.50,1,72x,Acidente,+0.2s
+20:25:09,E010,moto,L07,ENTREGUE,2.3,R$ 7.50,R$ 15.00,2,72x,Acidente,+1.3s
+20:25:09,E017,carro,L11,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,72x,Acidente,+0.4s
+20:25:09,E019,carro,L05,ENTREGUE,4.9,R$ 7.50,R$ 22.50,3,72x,Acidente,+1.8s
+20:25:09,E024,moto,L10,ENTREGUE,1.0,R$ 7.50,R$ 7.50,1,72x,Acidente,+0.1s
+20:25:09,E022,moto,L09,ENTREGUE,2.8,R$ 7.50,R$ 7.50,1,72x,Acidente,+0.7s
+20:25:09,E002,moto,L11,ENTREGUE,1.4,R$ 7.50,R$ 7.50,1,72x,Acidente,+0.5s
+20:25:09,E012,moto,L11,ENTREGUE,2.8,R$ 7.50,—,2,72x,Acidente,+2.3s
+20:25:10,E013,bike,L05,ENTREGUE,2.2,R$ 9.38,R$ 9.38,1,70x,"Chuva, Trânsito, Acidente",+0.6s
+20:25:10,E001,carro,L05,ENTREGUE,4.0,R$ 7.50,R$ 15.00,2,70x,"Trânsito, Acidente",+1.9s
+20:25:10,E006,carro,L02,ENTREGUE,5.3,R$ 7.50,—,3,70x,"Trânsito, Acidente",+3.8s
+20:25:10,E011,moto,L12,ENTREGUE,2.5,R$ 7.50,R$ 7.50,1,70x,"Trânsito, Acidente",+0.6s
+20:25:10,E029,carro,L05,ENTREGUE,1.5,R$ 7.50,R$ 7.50,1,70x,"Trânsito, Acidente",+0.2s
+20:25:10,E008,moto,L05,ENTREGUE,2.4,R$ 7.50,—,2,70x,"Trânsito, Acidente",+1.4s
+20:25:10,E012,moto,L09,ENTREGUE,3.5,R$ 7.50,R$ 15.00,2,70x,"Trânsito, Acidente",+1.0s
+20:25:10,E030,moto,L12,ENTREGUE,2.5,R$ 9.38,R$ 9.38,1,70x,"Chuva, Trânsito, Acidente",+0.7s
+20:25:10,E026,bike,L08,ENTREGUE,3.9,R$ 9.38,R$ 9.38,1,70x,"Chuva, Trânsito, Acidente",+1.7s
+20:25:11,E030,moto,L04,ENTREGUE,2.7,R$ 7.50,R$ 7.50,1,70x,"Trânsito, Acidente",+0.4s
+20:25:11,E024,moto,L04,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,70x,"Chuva, Trânsito, Acidente",+0.0s
+20:25:11,E021,moto,L01,ENTREGUE,3.3,R$ 9.38,R$ 9.38,1,66x,"Chuva, Trânsito, Acidente",+1.2s
+20:25:11,E015,bike,L03,ENTREGUE,3.0,R$ 9.38,R$ 9.38,1,66x,"Chuva, Trânsito, Acidente",+0.4s
+20:25:11,E005,moto,L12,ENTREGUE,2.5,R$ 7.50,R$ 7.50,1,64x,"Trânsito, Acidente",+0.5s
+20:25:11,E023,bike,L04,ENTREGUE,2.6,R$ 7.50,R$ 7.50,1,62x,"Trânsito, Acidente",+0.6s
+20:25:11,E019,carro,L12,ENTREGUE,2.1,R$ 7.50,R$ 7.50,1,62x,"Trânsito, Acidente",+0.9s
+20:25:11,E016,bike,L02,ENTREGUE,2.9,R$ 7.50,R$ 7.50,1,60x,"Trânsito, Acidente",+0.6s
+20:25:12,E009,moto,L09,ENTREGUE,2.5,R$ 7.50,—,2,58x,"Trânsito, Acidente",+0.8s
+20:25:12,E029,carro,L07,ENTREGUE,1.5,R$ 7.50,R$ 7.50,1,58x,"Trânsito, Acidente",+0.0s
+20:25:12,E006,carro,L04,ENTREGUE,7.2,R$ 9.38,R$ 26.25,3,54x,"Chuva, Trânsito, Acidente",+4.8s
+20:25:12,E008,moto,L04,ENTREGUE,4.3,R$ 9.38,R$ 16.88,2,54x,"Chuva, Trânsito, Acidente",+2.4s
+20:25:12,E028,carro,L04,ENTREGUE,8.5,R$ 12.19,—,3,52x,"Chuva, Trânsito, Acidente",+6.4s
+20:25:12,E024,moto,L02,ENTREGUE,1.3,R$ 7.50,R$ 7.50,1,50x,"Trânsito, Acidente",+0.2s
+20:25:12,E017,carro,L02,ENTREGUE,2.8,R$ 7.50,R$ 7.50,1,50x,"Trânsito, Acidente",+0.4s
+20:25:12,E009,moto,L03,ENTREGUE,3.4,R$ 7.50,R$ 15.00,2,50x,"Trânsito, Acidente",+1.0s
+20:25:12,E020,carro,L09,ENTREGUE,5.4,R$ 7.50,—,2,50x,"Trânsito, Acidente",+3.0s
+20:25:12,E021,moto,L07,ENTREGUE,1.4,R$ 7.50,R$ 7.50,1,50x,"Trânsito, Acidente",+0.2s
+20:25:13,E013,bike,L10,ENTREGUE,2.3,R$ 9.38,R$ 9.38,1,50x,"Chuva, Trânsito, Acidente",+0.5s
+20:25:13,E010,moto,L10,ENTREGUE,2.4,R$ 9.38,R$ 9.38,1,50x,"Chuva, Trânsito, Acidente",+0.6s
+20:25:13,E014,moto,L01,ENTREGUE,4.4,R$ 7.50,R$ 7.50,1,48x,"Trânsito, Acidente",+1.7s
+20:25:14,E016,bike,L12,ENTREGUE,4.7,R$ 7.50,R$ 7.50,1,46x,"Trânsito, Acidente",+0.6s
+20:25:14,E030,moto,L02,ENTREGUE,3.3,R$ 7.50,R$ 7.50,1,46x,"Trânsito, Acidente",+0.6s
+20:25:14,E027,moto,L04,ENTREGUE,5.2,R$ 7.50,—,2,44x,"Trânsito, Acidente",+3.8s
+20:25:14,E024,moto,L03,ENTREGUE,1.6,R$ 9.38,R$ 9.38,1,40x,"Chuva, Trânsito, Acidente",+0.6s
+20:25:14,E001,carro,L09,ENTREGUE,4.4,R$ 9.38,—,2,36x,"Chuva, Trânsito, Acidente",+2.7s
+20:25:15,E021,moto,L11,ENTREGUE,2.2,R$ 7.50,R$ 7.50,1,22x,"Trânsito, Acidente",+0.7s
+20:25:15,E025,bike,L01,ENTREGUE,7.9,R$ 7.50,R$ 7.50,1,22x,"Trânsito, Acidente",+3.4s
+20:25:16,E026,bike,L10,ESTORNADO,0,R$ 0.00,—,0,2x,"Trânsito, Acidente, Machucado",+0.0s
+20:25:19,E003,carro,L09,ESTORNADO,0,R$ 0.00,—,0,1x,"Trânsito, Acidente, Machucado",+0.0s
+20:25:19,E003,carro,L04,ESTORNADO,0,R$ 0.00,—,0,1x,"Trânsito, Acidente, Machucado",+0.0s
+20:25:25,E002,moto,L08,ENTREGUE,14.4,R$ 7.50,R$ 7.50,1,1x,"Trânsito, Acidente",+12.0s
+20:25:25,E012,moto,L06,ENTREGUE,13.5,R$ 7.50,R$ 7.50,1,1x,"Trânsito, Acidente",+10.2s
+20:25:25,E020,carro,L08,ENTREGUE,18.5,R$ 7.50,R$ 15.00,2,1x,"Trânsito, Acidente",+14.8s
+20:25:26,E030,moto,L12,ENTREGUE,14.4,R$ 7.50,R$ 7.50,1,1x,"Trânsito, Acidente",+10.8s
+20:25:26,E011,moto,L12,ENTREGUE,14.5,R$ 7.50,R$ 7.50,1,1x,"Trânsito, Acidente",+11.3s
+20:25:26,E029,carro,L02,ENTREGUE,13.7,R$ 7.50,R$ 7.50,1,1x,"Trânsito, Acidente",+11.6s
+20:25:30,E008,moto,L12,ENTREGUE,17.9,R$ 7.50,—,2,1x,"Trânsito, Acidente",+16.6s
+20:34:43,E011,moto,L02,ENTREGUE,5.3,R$ 12.19,R$ 12.19,1,26x,"Chuva, Acidente",-8.4s
+20:34:44,E023,bike,L02,ENTREGUE,3.8,R$ 7.50,R$ 7.50,1,24x,"Trânsito, Acidente",-4.2s
+20:34:45,E022,moto,L02,ENTREGUE,4.2,R$ 9.38,R$ 9.38,1,20x,"Chuva, Acidente",-0.6s
+20:34:45,E002,moto,L02,ENTREGUE,3.0,R$ 9.38,R$ 9.38,1,20x,"Chuva, Acidente",+0.8s
+20:34:45,E021,moto,L01,ENTREGUE,3.9,R$ 9.38,R$ 9.38,1,20x,"Chuva, Trânsito, Acidente",+1.4s
+20:34:46,E029,carro,L01,ENTREGUE,3.6,R$ 7.50,R$ 7.50,1,20x,Acidente,+0.6s
+20:34:48,E017,carro,L02,ENTREGUE,6.7,R$ 9.38,R$ 9.38,1,20x,"Chuva, Trânsito, Acidente",+2.5s
+20:34:48,E008,moto,L01,ENTREGUE,3.8,R$ 9.38,R$ 9.38,1,20x,"Chuva, Trânsito, Acidente",+0.4s
+20:34:49,E021,moto,L02,ENTREGUE,2.7,R$ 7.50,R$ 7.50,1,20x,"Trânsito, Acidente",+0.7s
+20:34:49,E026,bike,L01,ENTREGUE,9.1,R$ 7.50,R$ 7.50,1,20x,"Trânsito, Acidente",-6.8s
+20:34:49,E015,bike,L01,ENTREGUE,7.5,R$ 7.50,R$ 7.50,1,20x,"Trânsito, Acidente",+1.5s
+20:34:49,E011,moto,L02,ENTREGUE,6.1,R$ 7.50,R$ 7.50,1,20x,"Trânsito, Acidente",+1.3s
+20:34:50,E004,bike,L01,ENTREGUE,10.0,R$ 9.38,R$ 9.38,1,20x,"Chuva, Trânsito, Acidente",-4.0s
+20:34:51,E014,moto,L01,ENTREGUE,4.9,R$ 9.38,R$ 9.38,1,20x,"Chuva, Trânsito, Acidente",+1.2s
+20:34:51,E006,carro,L02,ESTORNADO,0,R$ 0.00,—,0,20x,"Acidente, Machucado",+0.0s
+20:34:51,E006,carro,L02,ESTORNADO,0,R$ 0.00,—,0,20x,"Acidente, Machucado",+0.0s
+20:34:51,E002,moto,L01,ENTREGUE,5.8,R$ 7.50,R$ 7.50,1,20x,Acidente,+0.2s
+20:34:52,E003,carro,L01,ENTREGUE,5.0,R$ 7.50,R$ 7.50,1,20x,Acidente,+3.0s
+20:34:52,E009,moto,L01,ENTREGUE,2.7,R$ 7.50,R$ 7.50,1,20x,Acidente,+0.2s
+20:34:52,E016,bike,L01,ENTREGUE,8.4,R$ 9.38,R$ 9.38,1,20x,"Chuva, Acidente",+2.4s
+20:34:54,E013,bike,L03,ENTREGUE,10.7,R$ 9.38,R$ 9.38,1,10x,"Chuva, Trânsito, Acidente",+2.1s
+20:34:58,E026,bike,L02,ESTORNADO,0,R$ 0.00,—,0,1x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
+20:35:02,E020,carro,L03,ESTORNADO,0,R$ 0.00,—,0,1x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
+20:35:02,E020,carro,L02,ESTORNADO,0,R$ 0.00,—,0,1x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
+20:35:03,E018,moto,L01,ENTREGUE,12.8,R$ 9.38,R$ 9.38,1,1x,"Chuva, Trânsito, Acidente",+10.0s
+20:35:05,E028,carro,L01,ESTORNADO,0,R$ 0.00,—,0,1x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
+20:35:05,E028,carro,L02,ESTORNADO,0,R$ 0.00,—,0,1x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
+20:35:08,E022,moto,L01,ENTREGUE,16.6,R$ 7.50,R$ 7.50,1,3x,Acidente,+14.0s
+20:35:09,E011,moto,L01,ENTREGUE,18.0,R$ 7.50,R$ 7.50,1,9x,Acidente,+15.5s
+20:35:10,E023,bike,L01,ENTREGUE,25.0,R$ 9.38,R$ 9.38,1,15x,"Chuva, Acidente",+15.9s
+20:35:11,E005,moto,L01,ENTREGUE,19.4,R$ 9.38,R$ 9.38,1,17x,"Chuva, Trânsito, Acidente",+3.5s
+20:35:11,E007,carro,L01,ENTREGUE,27.9,R$ 9.38,—,2,17x,"Chuva, Trânsito, Acidente",+26.1s
+20:35:11,E027,moto,L01,ENTREGUE,26.3,R$ 9.38,—,2,17x,"Chuva, Trânsito, Acidente",+22.1s
+20:35:11,E021,moto,L02,ENTREGUE,21.6,R$ 7.50,R$ 7.50,1,17x,"Trânsito, Acidente",+16.4s
+20:35:12,E018,moto,L01,ENTREGUE,6.8,R$ 7.50,R$ 7.50,1,17x,Acidente,-22.6s
+20:35:12,E004,bike,L01,ENTREGUE,22.0,R$ 7.50,R$ 7.50,1,17x,Acidente,+16.5s
+20:35:19,E017,carro,L01,ENTREGUE,30.7,R$ 9.38,—,2,9x,"Chuva, Trânsito, Acidente",+28.3s
+20:35:19,E027,moto,L02,ENTREGUE,33.9,R$ 9.38,R$ 18.75,2,11x,"Chuva, Trânsito, Acidente",+22.5s
+20:35:20,E005,moto,L01,ENTREGUE,8.7,R$ 7.50,R$ 7.50,1,23x,"Trânsito, Acidente",+5.6s
+20:35:20,E017,carro,L02,ENTREGUE,32.4,R$ 7.50,R$ 16.88,2,27x,"Trânsito, Acidente",+10.4s
+20:35:21,E024,moto,L02,ENTREGUE,28.2,R$ 9.38,R$ 9.38,1,27x,"Chuva, Trânsito, Acidente",+5.1s
+20:35:21,E008,moto,L01,ENTREGUE,15.3,R$ 9.38,—,2,27x,"Chuva, Trânsito, Acidente",-66.1s
+20:35:21,E029,carro,L02,ENTREGUE,28.9,R$ 9.38,—,2,27x,"Chuva, Trânsito, Acidente",+6.1s
+20:35:21,E014,moto,L02,ENTREGUE,27.3,R$ 9.38,R$ 9.38,1,27x,"Chuva, Trânsito, Acidente",+3.1s
+20:35:21,E002,moto,L02,ENTREGUE,11.2,R$ 9.38,R$ 9.38,1,27x,"Chuva, Trânsito, Acidente",-0.4s
+20:35:21,E007,carro,L02,ENTREGUE,37.4,R$ 9.38,R$ 18.75,2,27x,"Chuva, Trânsito, Acidente",+25.8s
+20:35:21,E010,moto,L02,ENTREGUE,33.3,R$ 9.38,—,2,27x,"Chuva, Trânsito, Acidente",+22.8s
+20:35:21,E011,moto,L02,ENTREGUE,11.4,R$ 9.38,R$ 9.38,1,27x,"Chuva, Trânsito, Acidente",-1.7s
+20:35:21,E003,carro,L02,ENTREGUE,28.8,R$ 9.38,—,2,27x,"Chuva, Trânsito, Acidente",+9.1s
+20:35:21,E001,carro,L02,ENTREGUE,11.7,R$ 9.38,R$ 9.38,1,27x,"Chuva, Trânsito, Acidente",-1.1s
+20:35:21,E021,moto,L02,ENTREGUE,9.5,R$ 9.38,R$ 9.38,1,27x,"Chuva, Trânsito, Acidente",+1.6s
+20:35:22,E025,bike,L02,ENTREGUE,30.6,R$ 7.50,R$ 7.50,1,27x,"Trânsito, Acidente",+1.3s
+20:35:22,E013,bike,L01,ENTREGUE,24.3,R$ 7.50,R$ 7.50,1,27x,"Trânsito, Acidente",-35.3s
+20:35:22,E022,moto,L02,ENTREGUE,10.6,R$ 7.50,R$ 7.50,1,27x,"Trânsito, Acidente",-0.4s
+20:35:22,E009,moto,L02,ENTREGUE,13.9,R$ 7.50,R$ 7.50,1,27x,"Trânsito, Acidente",-9.5s
+20:35:22,E005,moto,L01,ENTREGUE,2.6,R$ 9.38,R$ 9.38,1,27x,"Chuva, Trânsito, Acidente",+0.1s
+20:35:22,E019,carro,L01,ENTREGUE,20.2,R$ 9.38,—,2,27x,"Chuva, Trânsito, Acidente",-28.8s
+20:35:23,E008,moto,L03,ENTREGUE,17.2,R$ 9.38,R$ 18.75,2,27x,"Chuva, Trânsito, Acidente",-18.7s
+20:35:23,E029,carro,L01,ENTREGUE,31.1,R$ 9.38,R$ 18.75,2,27x,"Chuva, Trânsito, Acidente",+1.1s
+20:35:23,E010,moto,L01,ENTREGUE,35.4,R$ 9.38,R$ 18.75,2,27x,"Chuva, Trânsito, Acidente",+6.9s
+20:35:23,E017,carro,L01,ENTREGUE,2.9,R$ 7.50,R$ 7.50,1,27x,"Trânsito, Acidente",+0.4s
+20:35:24,E003,carro,L01,ENTREGUE,31.6,R$ 7.50,R$ 16.88,2,29x,"Trânsito, Acidente",+3.6s
+20:35:24,E014,moto,L03,ENTREGUE,2.3,R$ 7.50,R$ 7.50,1,29x,"Trânsito, Acidente",+0.1s
+20:35:25,E018,moto,L01,ENTREGUE,12.3,R$ 7.50,—,2,43x,"Trânsito, Acidente",+3.2s
+20:35:25,E011,moto,L01,ENTREGUE,3.2,R$ 7.50,R$ 7.50,1,43x,"Trânsito, Acidente",-0.0s
+20:35:25,E001,carro,L02,ENTREGUE,3.7,R$ 7.50,R$ 7.50,1,45x,Acidente,+0.1s
+20:35:25,E016,bike,L01,ENTREGUE,14.7,R$ 7.50,R$ 7.50,1,45x,Acidente,-1.3s
+20:35:25,E002,moto,L02,ENTREGUE,4.2,R$ 7.50,R$ 7.50,1,47x,Acidente,+0.4s
+20:35:25,E024,moto,L01,ENTREGUE,4.2,R$ 7.50,R$ 7.50,1,47x,Acidente,+1.1s
+20:35:25,E009,moto,L01,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,47x,Acidente,-0.3s
+20:35:25,E019,carro,L02,ENTREGUE,23.1,R$ 9.38,R$ 18.75,2,51x,"Chuva, Acidente",-27.1s
+20:35:25,E022,moto,L02,ENTREGUE,2.7,R$ 9.38,R$ 9.38,1,51x,"Chuva, Acidente",-0.4s
+20:35:25,E021,moto,L02,ENTREGUE,3.6,R$ 9.38,R$ 9.38,1,51x,"Chuva, Trânsito, Acidente",-0.4s
+20:35:25,E012,moto,L02,ENTREGUE,20.1,R$ 9.38,—,2,51x,"Chuva, Trânsito, Acidente",-123.2s
+20:35:26,E018,moto,L02,ENTREGUE,13.1,R$ 9.38,R$ 16.88,2,55x,"Chuva, Trânsito, Acidente",-2.4s
+20:35:26,E005,moto,L01,ENTREGUE,3.3,R$ 7.50,R$ 7.50,1,59x,"Trânsito, Acidente",+0.7s
+20:35:26,E011,moto,L01,ENTREGUE,0.9,R$ 7.50,R$ 7.50,1,59x,"Trânsito, Acidente",+0.0s
+20:35:26,E014,moto,L01,ENTREGUE,1.3,R$ 7.50,R$ 7.50,1,61x,"Trânsito, Acidente",-0.2s
+20:35:26,E027,moto,L02,ENTREGUE,7.2,R$ 9.38,—,2,61x,"Chuva, Trânsito, Acidente",+0.0s
+20:35:26,E004,bike,L01,ENTREGUE,9.1,R$ 9.38,R$ 9.38,1,61x,"Chuva, Trânsito, Acidente",-30.4s
+20:35:26,E029,carro,L01,ENTREGUE,1.3,R$ 9.38,R$ 9.38,1,61x,"Chuva, Trânsito, Acidente",-0.0s
+20:35:26,E027,moto,L01,ENTREGUE,7.9,R$ 9.38,—,2,61x,"Chuva, Trânsito, Acidente",-1.4s
+20:35:26,E021,moto,L01,ENTREGUE,0.8,R$ 9.38,R$ 9.38,1,61x,"Chuva, Trânsito, Acidente",-0.0s
+20:35:26,E013,bike,L02,ENTREGUE,4.3,R$ 9.38,R$ 9.38,1,61x,"Chuva, Trânsito, Acidente",-1.5s
+20:35:26,E007,carro,L02,ENTREGUE,2.6,R$ 9.38,R$ 9.38,1,61x,"Chuva, Trânsito, Acidente",-0.7s
+20:35:27,E003,carro,L01,ENTREGUE,2.6,R$ 7.50,R$ 7.50,1,65x,Acidente,-1.0s
+20:35:27,E027,moto,L01,ENTREGUE,8.0,R$ 9.38,R$ 18.75,2,67x,"Chuva, Acidente",-0.6s
+20:35:27,E011,moto,L01,ENTREGUE,0.9,R$ 9.38,R$ 9.38,1,67x,"Chuva, Acidente",+0.2s
+20:35:27,E026,bike,L02,ENTREGUE,15.0,R$ 9.38,R$ 9.38,1,69x,"Chuva, Trânsito, Acidente",-7.1s
+20:35:27,E029,carro,L01,ENTREGUE,3.3,R$ 7.50,—,2,71x,"Trânsito, Acidente",+1.5s
+20:35:27,E012,moto,L01,ENTREGUE,22.1,R$ 7.50,R$ 16.88,2,71x,"Trânsito, Acidente",-36.4s
+20:35:27,E024,moto,L02,ENTREGUE,1.5,R$ 7.50,R$ 7.50,1,71x,"Trânsito, Acidente",+0.2s
+20:35:27,E027,moto,L02,ENTREGUE,9.1,R$ 7.50,R$ 16.88,2,75x,Acidente,-4.1s
+20:35:28,E008,moto,L02,ENTREGUE,4.5,R$ 7.50,—,2,75x,Acidente,+0.6s
+20:35:28,E029,carro,L01,ENTREGUE,1.1,R$ 7.50,R$ 7.50,1,75x,Acidente,+0.1s
+20:35:28,E015,bike,L02,ENTREGUE,37.1,R$ 7.50,R$ 7.50,1,75x,Acidente,-5.5s
+20:35:28,E010,moto,L01,ENTREGUE,3.0,R$ 7.50,—,2,75x,Acidente,-0.7s
+20:35:28,E022,moto,L02,ENTREGUE,2.2,R$ 7.50,R$ 7.50,1,75x,Acidente,+1.1s
+20:35:28,E021,moto,L01,ENTREGUE,0.7,R$ 7.50,R$ 7.50,1,75x,Acidente,+0.1s
+20:35:28,E029,carro,L02,ENTREGUE,3.7,R$ 9.38,R$ 16.88,2,77x,"Chuva, Trânsito, Acidente",+0.2s
+20:35:28,E009,moto,L01,ENTREGUE,2.4,R$ 9.38,—,2,79x,"Chuva, Trânsito, Acidente",+1.4s
+20:35:28,E001,carro,L01,ENTREGUE,2.7,R$ 9.38,—,2,79x,"Chuva, Trânsito, Acidente",+1.7s
+20:35:28,E002,moto,L02,ENTREGUE,2.0,R$ 9.38,R$ 9.38,1,81x,"Chuva, Trânsito, Acidente",-0.1s
+20:35:28,E018,moto,L03,ENTREGUE,1.8,R$ 7.50,—,2,83x,"Trânsito, Acidente",+0.2s
+20:35:28,E011,moto,L01,ENTREGUE,1.0,R$ 7.50,R$ 7.50,1,83x,"Trânsito, Acidente",+0.1s
+20:35:28,E027,moto,L01,ENTREGUE,1.1,R$ 7.50,R$ 7.50,1,83x,"Trânsito, Acidente",+0.1s
+20:35:28,E013,bike,L03,ENTREGUE,1.1,R$ 7.50,R$ 7.50,1,83x,"Trânsito, Acidente",+0.0s
+20:35:28,E028,carro,L02,ENTREGUE,8.7,R$ 7.50,—,2,85x,"Trânsito, Acidente",-4.3s
+20:35:28,E005,moto,L03,ENTREGUE,2.1,R$ 7.50,R$ 7.50,1,85x,"Trânsito, Acidente",+0.4s
+20:35:28,E019,carro,L02,ENTREGUE,2.6,R$ 9.38,—,2,85x,"Chuva, Trânsito, Acidente",+1.8s
+20:35:28,E025,bike,L01,ENTREGUE,5.6,R$ 9.38,R$ 9.38,1,85x,"Chuva, Trânsito, Acidente",-1.0s
+20:35:28,E014,moto,L01,ENTREGUE,1.4,R$ 9.38,R$ 9.38,1,85x,"Chuva, Trânsito, Acidente",-0.1s
+20:35:28,E017,carro,L02,ENTREGUE,4.8,R$ 9.38,—,2,87x,"Chuva, Trânsito, Acidente",+0.6s
+20:35:28,E010,moto,L03,ENTREGUE,3.7,R$ 9.38,R$ 16.88,2,87x,"Chuva, Trânsito, Acidente",+0.9s
+20:35:28,E016,bike,L01,ENTREGUE,2.4,R$ 9.38,R$ 9.38,1,87x,"Chuva, Trânsito, Acidente",+0.1s
+20:35:28,E018,moto,L01,ENTREGUE,2.2,R$ 9.38,R$ 16.88,2,87x,"Chuva, Trânsito, Acidente",+0.6s
+20:35:29,E007,carro,L02,ENTREGUE,2.0,R$ 7.50,R$ 7.50,1,89x,"Trânsito, Acidente",+0.1s
+20:35:29,E024,moto,L01,ENTREGUE,1.1,R$ 7.50,R$ 7.50,1,89x,"Trânsito, Acidente",-0.0s
+20:35:29,E029,carro,L01,ENTREGUE,0.9,R$ 7.50,R$ 7.50,1,89x,"Trânsito, Acidente",+0.1s
+20:35:29,E023,bike,L02,ENTREGUE,18.3,R$ 7.50,R$ 7.50,1,89x,"Trânsito, Acidente",-10.7s
+20:35:29,E009,moto,L02,ENTREGUE,3.3,R$ 7.50,R$ 16.88,2,89x,"Trânsito, Acidente",-0.2s
+20:35:29,E021,moto,L01,ENTREGUE,0.6,R$ 7.50,R$ 7.50,1,89x,Acidente,-0.0s
+20:35:29,E001,carro,L02,ENTREGUE,3.6,R$ 7.50,R$ 16.88,2,91x,Acidente,-0.2s
+20:35:29,E019,carro,L01,ENTREGUE,3.1,R$ 7.50,R$ 16.88,2,91x,Acidente,+0.6s
+20:35:29,E027,moto,L02,ENTREGUE,0.9,R$ 9.38,R$ 9.38,1,93x,"Chuva, Acidente",+0.1s
+20:35:29,E008,moto,L01,ENTREGUE,6.0,R$ 9.38,R$ 16.88,2,93x,"Chuva, Trânsito, Acidente",+0.4s
+20:35:29,E022,moto,L02,ENTREGUE,1.2,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",+0.0s
+20:35:29,E011,moto,L01,ENTREGUE,0.8,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",+0.0s
+20:35:29,E013,bike,L01,ENTREGUE,0.8,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",+0.1s
+20:35:29,E004,bike,L03,ENTREGUE,3.1,R$ 9.38,R$ 9.38,1,93x,"Chuva, Acidente",-0.5s
+20:35:29,E017,carro,L01,ENTREGUE,5.9,R$ 9.38,R$ 18.75,2,93x,"Chuva, Acidente",+2.9s
+20:35:29,E003,carro,L02,ENTREGUE,2.2,R$ 9.38,R$ 9.38,1,93x,"Chuva, Acidente",-0.0s
+20:35:30,E029,carro,L01,ENTREGUE,0.9,R$ 9.38,R$ 9.38,1,93x,"Chuva, Trânsito, Acidente",+0.0s
+20:35:30,E010,moto,L01,ENTREGUE,0.8,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",+0.1s
+20:35:30,E012,moto,L01,ENTREGUE,2.4,R$ 7.50,—,2,93x,Acidente,+1.0s
+20:35:30,E016,bike,L02,ENTREGUE,1.3,R$ 7.50,R$ 7.50,1,93x,Acidente,+0.3s
+20:35:30,E022,moto,L02,ENTREGUE,0.8,R$ 9.38,R$ 9.38,1,93x,"Chuva, Trânsito, Acidente",+0.1s
+20:35:30,E028,carro,L03,ENTREGUE,10.5,R$ 9.38,R$ 16.88,2,93x,"Chuva, Trânsito, Acidente",+2.6s
+20:35:30,E013,bike,L01,ENTREGUE,0.7,R$ 9.38,R$ 9.38,1,93x,"Chuva, Trânsito, Acidente",-0.1s
+20:35:30,E027,moto,L01,ENTREGUE,1.1,R$ 9.38,R$ 9.38,1,93x,"Chuva, Trânsito, Acidente",+0.1s
+20:35:31,E018,moto,L01,ENTREGUE,1.7,R$ 9.38,—,2,93x,"Chuva, Trânsito, Acidente",+1.1s
+20:35:31,E029,carro,L01,ENTREGUE,1.9,R$ 9.38,—,2,93x,"Chuva, Trânsito, Acidente",+1.2s
+20:35:31,E012,moto,L02,ENTREGUE,3.2,R$ 9.38,R$ 16.88,2,93x,"Chuva, Trânsito, Acidente",+0.6s
+20:35:31,E003,carro,L01,ENTREGUE,0.9,R$ 9.38,R$ 9.38,1,93x,"Chuva, Trânsito, Acidente",+0.2s
+20:35:31,E025,bike,L01,ENTREGUE,2.3,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",+0.5s
+20:35:31,E007,carro,L01,ENTREGUE,0.9,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",-0.0s
+20:35:31,E024,moto,L01,ENTREGUE,1.6,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",+0.4s
+20:35:31,E005,moto,L01,ENTREGUE,1.5,R$ 9.38,R$ 9.38,1,93x,"Chuva, Trânsito, Acidente",+0.2s
+20:35:31,E018,moto,L02,ENTREGUE,2.4,R$ 9.38,R$ 18.75,2,93x,"Chuva, Trânsito, Acidente",+0.7s
+20:35:31,E027,moto,L01,ENTREGUE,0.8,R$ 9.38,R$ 9.38,1,93x,"Chuva, Trânsito, Acidente",+0.1s
+20:35:31,E026,bike,L02,ENTREGUE,4.1,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",-0.1s
+20:35:31,E021,moto,L02,ENTREGUE,1.5,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",+0.0s
+20:35:31,E007,carro,L01,ENTREGUE,0.4,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",+0.0s
+20:35:31,E016,bike,L01,ENTREGUE,1.5,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",+0.7s
+20:35:31,E008,moto,L03,ENTREGUE,0.9,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",+0.3s
+20:35:32,E017,carro,L02,ENTREGUE,2.1,R$ 7.50,—,2,93x,Acidente,+1.5s
+20:35:32,E019,carro,L01,ENTREGUE,2.1,R$ 9.38,—,2,93x,"Chuva, Trânsito, Acidente",+1.1s
+20:35:32,E029,carro,L02,ENTREGUE,3.0,R$ 9.38,R$ 18.75,2,93x,"Chuva, Trânsito, Acidente",+0.7s
+20:35:32,E002,moto,L02,ENTREGUE,1.6,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",+0.1s
+20:35:32,E013,bike,L01,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,93x,"Trânsito, Acidente",+0.4s
+20:35:32,E014,moto,L02,ENTREGUE,2.0,R$ 7.50,—,2,93x,"Trânsito, Acidente",+0.6s
+20:37:38,E024,moto,L01,ENTREGUE,2.2,R$ 9.38,R$ 9.38,1,22x,"Chuva, Trânsito, Acidente",-0.1s
+20:37:41,E005,moto,L01,ENTREGUE,6.2,R$ 7.50,R$ 7.50,1,24x,Acidente,-0.6s
+20:37:42,E025,bike,L02,ENTREGUE,5.4,R$ 9.38,R$ 9.38,1,28x,"Chuva, Acidente",-0.9s
+20:37:43,E008,moto,L01,ENTREGUE,8.4,R$ 9.75,—,2,34x,Acidente,-1.2s
+20:37:43,E020,carro,L01,ENTREGUE,5.3,R$ 7.50,R$ 7.50,1,34x,Acidente,+0.4s
+20:37:43,E030,moto,L02,ENTREGUE,5.4,R$ 7.50,R$ 7.50,1,34x,Acidente,-0.1s
+20:37:43,E011,moto,L03,ENTREGUE,8.6,R$ 7.50,R$ 7.50,1,34x,Acidente,-7.8s
+20:37:43,E017,carro,L02,ENTREGUE,8.1,R$ 12.19,—,2,34x,"Chuva, Trânsito, Acidente",-0.9s
+20:37:43,E001,carro,L01,ENTREGUE,4.2,R$ 9.38,—,2,34x,"Chuva, Trânsito, Acidente",+1.9s
+20:37:45,E019,carro,L02,ENTREGUE,7.7,R$ 9.38,—,2,34x,"Chuva, Trânsito, Acidente",+0.1s
+20:37:45,E002,moto,L02,ENTREGUE,6.6,R$ 9.38,R$ 9.38,1,34x,"Chuva, Trânsito, Acidente",-0.9s
+20:37:45,E008,moto,L02,ENTREGUE,10.3,R$ 12.19,R$ 21.94,2,34x,"Chuva, Trânsito, Acidente",-1.5s
+20:37:45,E024,moto,L01,ENTREGUE,5.8,R$ 9.38,R$ 9.38,1,34x,"Chuva, Trânsito, Acidente",-1.7s
+20:37:45,E012,moto,L02,ENTREGUE,8.8,R$ 9.38,R$ 9.38,1,34x,"Chuva, Trânsito, Acidente",-0.7s
+20:37:45,E004,bike,L01,ENTREGUE,6.7,R$ 7.50,R$ 7.50,1,34x,"Trânsito, Acidente",-1.7s
+20:37:46,E026,bike,L02,ENTREGUE,6.8,R$ 7.50,R$ 7.50,1,34x,"Trânsito, Acidente",+0.1s
+20:37:46,E027,moto,L02,ENTREGUE,7.8,R$ 7.50,R$ 7.50,1,34x,"Trânsito, Acidente",-1.3s
+20:37:46,E001,carro,L02,ENTREGUE,6.8,R$ 7.50,R$ 16.88,2,34x,"Trânsito, Acidente",+2.2s
+20:37:46,E017,carro,L01,ENTREGUE,10.9,R$ 12.19,R$ 24.38,2,34x,"Chuva, Trânsito, Acidente",+4.8s
+20:37:46,E006,carro,L01,ENTREGUE,5.3,R$ 9.38,R$ 9.38,1,34x,"Chuva, Trânsito, Acidente",-1.1s
+20:37:46,E018,moto,L02,ENTREGUE,4.4,R$ 9.38,R$ 9.38,1,34x,"Chuva, Trânsito, Acidente",+0.4s
+20:37:46,E021,moto,L01,ENTREGUE,4.9,R$ 9.38,R$ 9.38,1,34x,"Chuva, Trânsito, Acidente",-1.6s
+20:37:46,E013,bike,L01,ENTREGUE,6.8,R$ 9.38,R$ 9.38,1,34x,"Chuva, Trânsito, Acidente",-0.6s
+20:37:47,E022,moto,L01,ENTREGUE,5.3,R$ 9.38,R$ 9.38,1,34x,"Chuva, Trânsito, Acidente",-1.1s
+20:37:47,E019,carro,L01,ENTREGUE,9.8,R$ 9.38,R$ 18.75,2,34x,"Chuva, Trânsito, Acidente",+1.5s
+20:37:47,E020,carro,L01,ENTREGUE,4.5,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.4s
+20:37:48,E025,bike,L02,ENTREGUE,6.0,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.7s
+20:37:48,E002,moto,L03,ENTREGUE,3.4,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.0s
+20:37:48,E030,moto,L02,ENTREGUE,5.2,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+1.1s
+20:37:49,E003,carro,L01,ENTREGUE,5.5,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.5s
+20:37:49,E008,moto,L01,ENTREGUE,3.7,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+1.4s
+20:37:49,E021,moto,L03,ENTREGUE,1.5,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.4s
+20:37:49,E016,bike,L03,ENTREGUE,9.8,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",-2.2s
+20:37:49,E011,moto,L01,ENTREGUE,4.7,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.1s
+20:37:49,E014,moto,L01,ENTREGUE,6.9,R$ 7.50,—,2,32x,"Trânsito, Acidente",+2.7s
+20:37:49,E026,bike,L01,ENTREGUE,3.4,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.2s
+20:37:49,E019,carro,L01,ENTREGUE,2.5,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.3s
+20:37:50,E009,moto,L01,ENTREGUE,5.1,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.6s
+20:37:50,E014,moto,L02,ENTREGUE,8.0,R$ 7.50,R$ 15.00,2,32x,"Trânsito, Acidente",+1.6s
+20:37:50,E028,carro,L02,ENTREGUE,10.0,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",-0.3s
+20:37:50,E029,carro,L02,ENTREGUE,7.9,R$ 7.50,—,2,32x,"Trânsito, Acidente",+1.3s
+20:37:50,E010,moto,L01,ENTREGUE,6.6,R$ 7.50,—,2,32x,"Trânsito, Acidente",+3.5s
+20:37:50,E001,carro,L01,ENTREGUE,4.4,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.4s
+20:37:51,E018,moto,L02,ENTREGUE,4.1,R$ 7.50,—,2,32x,"Trânsito, Acidente",+1.4s
+20:37:51,E024,moto,L01,ENTREGUE,4.9,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.2s
+20:37:51,E005,moto,L02,ENTREGUE,6.5,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+1.2s
+20:37:52,E015,bike,L03,ENTREGUE,12.3,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",-1.8s
+20:37:52,E021,moto,L03,ENTREGUE,2.9,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.3s
+20:37:52,E030,moto,L01,ENTREGUE,4.1,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.2s
+20:37:52,E006,carro,L01,ENTREGUE,5.7,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.3s
+20:37:52,E007,carro,L01,ENTREGUE,8.6,R$ 7.50,—,2,32x,"Trânsito, Acidente",+3.9s
+20:37:52,E022,moto,L01,ENTREGUE,5.1,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+1.3s
+20:37:52,E002,moto,L02,ENTREGUE,4.3,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.8s
+20:37:52,E017,carro,L02,ENTREGUE,6.3,R$ 9.38,—,2,32x,"Chuva, Trânsito, Acidente",+1.5s
+20:37:52,E018,moto,L01,ENTREGUE,5.9,R$ 9.38,R$ 16.88,2,32x,"Chuva, Trânsito, Acidente",+0.9s
+20:37:53,E004,bike,L03,ENTREGUE,6.9,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+2.0s
+20:37:53,E019,carro,L01,ENTREGUE,3.4,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.3s
+20:37:53,E023,bike,L01,ENTREGUE,13.3,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",-2.4s
+20:37:54,E003,carro,L01,ENTREGUE,4.9,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.2s
+20:37:54,E017,carro,L01,ENTREGUE,7.5,R$ 7.50,R$ 16.88,2,32x,"Trânsito, Acidente",+2.2s
+20:37:54,E007,carro,L02,ENTREGUE,10.1,R$ 7.50,R$ 15.00,2,32x,"Trânsito, Acidente",+3.3s
+20:37:54,E027,moto,L02,ENTREGUE,6.5,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.7s
+20:37:54,E010,moto,L02,ENTREGUE,9.9,R$ 9.38,R$ 16.88,2,32x,"Chuva, Trânsito, Acidente",+2.4s
+20:37:54,E029,carro,L01,ENTREGUE,11.4,R$ 9.38,R$ 16.88,2,32x,"Chuva, Trânsito, Acidente",+5.9s
+20:37:54,E012,moto,L02,ENTREGUE,8.5,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+1.6s
+20:37:54,E011,moto,L02,ENTREGUE,4.9,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.4s
+20:37:55,E016,bike,L02,ENTREGUE,5.4,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+2.2s
+20:37:55,E013,bike,L01,ENTREGUE,7.1,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.6s
+20:37:55,E030,moto,L02,ENTREGUE,6.7,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.5s
+20:37:55,E020,carro,L03,ENTREGUE,6.8,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+1.2s
+20:37:55,E026,bike,L01,ENTREGUE,5.7,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.5s
+20:37:56,E014,moto,L02,ENTREGUE,5.8,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.7s
+20:37:56,E021,moto,L02,ENTREGUE,3.9,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",-0.3s
+20:37:56,E025,bike,L01,ENTREGUE,8.4,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.5s
+20:37:57,E008,moto,L02,ENTREGUE,7.9,R$ 7.50,—,2,32x,"Trânsito, Acidente",+1.8s
+20:37:57,E001,carro,L02,ENTREGUE,6.1,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.9s
+20:37:57,E009,moto,L02,ENTREGUE,7.0,R$ 7.50,—,2,32x,"Trânsito, Acidente",+1.6s
+20:37:57,E005,moto,L02,ENTREGUE,6.2,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.2s
+20:37:57,E024,moto,L02,ENTREGUE,6.6,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.6s
+20:37:58,E008,moto,L01,ENTREGUE,9.3,R$ 7.50,R$ 15.00,2,32x,"Trânsito, Acidente",+1.6s
+20:37:58,E022,moto,L02,ENTREGUE,5.8,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+1.1s
+20:37:58,E001,carro,L01,ENTREGUE,1.7,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.2s
+20:37:59,E021,moto,L02,ENTREGUE,2.7,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",-0.0s
+20:37:59,E009,moto,L01,ENTREGUE,9.1,R$ 9.38,R$ 16.88,2,34x,"Chuva, Trânsito, Acidente",+3.5s
+20:37:59,E011,moto,L02,ENTREGUE,4.7,R$ 9.38,R$ 9.38,1,38x,"Chuva, Trânsito, Acidente",-0.2s
+20:37:59,E030,moto,L02,ENTREGUE,7.3,R$ 7.50,R$ 7.50,1,40x,"Trânsito, Acidente",+0.4s
+20:37:59,E027,moto,L01,ENTREGUE,4.5,R$ 7.50,R$ 7.50,1,40x,"Trânsito, Acidente",-0.1s
+20:38:00,E018,moto,L01,ENTREGUE,7.3,R$ 7.50,—,2,40x,"Trânsito, Acidente",+3.1s
+20:38:00,E028,carro,L01,ENTREGUE,9.5,R$ 7.50,—,2,40x,"Trânsito, Acidente",+5.5s
+20:38:00,E002,moto,L02,ENTREGUE,7.3,R$ 7.50,R$ 7.50,1,40x,"Trânsito, Acidente",+0.5s
+20:38:00,E030,moto,L01,ENTREGUE,4.3,R$ 9.38,R$ 9.38,1,40x,"Chuva, Trânsito, Acidente",-0.2s
+20:38:00,E017,carro,L01,ENTREGUE,5.5,R$ 9.38,—,2,40x,"Chuva, Trânsito, Acidente",+2.0s
+20:38:00,E019,carro,L01,ENTREGUE,7.1,R$ 9.38,—,2,40x,"Chuva, Trânsito, Acidente",+2.6s
+20:38:00,E003,carro,L02,ENTREGUE,6.4,R$ 9.38,—,2,40x,"Chuva, Trânsito, Acidente",+1.1s
+20:38:00,E004,bike,L01,ENTREGUE,7.5,R$ 9.38,R$ 9.38,1,40x,"Chuva, Trânsito, Acidente",+0.1s
+20:38:01,E013,bike,L03,ENTREGUE,5.9,R$ 7.50,R$ 7.50,1,40x,"Trânsito, Acidente",-0.1s
+20:38:01,E017,carro,L02,ENTREGUE,6.3,R$ 7.50,R$ 16.88,2,40x,"Trânsito, Acidente",+1.1s
+20:38:01,E019,carro,L02,ENTREGUE,7.9,R$ 7.50,R$ 16.88,2,40x,"Trânsito, Acidente",+1.5s
+20:38:01,E018,moto,L02,ENTREGUE,8.4,R$ 7.50,R$ 15.00,2,40x,"Trânsito, Acidente",+1.1s
+20:38:01,E016,bike,L02,ENTREGUE,6.1,R$ 7.50,R$ 7.50,1,40x,"Trânsito, Acidente",+0.4s
+20:38:01,E007,carro,L02,ENTREGUE,7.4,R$ 7.50,R$ 7.50,1,40x,Acidente,-0.0s
+20:38:01,E006,carro,L02,ENTREGUE,8.9,R$ 7.50,—,2,40x,Acidente,+1.1s
+20:38:01,E003,carro,L01,ENTREGUE,7.6,R$ 9.38,R$ 18.75,2,40x,"Chuva, Acidente",+1.3s
+20:38:01,E022,moto,L01,ENTREGUE,3.1,R$ 9.38,R$ 9.38,1,40x,"Chuva, Acidente",-0.6s
+20:38:01,E010,moto,L02,ENTREGUE,6.2,R$ 9.38,R$ 9.38,1,40x,"Chuva, Acidente",+0.0s
+20:38:02,E014,moto,L02,ENTREGUE,5.6,R$ 7.50,—,2,40x,Acidente,+0.8s
+20:38:02,E009,moto,L01,ENTREGUE,3.1,R$ 7.50,—,2,40x,Acidente,+0.9s
+20:38:02,E025,bike,L01,ENTREGUE,5.3,R$ 7.50,R$ 7.50,1,40x,Acidente,+0.1s
+20:38:02,E023,bike,L01,ENTREGUE,9.0,R$ 9.38,R$ 9.38,1,40x,"Chuva, Acidente",+0.4s
+20:38:03,E011,moto,L01,ENTREGUE,3.2,R$ 9.38,R$ 9.38,1,40x,"Chuva, Acidente",+0.2s
+20:38:03,E024,moto,L02,ENTREGUE,5.4,R$ 9.38,R$ 9.38,1,40x,"Chuva, Acidente",-0.3s
+20:38:03,E001,carro,L01,ENTREGUE,4.1,R$ 9.38,R$ 9.38,1,40x,"Chuva, Acidente",-0.6s
+20:38:03,E008,moto,L01,ESTORNADO,0,R$ 0.00,—,0,40x,"Chuva, Acidente, Machucado",+0.0s
+20:38:03,E008,moto,L03,ESTORNADO,0,R$ 0.00,—,0,40x,"Chuva, Acidente, Machucado",+0.0s
+20:38:03,E006,carro,L01,ENTREGUE,10.7,R$ 9.38,R$ 16.88,2,42x,"Chuva, Trânsito, Acidente",+2.3s
+20:38:03,E017,carro,L01,ENTREGUE,2.2,R$ 9.38,R$ 9.38,1,44x,"Chuva, Trânsito, Acidente",+0.1s
+20:38:03,E030,moto,L01,ENTREGUE,2.4,R$ 9.38,R$ 9.38,1,44x,"Chuva, Trânsito, Acidente",+0.1s
+20:38:03,E005,moto,L02,ENTREGUE,5.9,R$ 7.50,R$ 7.50,1,44x,"Trânsito, Acidente",-0.5s
+20:38:03,E029,carro,L02,ENTREGUE,9.1,R$ 7.50,—,3,46x,"Trânsito, Acidente",+4.3s
+20:38:03,E016,bike,L01,ENTREGUE,2.1,R$ 7.50,R$ 7.50,1,46x,"Trânsito, Acidente",+0.4s
+20:38:03,E028,carro,L02,ENTREGUE,13.0,R$ 7.50,R$ 15.00,2,46x,"Trânsito, Acidente",+2.2s
+20:38:03,E015,bike,L02,ENTREGUE,11.3,R$ 7.50,R$ 7.50,1,48x,Acidente,+0.4s
+20:38:03,E002,moto,L01,ENTREGUE,3.5,R$ 7.50,R$ 7.50,1,48x,Acidente,+0.1s
+20:38:03,E012,moto,L02,ENTREGUE,5.6,R$ 7.50,R$ 7.50,1,48x,Acidente,+0.0s
+20:38:03,E014,moto,L01,ENTREGUE,7.1,R$ 7.50,R$ 15.00,2,48x,Acidente,+2.4s
+20:38:04,E021,moto,L02,ENTREGUE,4.4,R$ 9.38,R$ 9.38,1,48x,"Chuva, Trânsito, Acidente",+0.3s
+20:38:04,E019,carro,L01,ENTREGUE,2.9,R$ 9.38,R$ 9.38,1,48x,"Chuva, Trânsito, Acidente",-0.1s
+20:38:04,E020,carro,L02,ENTREGUE,8.5,R$ 9.38,—,2,48x,"Chuva, Trânsito, Acidente",+0.7s
+20:38:04,E030,moto,L02,ENTREGUE,4.6,R$ 9.38,R$ 9.38,1,48x,"Chuva, Trânsito, Acidente",+0.7s
+20:38:04,E030,moto,L01,ENTREGUE,1.3,R$ 7.50,R$ 7.50,1,48x,"Trânsito, Acidente",+0.2s
+20:38:04,E009,moto,L02,ENTREGUE,5.3,R$ 7.50,R$ 15.00,2,48x,"Trânsito, Acidente",+0.2s
+20:38:05,E022,moto,L01,ENTREGUE,2.8,R$ 7.50,R$ 7.50,1,44x,"Trânsito, Acidente",+0.2s
+20:38:05,E027,moto,L01,ENTREGUE,5.2,R$ 9.38,—,2,40x,"Chuva, Trânsito, Acidente",+2.2s
+20:38:05,E029,carro,L03,ENTREGUE,10.8,R$ 9.38,—,3,40x,"Chuva, Trânsito, Acidente",+5.4s
+20:38:05,E024,moto,L02,ENTREGUE,2.7,R$ 7.50,R$ 7.50,1,36x,"Trânsito, Acidente",+0.1s
+20:38:05,E010,moto,L01,ENTREGUE,3.8,R$ 7.50,R$ 7.50,1,36x,"Trânsito, Acidente",+0.1s
+20:38:06,E027,moto,L02,ENTREGUE,6.1,R$ 7.50,R$ 16.88,2,36x,"Trânsito, Acidente",+1.2s
+20:38:06,E013,bike,L03,ENTREGUE,5.5,R$ 9.38,R$ 9.38,1,34x,"Chuva, Acidente",+0.4s
+20:38:07,E020,carro,L01,ENTREGUE,11.4,R$ 9.38,R$ 18.75,2,32x,"Chuva, Trânsito, Acidente",+2.3s
+20:38:07,E011,moto,L02,ENTREGUE,4.1,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.2s
+20:38:07,E002,moto,L02,ENTREGUE,3.6,R$ 7.50,R$ 7.50,1,32x,Acidente,+1.5s
+20:38:07,E006,carro,L01,ENTREGUE,4.2,R$ 7.50,—,2,32x,Acidente,+1.7s
+20:38:07,E007,carro,L02,ENTREGUE,5.1,R$ 7.50,R$ 7.50,1,32x,Acidente,+1.4s
+20:38:07,E017,carro,L02,ENTREGUE,4.0,R$ 7.50,R$ 7.50,1,32x,Acidente,+1.3s
+20:38:07,E019,carro,L02,ENTREGUE,3.5,R$ 7.50,—,2,32x,Acidente,+2.5s
+20:38:07,E004,bike,L02,ENTREGUE,7.2,R$ 7.50,R$ 7.50,1,32x,Acidente,+1.1s
+20:38:07,E029,carro,L01,ENTREGUE,13.4,R$ 7.50,R$ 24.38,3,32x,Acidente,+5.6s
+20:38:08,E030,moto,L01,ENTREGUE,3.7,R$ 9.38,R$ 9.38,1,32x,"Chuva, Acidente",+1.0s
+20:38:08,E022,moto,L01,ENTREGUE,3.1,R$ 9.38,R$ 9.38,1,32x,"Chuva, Acidente",+0.4s
+20:38:08,E030,moto,L02,ENTREGUE,3.7,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+1.4s
+20:38:08,E005,moto,L01,ENTREGUE,3.6,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.4s
+20:38:09,E018,moto,L02,ENTREGUE,7.6,R$ 7.50,—,2,32x,"Trânsito, Acidente",+1.7s
+20:38:09,E024,moto,L02,ENTREGUE,3.7,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.8s
+20:38:09,E009,moto,L01,ENTREGUE,4.5,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.9s
+20:38:09,E016,bike,L01,ENTREGUE,6.0,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+1.7s
+20:38:09,E026,bike,L02,ENTREGUE,13.6,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",-0.2s
+20:38:09,E023,bike,L02,ENTREGUE,6.8,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+1.6s
+20:38:09,E014,moto,L02,ENTREGUE,5.0,R$ 9.38,—,2,32x,"Chuva, Trânsito, Acidente",+1.7s
+20:38:09,E025,bike,L02,ENTREGUE,7.0,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+1.5s
+20:38:09,E006,carro,L02,ENTREGUE,6.5,R$ 9.38,R$ 16.88,2,32x,"Chuva, Trânsito, Acidente",+1.5s
+20:38:10,E001,carro,L02,ENTREGUE,6.9,R$ 9.38,—,2,32x,"Chuva, Trânsito, Acidente",+1.9s
+20:38:10,E003,carro,L03,ENTREGUE,8.7,R$ 7.50,—,3,32x,"Trânsito, Acidente",+6.2s
+20:38:10,E019,carro,L01,ENTREGUE,6.5,R$ 7.50,R$ 15.00,2,32x,"Trânsito, Acidente",+3.3s
+20:38:10,E012,moto,L01,ENTREGUE,6.2,R$ 7.50,—,2,32x,"Trânsito, Acidente",+3.8s
+20:38:10,E014,moto,L01,ENTREGUE,6.0,R$ 7.50,R$ 16.88,2,32x,"Trânsito, Acidente",+1.3s
+20:38:10,E021,moto,L01,ENTREGUE,5.6,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.5s
+20:38:11,E020,carro,L01,ENTREGUE,4.2,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",-0.1s
+20:38:11,E018,moto,L01,ENTREGUE,10.2,R$ 9.38,R$ 16.88,2,32x,"Chuva, Trânsito, Acidente",+4.5s
+20:38:12,E001,carro,L01,ENTREGUE,8.9,R$ 7.50,R$ 16.88,2,32x,"Trânsito, Acidente",+2.3s
+20:38:12,E011,moto,L02,ENTREGUE,5.1,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.3s
+20:38:12,E003,carro,L01,ENTREGUE,10.5,R$ 7.50,—,3,32x,"Trânsito, Acidente",+5.8s
+20:38:12,E002,moto,L02,ENTREGUE,5.1,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.4s
+20:38:12,E027,moto,L01,ENTREGUE,6.5,R$ 9.38,—,2,32x,"Chuva, Trânsito, Acidente",+3.9s
+20:38:13,E022,moto,L01,ENTREGUE,4.8,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",-0.0s
+20:38:13,E010,moto,L01,ENTREGUE,7.4,R$ 9.38,—,2,32x,"Chuva, Trânsito, Acidente",+3.0s
+20:38:13,E017,carro,L02,ENTREGUE,5.9,R$ 7.50,—,2,32x,"Trânsito, Acidente",+1.3s
+20:38:14,E012,moto,L02,ENTREGUE,9.8,R$ 7.50,R$ 15.00,2,32x,"Trânsito, Acidente",+5.1s
+20:38:14,E020,carro,L01,ENTREGUE,3.3,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.0s
+20:38:14,E005,moto,L02,ENTREGUE,5.4,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.6s
+20:38:14,E029,carro,L02,ENTREGUE,5.4,R$ 9.38,—,2,32x,"Chuva, Trânsito, Acidente",+1.9s
+20:38:15,E011,moto,L01,ENTREGUE,2.6,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.3s
+20:38:15,E030,moto,L02,ENTREGUE,6.3,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.5s
+20:38:15,E010,moto,L02,ENTREGUE,9.6,R$ 7.50,R$ 16.88,2,32x,"Trânsito, Acidente",+3.6s
+20:38:15,E003,carro,L02,ENTREGUE,13.8,R$ 7.50,R$ 22.50,3,32x,"Trânsito, Acidente",+4.9s
+20:38:15,E030,moto,L02,ENTREGUE,7.1,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.7s
+20:38:15,E027,moto,L02,ENTREGUE,9.5,R$ 7.50,R$ 16.88,2,32x,"Trânsito, Acidente",+6.0s
+20:38:16,E024,moto,L01,ENTREGUE,5.5,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.2s
+20:38:16,E017,carro,L01,ENTREGUE,8.2,R$ 9.38,R$ 16.88,2,32x,"Chuva, Trânsito, Acidente",+3.0s
+20:38:16,E013,bike,L02,ENTREGUE,9.5,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+1.4s
+20:38:16,E007,carro,L01,ENTREGUE,8.6,R$ 9.38,—,3,32x,"Chuva, Trânsito, Acidente",+5.7s
+20:38:16,E021,moto,L01,ENTREGUE,2.8,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.1s
+20:38:16,E029,carro,L01,ENTREGUE,7.3,R$ 9.38,R$ 18.75,2,32x,"Chuva, Trânsito, Acidente",+3.2s
+20:38:17,E014,moto,L01,ENTREGUE,6.3,R$ 7.50,—,2,32x,"Trânsito, Acidente",+3.1s
+20:38:17,E028,carro,L02,ENTREGUE,11.5,R$ 7.50,—,2,32x,"Trânsito, Acidente",+2.3s
+20:38:17,E007,carro,L02,ENTREGUE,9.8,R$ 7.50,—,3,32x,"Trânsito, Acidente",+3.4s
+20:38:18,E010,moto,L01,ENTREGUE,2.4,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.1s
+20:38:18,E002,moto,L02,ENTREGUE,5.3,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.5s
+20:38:18,E018,moto,L02,ENTREGUE,6.2,R$ 9.38,—,2,32x,"Chuva, Trânsito, Acidente",+1.2s
+20:38:18,E020,carro,L01,ENTREGUE,4.0,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.3s
+20:38:18,E009,moto,L02,ENTREGUE,7.1,R$ 7.50,—,2,32x,"Trânsito, Acidente",+1.6s
+20:38:19,E004,bike,L02,ENTREGUE,11.0,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+2.5s
+20:38:19,E011,moto,L01,ENTREGUE,4.3,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+1.4s
+20:38:19,E005,moto,L01,ENTREGUE,4.6,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.5s
+20:38:19,E006,carro,L02,ENTREGUE,6.9,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.6s
+20:38:19,E022,moto,L02,ENTREGUE,5.8,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.4s
+20:38:19,E007,carro,L03,ENTREGUE,12.3,R$ 7.50,R$ 24.38,3,32x,"Trânsito, Acidente",+3.0s
+20:38:20,E028,carro,L01,ENTREGUE,14.3,R$ 7.50,R$ 15.00,2,32x,"Trânsito, Acidente",+2.0s
+20:38:20,E019,carro,L01,ENTREGUE,6.9,R$ 7.50,—,2,32x,"Trânsito, Acidente",+3.5s
+20:38:20,E014,moto,L02,ENTREGUE,9.3,R$ 7.50,R$ 15.00,2,32x,"Trânsito, Acidente",+3.0s
+20:38:20,E009,moto,L01,ENTREGUE,8.6,R$ 7.50,R$ 15.00,2,32x,"Trânsito, Acidente",+2.5s
+20:38:20,E001,carro,L02,ENTREGUE,7.4,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+1.6s
+20:38:20,E021,moto,L02,ENTREGUE,4.0,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.2s
+20:38:20,E015,bike,L02,ENTREGUE,16.9,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+5.4s
+20:38:20,E018,moto,L01,ENTREGUE,8.9,R$ 9.38,R$ 18.75,2,32x,"Chuva, Trânsito, Acidente",+2.6s
+20:38:21,E025,bike,L02,ENTREGUE,11.5,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+1.4s
+20:38:22,E019,carro,L02,ENTREGUE,9.0,R$ 7.50,R$ 15.00,2,32x,"Trânsito, Acidente",+3.7s
+20:38:22,E012,moto,L02,ENTREGUE,8.0,R$ 9.38,—,2,32x,"Chuva, Trânsito, Acidente",+0.9s
+20:38:22,E010,moto,L01,ENTREGUE,4.5,R$ 9.38,—,2,32x,"Chuva, Trânsito, Acidente",+2.2s
+20:38:22,E016,bike,L02,ENTREGUE,12.0,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+1.4s
+20:38:22,E022,moto,L01,ENTREGUE,2.8,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",-0.1s
+20:38:22,E026,bike,L02,ENTREGUE,10.0,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.8s
+20:38:23,E027,moto,L02,ENTREGUE,7.0,R$ 9.38,—,2,32x,"Chuva, Trânsito, Acidente",+1.8s
+20:38:23,E023,bike,L02,ENTREGUE,13.3,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+1.9s
+20:38:23,E030,moto,L02,ENTREGUE,7.7,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+1.0s
+20:38:23,E029,carro,L02,ENTREGUE,6.2,R$ 7.50,—,2,32x,"Trânsito, Acidente",+2.1s
+20:38:23,E017,carro,L01,ENTREGUE,7.4,R$ 7.50,—,2,32x,"Trânsito, Acidente",+3.5s
+20:38:23,E030,moto,L02,ENTREGUE,6.3,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.9s
+20:38:23,E021,moto,L03,ENTREGUE,2.7,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.2s
+20:38:24,E017,carro,L02,ENTREGUE,7.8,R$ 9.38,R$ 16.88,2,32x,"Chuva, Trânsito, Acidente",+1.3s
+20:38:24,E005,moto,L01,ENTREGUE,4.4,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",-0.3s
+20:38:24,E003,carro,L02,ENTREGUE,7.8,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+1.1s
+20:38:24,E024,moto,L01,ENTREGUE,7.1,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.5s
+20:38:24,E027,moto,L01,ENTREGUE,9.0,R$ 7.50,R$ 16.88,2,32x,"Trânsito, Acidente",+3.1s
+20:38:24,E012,moto,L01,ENTREGUE,10.6,R$ 7.50,R$ 16.88,2,32x,"Trânsito, Acidente",+2.6s
+20:38:25,E011,moto,L01,ENTREGUE,5.5,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.4s
+20:38:25,E010,moto,L02,ENTREGUE,7.0,R$ 7.50,R$ 16.88,2,32x,"Trânsito, Acidente",+1.9s
+20:38:25,E019,carro,L01,ENTREGUE,2.7,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.4s
+20:38:25,E029,carro,L01,ENTREGUE,8.2,R$ 7.50,R$ 15.00,2,32x,"Trânsito, Acidente",+2.2s
+20:38:25,E002,moto,L02,ENTREGUE,7.2,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.6s
+20:38:25,E013,bike,L01,ENTREGUE,9.1,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.3s
+20:38:25,E020,carro,L01,ENTREGUE,7.1,R$ 9.38,—,2,32x,"Chuva, Trânsito, Acidente",+3.9s
+20:38:26,E007,carro,L02,ENTREGUE,6.5,R$ 7.50,—,2,32x,"Trânsito, Acidente",+1.5s
+20:38:26,E004,bike,L02,ENTREGUE,7.5,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+1.0s
+20:38:26,E022,moto,L01,ENTREGUE,4.1,R$ 7.50,R$ 7.50,1,32x,"Trânsito, Acidente",+0.2s
+20:38:27,E021,moto,L03,ENTREGUE,3.2,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",-0.1s
+20:38:27,E005,moto,L03,ENTREGUE,3.1,R$ 9.38,R$ 9.38,1,32x,"Chuva, Trânsito, Acidente",+0.6s
+20:39:58,E005,moto,L03,ENTREGUE,6.8,R$ 9.38,R$ 9.38,1,6x,"Chuva, Trânsito, Acidente",-2.0s
+20:39:59,E010,moto,L01,ENTREGUE,5.1,R$ 9.38,R$ 9.38,1,6x,"Chuva, Trânsito, Acidente",+2.1s
+20:40:01,E022,moto,L01,ENTREGUE,5.9,R$ 7.50,R$ 7.50,1,6x,Acidente,+2.3s
+20:40:02,E012,moto,L01,ENTREGUE,8.8,R$ 7.50,R$ 7.50,1,6x,Acidente,+1.2s
+20:40:05,E029,carro,L02,ENTREGUE,19.1,R$ 9.38,—,2,6x,"Chuva, Acidente",-0.1s
+20:40:06,E004,bike,L02,ENTREGUE,9.2,R$ 9.38,R$ 9.38,1,6x,"Chuva, Trânsito, Acidente",+4.3s
+20:40:10,E011,moto,L02,ENTREGUE,9.5,R$ 7.50,R$ 7.50,1,6x,"Trânsito, Acidente",+1.6s
+20:40:11,E029,carro,L01,ENTREGUE,25.4,R$ 7.50,R$ 16.88,2,6x,"Trânsito, Acidente",+3.1s
+20:40:13,E025,bike,L01,ENTREGUE,14.8,R$ 9.38,R$ 9.38,1,6x,"Chuva, Acidente",+0.5s
+20:41:02,E006,carro,L02,ENTREGUE,17.4,R$ 9.38,R$ 9.38,1,24x,"Chuva, Acidente",-7.9s
+20:41:03,E003,carro,L03,ENTREGUE,17.9,R$ 9.38,R$ 9.38,1,24x,"Chuva, Trânsito, Acidente",-11.7s
+20:41:03,E002,moto,L02,ENTREGUE,20.2,R$ 7.50,R$ 7.50,1,24x,Acidente,-11.4s
+20:41:04,E005,moto,L01,ENTREGUE,19.6,R$ 7.50,R$ 7.50,1,18x,Acidente,-15.7s
+20:41:06,E008,moto,L01,ENTREGUE,10.5,R$ 9.38,—,2,16x,"Chuva, Trânsito, Acidente",-3.7s
+20:41:06,E011,moto,L01,ENTREGUE,4.0,R$ 7.50,R$ 7.50,1,16x,"Trânsito, Acidente",+0.5s
+20:41:07,E007,carro,L01,ENTREGUE,16.8,R$ 7.50,R$ 7.50,1,16x,Acidente,-20.5s
+20:41:08,E008,moto,L03,ENTREGUE,13.0,R$ 9.38,R$ 18.75,2,16x,"Chuva, Acidente",-4.1s
+20:41:12,E001,carro,L01,ENTREGUE,25.5,R$ 9.38,—,3,6x,"Chuva, Trânsito, Acidente",-3.0s
+20:41:14,E010,moto,L02,ENTREGUE,12.4,R$ 7.50,—,2,6x,Acidente,+6.3s
+20:41:14,E005,moto,L03,ENTREGUE,10.2,R$ 7.50,R$ 7.50,1,6x,Acidente,+4.2s
+20:41:15,E001,carro,L03,ENTREGUE,28.8,R$ 7.50,—,3,6x,Acidente,-1.0s
+20:41:17,E004,bike,L02,ENTREGUE,31.8,R$ 9.38,R$ 9.38,1,6x,"Chuva, Acidente",-12.4s
+20:41:17,E002,moto,L01,ENTREGUE,13.9,R$ 9.38,R$ 9.38,1,6x,"Chuva, Acidente",+7.7s
+20:41:17,E010,moto,L01,ENTREGUE,15.9,R$ 9.38,R$ 16.88,2,6x,"Chuva, Acidente",+7.1s
+20:41:17,E009,moto,L02,ENTREGUE,17.2,R$ 9.38,—,2,6x,"Chuva, Acidente",+8.6s
+20:41:19,E012,moto,L01,ENTREGUE,15.7,R$ 9.38,—,2,6x,"Chuva, Trânsito, Acidente",+11.2s
+21:01:03,E003,carro,L03,ENTREGUE,15.8,R$ 7.50,R$ 7.50,1,16x,Acidente,-5.4s
+21:01:03,E018,moto,L01,ENTREGUE,16.0,R$ 9.38,R$ 9.38,1,18x,"Chuva, Acidente",+1.9s
+21:01:03,E008,moto,L02,ENTREGUE,15.5,R$ 9.38,R$ 9.38,1,18x,"Chuva, Acidente",-7.9s
+21:01:05,E009,moto,L03,ENTREGUE,17.0,R$ 7.50,R$ 7.50,1,18x,"Trânsito, Acidente",-10.5s
+21:01:05,E023,bike,L03,ENTREGUE,17.4,R$ 7.50,R$ 7.50,1,18x,"Trânsito, Acidente",-5.8s
+21:01:06,E002,moto,L03,ENTREGUE,13.6,R$ 7.50,R$ 7.50,1,20x,Acidente,-6.3s
+21:01:06,E026,bike,L03,ENTREGUE,18.4,R$ 9.38,R$ 9.38,1,20x,"Chuva, Acidente",-13.3s
+21:01:06,E015,bike,L03,ENTREGUE,19.8,R$ 12.19,R$ 12.19,1,20x,"Chuva, Acidente",+3.5s
+21:01:06,E024,moto,L02,ENTREGUE,17.6,R$ 9.38,R$ 9.38,1,22x,"Chuva, Acidente",-2.3s
+21:01:06,E022,moto,L03,ENTREGUE,10.4,R$ 9.38,R$ 9.38,1,22x,"Chuva, Acidente",-5.6s
+21:01:06,E019,carro,L01,ENTREGUE,17.9,R$ 9.38,R$ 9.38,1,22x,"Chuva, Acidente",-2.8s
+21:01:07,E012,moto,L02,ENTREGUE,19.4,R$ 7.50,R$ 7.50,1,22x,"Trânsito, Acidente",-5.0s
+21:01:07,E006,carro,L02,ENTREGUE,20.1,R$ 7.50,R$ 7.50,1,22x,Acidente,-19.3s
+21:01:08,E029,carro,L02,ENTREGUE,7.9,R$ 9.38,—,2,22x,"Chuva, Acidente",+3.3s
+21:01:08,E027,moto,L02,ENTREGUE,14.6,R$ 9.38,R$ 9.38,1,22x,"Chuva, Acidente",-3.6s
+21:01:08,E005,moto,L01,ENTREGUE,16.3,R$ 9.38,R$ 9.38,1,22x,"Chuva, Trânsito, Acidente",-6.8s
+21:01:09,E013,bike,L03,ENTREGUE,16.4,R$ 9.38,R$ 9.38,1,22x,"Chuva, Trânsito, Acidente",-14.3s
+21:01:09,E011,moto,L02,ENTREGUE,14.6,R$ 9.38,R$ 9.38,1,22x,"Chuva, Trânsito, Acidente",-3.7s
+21:01:09,E001,carro,L02,ENTREGUE,21.0,R$ 9.38,R$ 9.38,1,22x,"Chuva, Trânsito, Acidente",-21.4s
+21:01:09,E022,moto,L03,ENTREGUE,2.5,R$ 9.38,R$ 9.38,1,22x,"Chuva, Trânsito, Acidente",-0.2s
+21:01:09,E030,moto,L03,ENTREGUE,7.5,R$ 7.50,R$ 7.50,1,22x,"Trânsito, Acidente",-0.1s
+21:01:10,E005,moto,L02,ESTORNADO,0,R$ 0.00,—,0,22x,"Trânsito, Acidente, Machucado",+0.0s
+21:01:10,E005,moto,L02,ESTORNADO,0,R$ 0.00,—,0,22x,"Trânsito, Acidente, Machucado",+0.0s
+21:01:11,E024,moto,L01,ENTREGUE,4.5,R$ 9.38,R$ 9.38,1,22x,"Chuva, Trânsito, Acidente",+2.1s
+21:01:11,E014,moto,L01,ENTREGUE,21.8,R$ 9.38,R$ 9.38,1,22x,"Chuva, Trânsito, Acidente",-4.5s
+21:01:11,E030,moto,L03,ESTORNADO,0,R$ 0.00,—,0,22x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
+21:01:11,E030,moto,L03,ESTORNADO,0,R$ 0.00,—,0,22x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
+21:01:11,E027,moto,L03,ESTORNADO,0,R$ 0.00,—,0,22x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
+21:01:11,E027,moto,L02,ESTORNADO,0,R$ 0.00,—,0,22x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
+21:01:11,E027,moto,L03,ESTORNADO,0,R$ 0.00,—,0,22x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
+21:01:11,E027,moto,L02,ESTORNADO,0,R$ 0.00,—,0,22x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
+21:01:12,E021,moto,L01,ENTREGUE,18.7,R$ 9.38,R$ 9.38,1,14x,"Chuva, Trânsito, Acidente",-12.1s
+21:01:13,E010,moto,L02,ENTREGUE,14.8,R$ 7.50,R$ 7.50,1,14x,"Trânsito, Acidente",-16.2s
+21:01:13,E022,moto,L03,ENTREGUE,3.7,R$ 7.50,R$ 7.50,1,14x,"Trânsito, Acidente",+0.7s
+21:01:13,E011,moto,L01,ENTREGUE,4.6,R$ 7.50,R$ 7.50,1,14x,"Trânsito, Acidente",+0.7s
+21:01:13,E004,bike,L02,ENTREGUE,25.7,R$ 7.50,R$ 7.50,1,14x,"Trânsito, Acidente",-1.8s
+21:01:14,E029,carro,L03,ENTREGUE,13.8,R$ 9.38,R$ 18.75,2,14x,"Chuva, Trânsito, Acidente",+3.1s
+21:01:14,E008,moto,L01,ENTREGUE,10.5,R$ 9.38,—,2,14x,"Chuva, Trânsito, Acidente",+3.5s
+21:01:14,E009,moto,L03,ENTREGUE,9.1,R$ 9.38,—,2,14x,"Chuva, Trânsito, Acidente",+1.9s
+21:01:14,E018,moto,L01,ENTREGUE,10.8,R$ 9.38,R$ 9.38,1,14x,"Chuva, Trânsito, Acidente",+2.3s
+21:01:15,E026,bike,L03,ESTORNADO,0,R$ 0.00,—,0,14x,"Chuva, Trânsito, Acidente, Machucado",+0.0s
+21:01:15,E007,carro,L02,ENTREGUE,21.5,R$ 9.38,R$ 9.38,1,14x,"Chuva, Trânsito, Acidente",-7.5s
+21:01:16,E028,carro,L03,ENTREGUE,26.7,R$ 7.50,—,3,14x,"Trânsito, Acidente",-1.7s
+21:01:19,E019,carro,L01,ENTREGUE,12.8,R$ 7.50,R$ 7.50,1,3x,"Trânsito, Acidente",+5.7s
+21:01:22,E008,moto,L03,ENTREGUE,18.2,R$ 9.38,R$ 18.75,2,5x,"Chuva, Trânsito, Acidente",+6.2s
+21:01:22,E024,moto,L03,ENTREGUE,11.4,R$ 9.38,R$ 9.38,1,5x,"Chuva, Trânsito, Acidente",+6.0s
+21:01:23,E017,carro,L01,ENTREGUE,34.7,R$ 9.38,R$ 9.38,1,5x,"Chuva, Trânsito, Acidente",-5.0s
