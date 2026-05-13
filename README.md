@@ -330,6 +330,7 @@ python simulador_entregas.py
 | Membro |
 |--------|
 | Mateus Ribeiro Cerqueira|
+| Gustavo Kiyoshi Ikeda|
 
 > Evento: **HACKATHON 2026** — Escola de Engenharia da Universidade Presbiteriana Mackenzie
 > Empresa patrocinadora do desafio: **Keeta Delivery Brazil LTDA**
