@@ -5,7 +5,6 @@
 ![Hackathon Mackenzie 2026](https://img.shields.io/badge/Hackathon-Mackenzie%202026-FFE600?style=for-the-badge&labelColor=232323)
 ![2º Lugar](https://img.shields.io/badge/Resultado-2º%20Lugar%20🥈-1EC96E?style=for-the-badge&labelColor=232323)
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
 **Sistema completo de logística inteligente desenvolvido pela Team E-Keda para o desafio proposto pela Keeta Delivery Brazil LTDA no Hackathon Mackenzie 2026.**
 
