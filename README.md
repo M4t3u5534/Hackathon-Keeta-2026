@@ -327,9 +327,9 @@ python simulador_entregas.py
 
 **Team E-Keda** — Hackathon Mackenzie 2026
 
-| Membro | RA |
-|--------|----|
-| Mateus Ribeiro Cerqueira | 10443901 |
+| Membro |
+|--------|
+| Mateus Ribeiro Cerqueira|
 
 > Evento: **HACKATHON 2026** — Escola de Engenharia da Universidade Presbiteriana Mackenzie
 > Empresa patrocinadora do desafio: **Keeta Delivery Brazil LTDA**
